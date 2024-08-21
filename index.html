@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+body {
+background-color: black;
+color: white;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #333;
+color: white;
+padding: 1em 0;
+text-align: center;
+}
+nav ul {
+list-style: none;
+padding: 0;
+}
+nav ul li {
+display: inline;
+margin: 0 10px;
+}
+nav ul li a {
+color: white;
+text-decoration: none;
+}
+section {
+padding: 2em;
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.animated {
+opacity: 1;
+transform: translateY(0);
+}
+#map {
+height: 400px;
+width: 100%;
+max-width: 600px;
+margin: 0 auto;
+}
+.skills-list {
+    display: flex;
+flex-wrap: wrap;
+gap: 1em;
+}
+.skills-list li {
+background: #444;
+border-radius: 5px;
+padding: 0.5em 1em;
+}
+.project {
+background: #444;
+border-radius: 5px;
+margin: 1em 0;
+padding: 1em;
+cursor: pointer;
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.project:hover {
+background: #555;
+}
+.animated-project {
+opacity: 1;
+transform: translateY(0);
+}
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0, 0, 0);
+background-color: rgba(0, 0, 0, 0.4);
+padding-top: 60px;
+}
+.modal-content {
+background-color: #333;
+margin: 5% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 600px;
+color: white;
+}
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+.close:hover, .close:focus {
+color: white;
+text-decoration: none;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>My Portfolio</h1>
+<nav>
+<ul>
+<li><a href="#bio">Bio</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="bio">
+<h2>Bio</h2>
+<p>Hello! I'm a web developer with a passion for creating interactive and user-friendly websites. I have experience in HTML, CSS, JavaScript, and various web development frameworks. Welcome to my portfolio!</p>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<ul class="skills-list">
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React</li>
+<li>Node.js</li>
+<li>Python</li>
+</ul>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="project" onclick="openModal('project1')">
+<h3>Personal Portfolio Website</h3>
+<p>A website to showcase my projects, skills, and resume. Built with HTML, CSS, and JavaScript.</p>
+</div>
+<div class="project" onclick="openModal('project2')">
+<h3>Weather App</h3>
+<p>A web application that provides weather forecasts for any location. Built with React and the OpenWeather API.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: vishvajeetkumar8076@gmail.com</p>
+<div id="map"></div>
+</section>
+
+<footer>
+<p>&copy; 2024 My Portfolio</p>
+</footer>
+
+<!-- Modals -->
+<div id="project1" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('project1')">&times;</span>
+<h2>Personal Portfolio Website</h2>
+<p>Detailed description and features of the personal portfolio website.</p>
+</div>
+</div>
+
+<div id="project2" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('project2')">&times;</span>
+<h2>Weather App</h2>
+<p>Detailed description and features of the weather app.</p>
+</div>
+</div>
+
+<script src="sctipt.js"></script>
+<script>
+// Initialize and add the map
+function initMap() {
+// Set the location coordinates to Haryana, India
+const location = [29.0588, 76.0856]; 
+
+// Initialize the map
+const map = L.map('map').setView(location, 10); 
+
+// Add the tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Add a marker at the location
+L.marker(location).addTo(map)
+.bindPopup('Haryana, India')
+.openPopup();
+}
+
+// Call initMap when the window loads
+window.onload = initMap;
+
+// Animation on scroll
+function animateOnScroll() {
+const sections = document.querySelectorAll('section');
+const projects = document.querySelectorAll('.project');
+const triggerPoint = window.innerHeight / 1.2;
+
+sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+if (sectionTop < triggerPoint) {
+section.classList.add('animated');
+}
+});
+
+projects.forEach(project => {
+const projectTop = project.getBoundingClientRect().top;
+if (projectTop < triggerPoint) {
+project.classList.add('animated-project');
+}
+});
+}
+
+window.addEventListener('scroll', animateOnScroll);
+
+// Modal functionality
+function openModal(modalId) {
+document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+document.getElementById(modalId).style.display = "none";
+}
+
+// Close modals when clicking outside of the modal content
+window.onclick = function(event) {
+let modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+if (event.target === modal) {
+modal.style.display = "none";
+}
+});
+}
+
+// Smooth scroll for navigation links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+</script>
+</body>
+</html>

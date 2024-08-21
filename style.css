@@ -1,0 +1,143 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white; /* Set all text to white */
+        background: linear-gradient(270deg, #1e1e1e, #3c3c3c);
+        background-size: 400% 400%;
+        animation: gradientBackground 15s ease infinite; /* Add background animation */
+        scroll-behavior: smooth; /* Add smooth scrolling */
+        }
+        
+        header {
+        background-color: #333333; /* Dark grey background */
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        }
+        
+        header nav ul {
+        list-style: none;
+        padding: 0;
+        }
+        
+        header nav ul li {
+        display: inline;
+        margin: 0 1rem;
+        }
+        
+        header nav ul li a {
+        color: white;
+        text-decoration: none;
+        }
+        
+        section {
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        }
+        
+        #bio {
+        opacity: 0; /* Start with hidden bio section */
+        transform: translateX(-50px); /* Start with bio section shifted left */
+        animation: bioAnimation 2s forwards; /* Apply bio animation */
+        }
+        
+        #skills {
+        opacity: 0; /* Start with hidden skills section */
+        transform: translateY(50px); /* Start with skills section shifted down */
+        animation: skillsAnimation 2s forwards; /* Apply skills animation */
+        }
+        
+        .skills-list {
+        list-style: none;
+        padding: 0;
+        }
+        
+        .skills-list li {
+
+            padding: 0.5rem 0;
+    font-size: 1.2rem;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }
+
+    /* Gradient background animation */
+    @keyframes gradientBackground {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+    }
+
+    /* Bio section animation */
+    @keyframes bioAnimation {
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+    }
+
+    /* Skills section animation */
+    @keyframes skillsAnimation {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+
+    /* Modal styles */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    color: black; /* Change text color for readability */
+    }
+
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+    /* Map styling */
+    #map {
+    height: 400px;
+    width: 100%;
+    }
