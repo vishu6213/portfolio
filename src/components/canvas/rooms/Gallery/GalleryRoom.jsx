@@ -36,107 +36,35 @@ export const GALLERY_INTERACTION_AUDIO_SETTINGS = {
 // Define the unique projects and their textures
 const FALLBACK_PROJECTS = [
     {
-        id: 'quranguide',
-        title: 'QURANGUIDE.IN',
+        id: 'neurobase',
+        title: 'NEUROBASE',
+        front: '/textures/gallery/bioprzod.webp',
+        painted: '/textures/gallery/bioprzod_painted.webp',
+        url: '#',
+        description: 'A powerful neuro-symbolic framework (details to be updated later).',
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/jslogo.webp']
+    },
+    {
+        id: 'rag',
+        title: 'RAG SYSTEM',
         front: '/textures/gallery/timberkittyprzod.webp',
         painted: '/textures/gallery/timberkittyprzod_painted.webp',
-        url: 'https://quranguide.in',
-        description: 'An accessible digital Quranic study tool and reading reference platform, designed for clean typography and high readability.',
+        url: '#',
+        description: 'Retrieval-Augmented Generation system (details to be updated later).',
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/csslogo.webp']
+    },
+    {
+        id: 'team-task-manager',
+        title: 'TEAM TASK MANAGER',
+        front: '/textures/gallery/monetuneprzod.webp',
+        painted: '/textures/gallery/monetuneprzod_painted.webp',
+        url: '#',
+        description: 'A collaborative task management application for teams (details to be updated later).',
         techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'india60s',
-        title: 'INDIA60S.COM',
-        front: '/textures/gallery/monetuneprzod.webp',
-        painted: '/textures/gallery/monetuneprzod_painted.webp',
-        url: 'https://india60s.com/',
-        description: 'A digital archive and history portal documenting cultural stories, archives, and regional chronicles of India.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'toolzpedia',
-        title: 'TOOLZPEDIA.IN',
-        front: '/textures/gallery/bioprzod.webp',
-        painted: '/textures/gallery/bioprzod_painted.webp',
-        url: 'https://toolzpedia.in/',
-        description: 'An organic traffic and web utility toolbox providing developer utilities, text analyzers, and digital productivity scripts.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'dealnology',
-        title: 'DEALNOLOGY.COM',
-        front: '/textures/gallery/youngmultiprzod.webp',
-        painted: '/textures/gallery/youngmultiprzod_painted.webp',
-        url: 'https://dealnology.com',
-        description: 'A digital marketplace and deal-aggregator system mapping active shopping coupons, software discounts, and tech deals.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'aitoolslimited',
-        title: 'AITOOLSLIMITED.COM',
-        front: '/textures/gallery/monetuneprzod.webp',
-        painted: '/textures/gallery/monetuneprzod_painted.webp',
-        url: 'http://aitoolslimited.com/',
-        description: 'A curated directory listing high-utility AI tools, SaaS systems, and machine learning models for creator workflows.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'publicportal',
-        title: 'PUBLICPORTAL.IN',
-        front: '/textures/gallery/youngmultiprzod.webp',
-        painted: '/textures/gallery/youngmultiprzod_painted.webp',
-        url: 'https://publicportal.in',
-        description: 'A comprehensive public information portal delivering regional services, community news, and utility tools.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'joblis',
-        title: 'JOBLIS.IN',
-        front: '/textures/gallery/bioprzod.webp',
-        painted: '/textures/gallery/bioprzod_painted.webp',
-        url: 'https://joblis.in',
-        description: 'A highly responsive job board portal listing active career openings, resume utilities, and hiring campaigns.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'job2',
-        title: 'JOB2.IN',
-        front: '/textures/gallery/timberkittyprzod.webp',
-        painted: '/textures/gallery/timberkittyprzod_painted.webp',
-        url: 'https://job2.in',
-        description: 'A rapid employment search engine and digital placement platform mapping job alerts and vacancy updates.',
-        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'indiancsc',
-        title: 'INDIANCSC.COM',
-        front: '/textures/gallery/monetuneprzod.webp',
-        painted: '/textures/gallery/monetuneprzod_painted.webp',
-        url: 'https://indiancsc.com',
-        description: 'A citizen-centric e-governance guide providing digital updates on public services and registration schemes.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'mariyahost',
-        title: 'MARIYAHOST.COM',
-        front: '/textures/gallery/bioprzod.webp',
-        painted: '/textures/gallery/bioprzod_painted.webp',
-        url: 'https://mariyahost.com',
-        description: 'A high-performance cloud hosting and domain provision platform optimized for WordPress and creator portfolios.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'mariyanology',
-        title: 'MARIYANOLOGY.COM',
-        front: '/textures/gallery/youngmultiprzod.webp',
-        painted: '/textures/gallery/youngmultiprzod_painted.webp',
-        url: 'https://mariyanology.com',
-        description: 'Personal hub and digital creator blog sharing WordPress REST APIs, blogging tactics, and AdSense optimization case studies.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/reactlogo.webp', '/textures/gallery/csslogo.webp']
-    },
+    }
 ];
 
-const PROJECT_COUNT = 11; // 11 unique projects in sequence
+const PROJECT_COUNT = 3; // 3 unique projects in sequence
 const GAP = 2.5;
 
 // Zmień te wartości aby dopasować proporcje ptaka (legacy ratio 1.41)

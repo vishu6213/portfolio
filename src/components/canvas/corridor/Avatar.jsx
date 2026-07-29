@@ -42,7 +42,7 @@ const Avatar = ({ position = [10, -20, 30] }) => {
 
         if (textures[0] && textures[0].image) {
             const aspectRatio = textures[0].image.width / textures[0].image.height;
-            const baseHeight = 2.3; // Fixed size
+            const baseHeight = 2.8; // Made slightly smaller
             setDimensions({
                 width: baseHeight * aspectRatio,
                 height: baseHeight
@@ -122,12 +122,14 @@ const Avatar = ({ position = [10, -20, 30] }) => {
 
     return (
         <group ref={groupRef} position={position}>
-            <mesh ref={meshRef}>
+            {/* Shift mesh up by 0.25 so feet stay grounded when scaled up */}
+            <mesh ref={meshRef} position={[0, 0.25, 0]}>
                 <planeGeometry args={[dimensions.width, dimensions.height]} />
                 <meshBasicMaterial color="#ffffff"
                     transparent={true}
                     side={THREE.DoubleSide}
-                    depthWrite={false}
+                    depthWrite={true}
+                    alphaTest={0.1}
                 />
             </mesh>
         </group>

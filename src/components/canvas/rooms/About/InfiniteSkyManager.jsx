@@ -352,7 +352,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
                 anchorY="middle"
                 font="/fonts/RubikScribble-Regular.ttf"
             >
-                TOMASZ SZMAJDA
+                vishvajeet tiwari
             </Text>
 
             {/* Subtitle - Brand (spreads right) */}
@@ -365,7 +365,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
                 anchorY="middle"
                 font="/fonts/CabinSketch-Regular.ttf"
             >
-                (ITOM)
+                
             </Text>
 
             {/* Avatar on cloud - floating + spreads up-left */}
@@ -743,7 +743,7 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                     anchorY="middle"
                     font="/fonts/CabinSketch-Bold.ttf"
                 >
-                    SEO & BLOG
+                    All Rounder
                 </Text>
                 {/* CAPACITY SUBTITLE */}
                 <Text
@@ -803,7 +803,7 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                     anchorY="middle"
                     font="/fonts/CabinSketch-Bold.ttf"
                 >
-                    CREATOR
+                    AI Engineer
                 </Text>
                 {/* CAPACITY SUBTITLE */}
                 <Text
@@ -814,7 +814,7 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                     anchorY="middle"
                     font="/fonts/CabinSketch-Regular.ttf"
                 >
-                    Video & Media
+                    ML & DL
                 </Text>
             </group>
         </group>
@@ -834,7 +834,7 @@ const JourneyMilestone = ({ z, scrollProgressRef }) => {
 
     // Load textures
     const uoTexture = useLoader(THREE.TextureLoader, '/textures/about/uowyspa.webp');
-    const freelanceTexture = useLoader(THREE.TextureLoader, '/textures/about/freelancewyspa.webp');
+    const freelanceTexture = useLoader(THREE.TextureLoader, '/textures/about/engineerwyspa.webp');
 
     // Texture settings
     uoTexture.colorSpace = THREE.SRGBColorSpace;
@@ -969,7 +969,7 @@ const JourneyMilestone = ({ z, scrollProgressRef }) => {
                     anchorY="middle"
                     font="/fonts/CabinSketch-Bold.ttf"
                 >
-                    2023-NOW
+                    2022-NOW
                 </Text>
             </group>
         </group>

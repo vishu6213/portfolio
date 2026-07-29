@@ -592,19 +592,19 @@ const EntranceDoors = ({
             {/* LEFT WALL PANEL */}
             <mesh position={[-(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
-                <meshBasicMaterial color="#fcf3c6" roughness={0.95} />
+                <meshBasicMaterial color="#c4a484" roughness={0.95} />
             </mesh>
 
             {/* RIGHT WALL PANEL */}
             <mesh position={[(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
-                <meshBasicMaterial color="#fcf3c6" roughness={0.95} />
+                <meshBasicMaterial color="#c4a484" roughness={0.95} />
             </mesh>
 
             {/* TOP WALL PANEL */}
             <mesh position={[0, topWallCenterY, 0]}>
                 <boxGeometry args={[doorOpeningWidth, topWallHeight, wallThickness]} />
-                <meshBasicMaterial color="#fcf3c6" roughness={0.95} />
+                <meshBasicMaterial color="#c4a484" roughness={0.95} />
             </mesh>
 
             {/* === BRICK FACADE === */}
@@ -616,7 +616,7 @@ const EntranceDoors = ({
             <mesh position={[0, wallCenterY + facadeYOffset + 1.65, 0.15]}>
                 {/* args={[Szerokość, Wysokość]} - Zmieniaj te liczby (np. 7, 8) */}
                 <planeGeometry args={[16., 8]} />
-                <meshBasicMaterial color="#fcf3c6"
+                <meshBasicMaterial color="#c4a484"
                     map={bricksTexture}
                     transparent={true}
                     alphaTest={0.01}
@@ -629,7 +629,7 @@ const EntranceDoors = ({
                 { text: "AdSense Expert", x: -1.8 },
                 { text: "Web Developer", x: -0.6 },
                 { text: "Website Developer", x: 0.6 },
-                { text: "Blogging Expert", x: 1.8 }
+                { text: "AI Engineer", x: 1.8 }
             ].map((banner, index) => (
                 <group key={index} position={[banner.x, frameCenterY + 1.65, 0.2]}>
                     {/* Shadow / Border plane */}
@@ -709,7 +709,7 @@ const EntranceDoors = ({
                         anchorY="middle"
                         font="/fonts/CabinSketch-Bold.ttf"
                     >
-                        @mariyanology
+                        vishvajeet
                     </Text>
                 </group>
 
@@ -812,7 +812,7 @@ const EntranceDoors = ({
                         anchorY="middle"
                         font="/fonts/CabinSketch-Bold.ttf"
                     >
-                        Blogging ✍️
+                        AI Engineer
                     </Text>
                 </group>
 
@@ -1102,7 +1102,7 @@ const EntranceDoors = ({
                 {/* Body */}
                 <mesh>
                     <planeGeometry args={[1.5, 1.5]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="gray"
                         map={catFrontBodyTexture}
                         transparent={true}
                         alphaTest={0.01}

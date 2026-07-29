@@ -44,20 +44,21 @@ const HeroText = ({ position = [0, 0.3, 0] }) => {
     const worldPosVec = useRef(new THREE.Vector3());
 
     // Letter positions for MARIYA split effect
-    const letters = useMemo(() => [
-        { char: 'M', baseX: -1.25, splitDir: -2.0 },
-        { char: 'A', baseX: -0.75, splitDir: -1.2 },
-        { char: 'R', baseX: -0.25, splitDir: -0.4 },
-        { char: 'I', baseX: 0.25, splitDir: 0.4 },
-        { char: 'Y', baseX: 0.75, splitDir: 1.2 },
-        { char: 'A', baseX: 1.25, splitDir: 2.0 },
-    ], []);
+    const letters = useMemo(() => {
+        const text = "VISHVAJEET TIWARI";
+        const charWidth = 0.35; // Reduced to fit screen
+        const totalWidth = (text.length - 1) * charWidth;
+        return text.split('').map((char, index) => {
+            const baseX = (index * charWidth) - (totalWidth / 2);
+            const splitDir = baseX * 1.5; 
+            return { char, baseX, splitDir };
+        });
+    }, []);
 
     // Tagline words for split effect
     const taglineWords = useMemo(() => [
         { text: 'Developer', baseX: -1.4, splitDir: -2.0 },
-        { text: 'Creator', baseX: -0.5, splitDir: -0.7 },
-        { text: 'Video Editor', baseX: 0.5, splitDir: 0.7 },
+        { text: 'AI Engineer', baseX: 0, splitDir: 0 },
         { text: 'Social Expert', baseX: 1.4, splitDir: 2.0 },
     ], []);
 
@@ -125,7 +126,7 @@ const HeroText = ({ position = [0, 0.3, 0] }) => {
                     key={`${letter.char}-${i}`}
                     ref={(el) => (letterRefs.current[i] = el)}
                     position={[letter.baseX, 0.2, 0]}
-                    fontSize={0.8}
+                    fontSize={0.35}
                     font={RUBIK_SCRIBBLE_URL}
                     color="#ffffff"
                     outlineWidth={0.012}

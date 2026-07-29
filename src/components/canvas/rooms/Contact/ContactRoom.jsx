@@ -395,51 +395,41 @@ const ContactRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
             {/* 🛢️ SOCIAL BARRELS (Floating in water) */}
             {/* TELEGRAM */}
             <SocialBarrel
-                position={isMobile ? [-1.2, 0.5, -10] : [-3, 0.5, -10]}
+                position={isMobile ? [-1.8, 0.2, -8] : [-4, 0.2, -8]}
                 rotation={[0, 0.2, 0]}
                 texturePath="/textures/contact/beczka.webp"
                 label="TELEGRAM"
-                onClick={() => window.open('https://t.me/blogging_by_group', '_blank')}
-                paintOnBeforeCompile={onBeforeCompile}
-                paintUniforms={uniformsData}
-            />
-            {/* YOUTUBE */}
-            <SocialBarrel
-                position={isMobile ? [-1.5, -0.3, -7] : [-5, -0.3, -8]}
-                rotation={[0, 0.3, 0]}
-                texturePath="/textures/contact/beczka.webp"
-                label="YOUTUBE"
-                onClick={() => window.open('https://www.youtube.com/@Mariyanology', '_blank')}
+                onClick={() => window.open('https://t.me/vishu_069', '_blank')}
                 paintOnBeforeCompile={onBeforeCompile}
                 paintUniforms={uniformsData}
             />
             {/* WHATSAPP */}
             <SocialBarrel
-                position={isMobile ? [1.2, 0.5, -10] : [3, 0.5, -10]}
+                position={isMobile ? [1.8, 0.2, -8] : [4, 0.2, -8]}
                 rotation={[0, -0.2, 0]}
                 texturePath="/textures/contact/beczka.webp"
                 label="WHATSAPP"
-                onClick={() => window.open('https://chat.whatsapp.com/CDXsiDn02mYHLxNHvX0k8U', '_blank')}
+                onClick={() => window.open('https://wa.me/9717906213', '_blank')}
                 paintOnBeforeCompile={onBeforeCompile}
                 paintUniforms={uniformsData}
             />
             {/* INSTAGRAM */}
             <SocialBarrel
-                position={isMobile ? [1.5, -0.3, -7] : [5, -0.3, -8]}
+                position={isMobile ? [0.8, -0.5, -6.5] : [1.8, -0.5, -6.5]}
                 rotation={[0, -0.3, 0]}
                 texturePath="/textures/contact/beczka.webp"
                 label="INSTAGRAM"
-                onClick={() => window.open('https://www.instagram.com/mariyanology?igsh=ZTRzMmRmN25uaTg=', '_blank')}
+                onClick={() => window.open('https://www.instagram.com/vi5hu?igsh=b2Y5aHk5MDQxbzR6&utm_source=qr', '_blank')}
                 paintOnBeforeCompile={onBeforeCompile}
                 paintUniforms={uniformsData}
             />
-            {/* MAIL (Triggers animation) */}
+            {/* MAIL (Triggers email link directly) */}
             <SocialBarrel
-                position={isMobile ? [0, -0.7, -6] : [0, -0.7, -7]}
-                rotation={[0, 0, 0]}
+                position={isMobile ? [-0.8, -0.5, -6.5] : [-1.8, -0.5, -6.5]}
+                rotation={[0, 0.1, 0]}
                 texturePath="/textures/contact/beczka.webp"
                 label="MESSAGE"
-                onClick={handleMailSelect}
+                onClick={() => window.open('mailto:hie.vishu@gmail.com', '_self')}
                 paintOnBeforeCompile={onBeforeCompile}
                 paintUniforms={uniformsData}
             />

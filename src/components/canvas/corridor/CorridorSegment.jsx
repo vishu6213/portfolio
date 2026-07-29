@@ -126,7 +126,7 @@ const CorridorSegment = ({
                 anchorY="middle"
                 font="/fonts/CabinSketch-Bold.ttf"
             >
-                MARIYANOLOGY
+                vishu
             </Text>
 
             {/* === WELCOME AREA (Start of segment) - MOVED CLOSER === */}
