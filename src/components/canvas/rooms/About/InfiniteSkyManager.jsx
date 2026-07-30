@@ -276,7 +276,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
 
     // Calculate aspect ratio
     // LEGACY FIX: Use original dimensions (2816x1536) to prevent stretching
-    const legacyAspectRatio = 2816 / 1536; 
+    const legacyAspectRatio = 2816 / 1536;
     const avatarWidth = 6; // Zwiększony rozmiar awatara na chmurce
     const avatarHeight = avatarWidth / legacyAspectRatio;
 
@@ -365,7 +365,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
                 anchorY="middle"
                 font="/fonts/CabinSketch-Regular.ttf"
             >
-                
+
             </Text>
 
             {/* Avatar on cloud - floating + spreads up-left */}
@@ -463,18 +463,27 @@ const AWARDS_DATA = {
         }
     },
     other: {
-        id: 'award-other',
+        id: 'award-ai-engineer',
         layout: 'certificate_grid',
-        title: 'Content Creation & Editing',
+        title: 'AI Engineer & Data Analytics Certifications',
         items: [
-            { label: 'Video Editing & Production', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Social Media Campaign Strategies', date: '2025', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Audience Growth Consulting', date: '2026', image: '/textures/about/button.webp', url: '#' }
+            { 
+                label: 'Deloitte - Data Analytics Job Simulation', 
+                date: 'June 2025', 
+                image: '/textures/certificates/cert_deloitte_data_analytics.png', 
+                url: '/textures/certificates/cert_deloitte_data_analytics.png' 
+            },
+            { 
+                label: 'IBM SkillsBuild - Journey to Cloud', 
+                date: 'July 2025', 
+                image: '/textures/certificates/cert_ibm_cloud_solution.png', 
+                url: 'https://www.credly.com/badges/4c060896-ec12-4ae9-8983-59ed49c69caf' 
+            },
         ],
         platformConfig: {
-            label: 'CREATOR',
+            label: 'AI ENGINEER',
             color: '#311059',
-            icon: '🎬'
+            icon: '🤖'
         }
     }
 };
@@ -988,16 +997,16 @@ const BALLOON_CONFIG = [
     { texture: '/textures/about/reactduzybalon.webp', paintedTexture: '/textures/about/reactduzybalon_painted.webp', label: 'React', size: 'large', x: -2.5, y: 2, z: 0.3, phase: 0 },
     { texture: '/textures/about/threejsduzybalon.webp', paintedTexture: '/textures/about/threejsduzybalon_painted.webp', label: 'Three.js', size: 'large', x: 2.5, y: 2.5, z: 0.2, phase: 1.5 },
     { texture: '/textures/about/GSAPduzybalon.webp', paintedTexture: '/textures/about/GSAPduzybalon_painted.webp', label: 'GSAP', size: 'large', x: 0, y: 3, z: 0.5, phase: 3 },
-    { texture: '/textures/about/clean_duzybalon.webp', paintedTexture: '/textures/about/clean_duzybalon_painted.webp', label: 'Python', isCustomSkill: true, size: 'large', x: 2, y: 1.8, z: 0.4, phase: 2.5 },
-    { texture: '/textures/about/clean_duzybalon.webp', paintedTexture: '/textures/about/clean_duzybalon_painted.webp', label: 'AI', isCustomSkill: true, size: 'large', x: -1.2, y: 4.0, z: 0.3, phase: 2.0 },
+    { texture: '/textures/about/reactduzybalon.webp', paintedTexture: '/textures/about/reactduzybalon_painted.webp', label: 'Python', isCustomSkill: true, size: 'large', x: 2, y: 1.8, z: 0.4, phase: 2.5 },
+    { texture: '/textures/about/threejsduzybalon.webp', paintedTexture: '/textures/about/threejsduzybalon_painted.webp', label: 'AI', isCustomSkill: true, size: 'large', x: -1.2, y: 4.0, z: 0.3, phase: 2.0 },
 
     // Medium balloons - scattered around
     { texture: '/textures/about/JSSREDNIBALON.webp', paintedTexture: '/textures/about/JSSREDNIBALON_painted.webp', label: 'JavaScript', size: 'medium', x: -4, y: 1, z: -0.3, phase: 0.8 },
     { texture: '/textures/about/csssrednibalon.webp', paintedTexture: '/textures/about/csssrednibalon_painted.webp', label: 'CSS', size: 'medium', x: 4, y: 1.5, z: -0.2, phase: 2.2 },
     { texture: '/textures/about/nextjssrednibalon.webp', paintedTexture: '/textures/about/nextjssrednibalon_painted.webp', label: 'Next.js', size: 'medium', x: 0, y: 0.5, z: -0.4, phase: 4 },
-    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'SQL', isCustomSkill: true, size: 'medium', x: -2, y: 1.2, z: -0.1, phase: 1.0 },
-    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'LLMs', isCustomSkill: true, size: 'medium', x: -3.5, y: 3.2, z: -0.2, phase: 3.8 },
-    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'RAG', isCustomSkill: true, size: 'medium', x: 3.5, y: 3.5, z: -0.3, phase: 0.5 },
+    { texture: '/textures/about/nextjssrednibalon.webp', paintedTexture: '/textures/about/nextjssrednibalon_painted.webp', label: 'SQL', isCustomSkill: true, size: 'medium', x: -2, y: 1.2, z: -0.1, phase: 1.0 },
+    { texture: '/textures/about/JSSREDNIBALON.webp', paintedTexture: '/textures/about/JSSREDNIBALON_painted.webp', label: 'LLMs', isCustomSkill: true, size: 'medium', x: -3.5, y: 3.2, z: -0.2, phase: 3.8 },
+    { texture: '/textures/about/csssrednibalon.webp', paintedTexture: '/textures/about/csssrednibalon_painted.webp', label: 'RAG', isCustomSkill: true, size: 'medium', x: 3.5, y: 3.5, z: -0.3, phase: 0.5 },
 
     // Small balloons - background accents
     { texture: '/textures/about/htmlmalybalon.webp', paintedTexture: '/textures/about/htmlmalybalon_painted.webp', label: 'HTML', size: 'small', x: -5.5, y: 2.5, z: -0.8, phase: 1.2 },
@@ -1056,7 +1065,7 @@ const SkillBalloon = ({ config, revealFactorRef, spreadFactorRef, timeRef }) => 
         'GSAPduzybalon.webp': 1.0, // GSAP balloon is square
         'default_small_medium': 631 / 1482 // Common ratio for others
     };
-    
+
     const filename = config.texture.split('/').pop();
     const aspect = legacyAspects[filename] || legacyAspects['default_small_medium'];
     const baseHeight = SIZE_MULTIPLIERS[config.size];
