@@ -21,6 +21,6 @@ export const journeyData = [
     phase: "SCALING",
     title: "Audience Building & Online Platforms",
     period: "Present Phase",
-    description: "Focusing on scaling digital assets, optimizing user acquisition flows, custom frontend routing systems, and developing content channels like Mariyanology to build audiences and digital business systems."
+    description: "Focusing on scaling digital assets, optimizing user acquisition flows, custom frontend routing systems, and developing content channels like Vishvajeet to build audiences and digital business systems."
   }
 ];

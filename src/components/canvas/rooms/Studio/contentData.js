@@ -45,9 +45,9 @@ export const PLATFORM_CONFIG = {
 const RAW_CONTENT_DATA = [
     // ============ Case Studies / Projects ============
     {
-        id: 'studio-mariyanology',
+        id: 'studio-vishvajeet',
         platform: 'blog',
-        title: 'Mariyanology: Custom WordPress & Audience Building',
+        title: 'Vishvajeet: Custom WordPress & Audience Building',
         description: 'Building a personal brand and publishing technical guides on advanced WordPress theme edits, responsive layout systems, and user engagement strategies.',
         frontTexture: '/textures/studio/monitorfront_postnafbdoublewinner.webp',
         paintedFrontTexture: '/textures/studio/monitorfront_postnafbdoublewinner_painted.webp',
