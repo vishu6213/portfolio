@@ -128,6 +128,10 @@ const allVishuTextures = [
     '/textures/studio/vishu_studio_6.jpg',
     '/textures/studio/vishu_studio_7.jpg',
     '/textures/studio/vishu_studio_8.jpg',
+    '/textures/studio/vishu_studio_9.jpg',
+    '/textures/studio/vishu_studio_10.jpg',
+    '/textures/studio/vishu_studio_11.jpg',
+    '/textures/studio/vishu_studio_12.jpg',
 ];
 
 const ytTextures = allVishuTextures;
