@@ -454,7 +454,8 @@ const AWARDS_DATA = {
             { label: 'Naukri Campus - AINCAT 2026', date: 'Jun 2026', image: '/textures/certificates/cert_naukri_aincat.png', url: '/textures/certificates/cert_naukri_aincat.png' },
             { label: 'CodSoft - Android App Development', date: 'Nov 2023', image: '/textures/certificates/cert_codsoft_android.jpg', url: '/textures/certificates/cert_codsoft_android.jpg' },
             { label: 'Edunet Foundation - AI & Data Analytics', date: 'Aug 2025', image: '/textures/certificates/cert_edunet_ai.png', url: '/textures/certificates/cert_edunet_ai.png' },
-            { label: 'A.N.D Intern - Web Development & Designing', date: 'Aug 2024', image: '/textures/certificates/cert_and_intern_web.png', url: '/textures/certificates/cert_and_intern_web.png' }
+            { label: 'A.N.D Intern - Web Development & Designing', date: 'Aug 2024', image: '/textures/certificates/cert_and_intern_web.png', url: '/textures/certificates/cert_and_intern_web.png' },
+            { label: 'PetriDish Media - AI Development Trainee', date: 'Jun 2026', image: '/textures/certificates/cert_petridish_ai.png', url: '/textures/certificates/cert_petridish_ai.png' }
         ],
         platformConfig: {
             label: 'ALL ROUNDER',
