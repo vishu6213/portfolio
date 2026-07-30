@@ -132,6 +132,7 @@ let ytPIdx = 0, blogPIdx = 0, ttPIdx = 0;
 export const CONTENT_DATA = RAW_CONTENT_DATA.map((item) => {
     return {
         ...item,
+        device: 'phone',
         url: instagramUrl,
         frontTexture: item.frontTexture || (
             item.platform === 'youtube' ? ytTextures[ytIdx++ % ytTextures.length] :

@@ -371,34 +371,37 @@ const ContentCard = ({ content, isOpen, onClose, isMobile }) => {
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'flex-start',
-                        marginBottom: '1rem',
+                        marginBottom: content.frontTexture ? '0.5rem' : '1rem',
                         ...getStaggerStyle(100)
                     }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                            <span style={{
-                                textTransform: 'uppercase',
-                                fontSize: '0.7rem',
-                                fontWeight: 700,
-                                letterSpacing: '1px',
-                                color: '#666'
-                            }}>
-                                {label}
-                            </span>
-                            <h2 style={{
-                                fontSize: '1.8rem',
-                                margin: 0,
-                                lineHeight: 1.1,
-                                fontWeight: 800,
-                                fontFamily: "'Rubik Scribble', cursive", // Clean, bold
-                            }}>
-                                {content.title}
-                            </h2>
-                        </div>
+                        {!content.frontTexture && (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                <span style={{
+                                    textTransform: 'uppercase',
+                                    fontSize: '0.7rem',
+                                    fontWeight: 700,
+                                    letterSpacing: '1px',
+                                    color: '#666'
+                                }}>
+                                    {label}
+                                </span>
+                                <h2 style={{
+                                    fontSize: '1.8rem',
+                                    margin: 0,
+                                    lineHeight: 1.1,
+                                    fontWeight: 800,
+                                    fontFamily: "'Rubik Scribble', cursive",
+                                }}>
+                                    {content.title}
+                                </h2>
+                            </div>
+                        )}
 
                         <button
                             onClick={onClose}
                             className="studio-close-btn"
                             aria-label="Close"
+                            style={{ marginLeft: 'auto' }}
                         >
                             <svg viewBox="0 0 24 24">
                                 <path d="M18 6L6 18M6 6l12 12" />
@@ -497,56 +500,61 @@ const ContentCard = ({ content, isOpen, onClose, isMobile }) => {
                     ) : (
                         /* === LAYOUT: DEFAULT (The Studio Style) === */
                         <>
-                            {/* Meta Info */}
-                            <div style={{
-                                display: 'flex',
-                                flexWrap: 'wrap',
-                                gap: '1rem',
-                                fontSize: '0.8rem',
-                                color: '#666',
-                                borderBottom: '1px dashed #ccc',
-                                paddingBottom: '1rem',
-                                ...getStaggerStyle(200)
-                            }}>
-                                <strong>{content.date}</strong>
-                                {content.views && <span>{content.views} views</span>}
-                            </div>
+                            {/* Meta Info (hidden for photo popups) */}
+                            {!content.frontTexture && content.date && (
+                                <div style={{
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    gap: '1rem',
+                                    fontSize: '0.8rem',
+                                    color: '#666',
+                                    borderBottom: '1px dashed #ccc',
+                                    paddingBottom: '1rem',
+                                    ...getStaggerStyle(200)
+                                }}>
+                                    <strong>{content.date}</strong>
+                                    {content.views && <span>{content.views} views</span>}
+                                </div>
+                            )}
 
                             {/* Photo Preview inside overlay */}
                             {content.frontTexture && (
                                 <div style={{
                                     width: '100%',
-                                    maxHeight: '180px',
+                                    maxHeight: '320px',
                                     overflow: 'hidden',
-                                    borderRadius: '4px',
+                                    borderRadius: '6px',
                                     border: '2px solid #1a1a1a',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     backgroundColor: '#000',
+                                    margin: '0.5rem 0',
                                     ...getStaggerStyle(250)
                                 }}>
                                     <img 
                                         src={content.frontTexture} 
-                                        alt={content.title} 
+                                        alt="Vishu" 
                                         style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
                                     />
                                 </div>
                             )}
 
-                            {/* Description */}
-                            <p 
-                                ref={descriptionRef}
-                                style={{
-                                lineHeight: 1.6,
-                                color: '#333',
-                                fontSize: '0.95rem',
-                                margin: 0,
-                                minHeight: '60px', // Prevent layout jump while typing
-                                ...getStaggerStyle(300)
-                            }}>
-                                {content.description}
-                            </p>
+                            {/* Description (hidden for photo popups) */}
+                            {!content.frontTexture && (
+                                <p 
+                                    ref={descriptionRef}
+                                    style={{
+                                    lineHeight: 1.6,
+                                    color: '#333',
+                                    fontSize: '0.95rem',
+                                    margin: 0,
+                                    minHeight: '60px',
+                                    ...getStaggerStyle(300)
+                                }}>
+                                    {content.description}
+                                </p>
+                            )}
 
                             {/* Action Button */}
                             <div style={{
