@@ -288,13 +288,21 @@ const InspectableFrame = ({ frame, wallX, frameTexture, framePaintedTexture, CAB
 
             {/* OBRAZEK WEWNĄTRZ */}
             {frame.image && (
-                <PictureContent
-                    imagePath={frame.image}
-                    imagePaintedPath={!isTouch ? frame.imagePainted : null}
-                    width={frame.imageWidth || frame.width * 0.7}
-                    height={frame.imageHeight || frame.height * 0.7}
-                    isPainted={isHovered || isInspected}
-                />
+                <group position={[0, 0, 0]}>
+                    {frame.imageBgColor && (
+                        <mesh position={[0, 0, 0.005]}>
+                            <planeGeometry args={[frame.imageBgWidth || frame.width * 0.85, frame.imageBgHeight || frame.height * 0.75]} />
+                            <meshBasicMaterial color={frame.imageBgColor} />
+                        </mesh>
+                    )}
+                    <PictureContent
+                        imagePath={frame.image}
+                        imagePaintedPath={!isTouch ? frame.imagePainted : null}
+                        width={frame.imageWidth || frame.width * 0.7}
+                        height={frame.imageHeight || frame.height * 0.7}
+                        isPainted={isHovered || isInspected}
+                    />
+                </group>
             )}
 
             {/* PODPIS */}
@@ -379,10 +387,13 @@ const CorridorDecorations = ({ segmentLength, zOffset, corridorWidth = 4, corrid
             height: 2.5 / 1.785,     // Legacy ratio 3200x1792
             y: 0.3,                  // Wysokość na ścianie
             id: 'frame-1',
-            // Custom setup for "rysuneknaobraz1.png"
-            image: '/textures/corridor/rysuneknaobraz1.webp',
-            imageWidth: 1.1,
-            imageHeight: 1.1,
+            // Custom setup for "vishu_photo.jpg"
+            image: '/textures/corridor/vishu_photo.jpg',
+            imageWidth: 1.15,
+            imageHeight: 1.15,
+            imageBgColor: '#000000',
+            imageBgWidth: 2.18,
+            imageBgHeight: 1.15,
             offsetFromWall: 0.1, // Przesunięcie bliżej środka korytarza (0.1 unit)
         },
         {
