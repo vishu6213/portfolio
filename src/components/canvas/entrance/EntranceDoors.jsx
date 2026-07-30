@@ -76,7 +76,7 @@ const EntranceDoors = ({
     const catFrontBodyTexture = useTexture('/textures/entrance/cat_front_body.webp');
     const windowSketchTexture = useTexture('/textures/entrance/window_sketch.webp');
     const avatarWindowTexture = useTexture('/textures/entrance/avatar_window.webp');
-    const treeTexture = useTexture('/textures/entrance/tree_sketch.webp');
+    const treeTexture = useTexture('/textures/entrance/tree_sketch_colored.webp');
     const mouseTexture = useTexture('/textures/entrance/mouse_hanging.webp');
     const potTexture = useTexture('/textures/entrance/pot_with_duck.webp');
     const bugTexture = useTexture('/textures/entrance/bug_sketch.webp');
@@ -1070,7 +1070,7 @@ const EntranceDoors = ({
                 {/* Tree */}
                 <mesh position={[0, 0, 0]}>
                     <planeGeometry args={[6, 8]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="#ffffff"
                         map={treeTexture}
                         transparent={true}
                         alphaTest={0.01}
