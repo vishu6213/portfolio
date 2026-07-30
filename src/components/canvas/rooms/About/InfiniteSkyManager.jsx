@@ -480,6 +480,11 @@ const AWARDS_DATA = {
                 image: '/textures/certificates/cert_ibm_cloud_solution.png', 
                 url: 'https://www.credly.com/badges/4c060896-ec12-4ae9-8983-59ed49c69caf' 
             },
+            { label: 'Forage - GenAI Powered Data Analytics', date: 'Nov 2025', image: '/textures/certificates/cert_forage_genai.png', url: '/textures/certificates/cert_forage_genai.png' },
+            { label: 'Intel - AI Appreciate Stage', date: 'Sep 2025', image: '/textures/certificates/cert_intel_ai_appreciate.png', url: '/textures/certificates/cert_intel_ai_appreciate.png' },
+            { label: 'Intel - AI Aware Stage', date: 'Sep 2025', image: '/textures/certificates/cert_intel_ai_aware.png', url: '/textures/certificates/cert_intel_ai_aware.png' },
+            { label: 'Physics Wallah - Generative AI for All', date: 'Jan 2026', image: '/textures/certificates/cert_pw_genai.png', url: '/textures/certificates/cert_pw_genai.png' },
+            { label: 'Nasscom - Yuva AI for All', date: 'Dec 2025', image: '/textures/certificates/cert_nasscom_yuva_ai.png', url: '/textures/certificates/cert_nasscom_yuva_ai.png' }
         ],
         platformConfig: {
             label: 'AI ENGINEER',
