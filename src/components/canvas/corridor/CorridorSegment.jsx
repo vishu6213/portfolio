@@ -14,7 +14,7 @@ import CorridorDecorations from './CorridorDecorations';
  * CorridorSegment Component
  * 
  * A single repeatable chunk of the infinite corridor.
- * Each segment contains: walls, avatar, ITOM text, doors, decorations.
+ * Each segment contains: walls, avatar, VISHU text, doors, decorations.
  * 
  * Segment length: 80 units
  * Positioned based on segmentIndex * segmentLength
@@ -116,7 +116,7 @@ const CorridorSegment = ({
                 zClip={zClip}
             />
 
-            {/* === MARIYANOLOGY BRAND SIGN ON SIDE WALL === */}
+            {/* === VISHUNOLOGY BRAND SIGN ON SIDE WALL === */}
             <Text
                 position={[-3.46, 0.4, zOffset - 8]}
                 rotation={[0, Math.PI / 2, 0]}
@@ -131,7 +131,7 @@ const CorridorSegment = ({
 
             {/* === WELCOME AREA (Start of segment) - MOVED CLOSER === */}
             <group position={[0, 0, zOffset - 2]}>
-                {/* ITOM Text - centered (ITOM letters adjusted internally) */}
+                {/* VISHU Text - centered (VISHU letters adjusted internally) */}
                 <HeroText position={[0, -0.1, -0.5]} />
 
                 {/* Avatar - center */}

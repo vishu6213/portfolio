@@ -25,7 +25,7 @@ export const AUDIO_SETTINGS = {
 // Story sections - positions define where each milestone appears
 // Using CHUNK_LENGTH to create looping story (every ~40 units restarts)
 const STORY_MILESTONES = [
-    { id: 'intro', position: [0, 0, -15], type: 'intro', title: 'MARIYA', subtitle: '< developer • creator • video editor • social expert />' },
+    { id: 'intro', position: [0, 0, -15], type: 'intro', title: 'VISHU', subtitle: '< developer • creator • video editor • social expert />' },
     { id: 'focus', position: [0, 0, -55], type: 'awards', title: 'CREATION', subtitle: 'WordPress Development • Social Media Campaigns • Video Production' },
     { id: 'journey', position: [0, 0, -95], type: 'journey', title: 'JOURNEY', subtitle: 'Building audience engagement, custom themes & web platforms' },
     { id: 'skills', position: [0, 0, -135], type: 'skills', title: 'SKILLS', subtitle: 'React • CSS/HTML • Video Editing • Technical SEO • PHP' },

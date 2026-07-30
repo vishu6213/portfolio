@@ -26,11 +26,11 @@ const ScreenReaderOverlay = () => {
 
             {/* Main accessible navigation */}
             <nav id="sr-main-nav" className="sr-only" aria-label="Portfolio rooms">
-                <h1>Mariya Ansari — Developer, Creator & Digital Builder</h1>
+                <h1>Vishvajeet Tiwari — Developer, Creator & Digital Builder</h1>
                 <h2>Portfolio Navigation</h2>
 
                 {!hasEntered && (
-                    <p>Welcome to Mariya Ansari's interactive 3D portfolio. Click or press Enter on the doors to enter.</p>
+                    <p>Welcome to Vishvajeet Tiwari's interactive 3D portfolio. Click or press Enter on the doors to enter.</p>
                 )}
 
                 {hasEntered && !isInRoom && (

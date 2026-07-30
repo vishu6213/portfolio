@@ -22,4 +22,4 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://itomdev.com/sitemap.xml
+Sitemap: https://vishvajeet.com/sitemap.xml

@@ -52,7 +52,7 @@ export default function Footer() {
                 letterSpacing: '1px'
               }}
             >
-              MARIYA ANSARI
+              VISHU ANSARI
             </h3>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0, letterSpacing: '0.5px', textTransform: 'uppercase' }}>
               Developer &bull; Creator &bull; Digital Builder
@@ -86,7 +86,7 @@ export default function Footer() {
           className="footer-bottom-row"
         >
           <div>
-            &copy; {currentYear} Mariya Ansari. All rights reserved.
+            &copy; {currentYear} Vishvajeet Tiwari. All rights reserved.
           </div>
           <div>
             Built with React &bull; GSAP &bull; Three.js

@@ -70,7 +70,7 @@ export default function ContactForm() {
         border: '1px solid var(--border-primary)',
         width: '100%',
       }}
-      aria-label="Send a message to Mariya"
+      aria-label="Send a message to Vishvajeet"
     >
       {/* Success Banner */}
       {status === 'success' && (
@@ -106,7 +106,7 @@ export default function ContactForm() {
             fontWeight: 500
           }}
         >
-          Something went wrong. Please try again or email me directly at contact@mariya.ansari
+          Something went wrong. Please try again or email me directly at hie.vishu@gmail.com
         </div>
       )}
 

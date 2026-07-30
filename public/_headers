@@ -1,33 +1,33 @@
-https://portfolio-itom.pages.dev/*
+https://portfolio-vishvajeet.pages.dev/*
   X-Robots-Tag: noindex
 
-https://itomdev.com/*
+https://vishvajeet.com/*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 # Cache static assets for 1 year (Performance & SEO Server Score)
-https://itomdev.com/*.js
+https://vishvajeet.com/*.js
   Cache-Control: public, max-age=31536000, immutable
 
-https://itomdev.com/*.css
+https://vishvajeet.com/*.css
   Cache-Control: public, max-age=31536000, immutable
 
-https://itomdev.com/*.webp
+https://vishvajeet.com/*.webp
   Cache-Control: public, max-age=31536000, immutable
 
-https://itomdev.com/*.png
+https://vishvajeet.com/*.png
   Cache-Control: public, max-age=31536000, immutable
 
-https://itomdev.com/*.ktx2
+https://vishvajeet.com/*.ktx2
   Cache-Control: public, max-age=31536000, immutable
 
-https://itomdev.com/*.glb
+https://vishvajeet.com/*.glb
   Cache-Control: public, max-age=31536000, immutable
 
-https://itomdev.com/*.mp3
+https://vishvajeet.com/*.mp3
   Cache-Control: public, max-age=31536000, immutable
 
-https://itomdev.com/fonts/*
+https://vishvajeet.com/fonts/*
   Cache-Control: public, max-age=31536000, immutable

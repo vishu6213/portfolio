@@ -8,7 +8,7 @@ const RUBIK_SCRIBBLE_URL = '/fonts/RubikScribble-Regular.ttf';
 const CABIN_SKETCH_URL = '/fonts/CabinSketch-Regular.ttf';
 
 /**
- * HeroText Component - Custom styled for Mariya Ansari
+ * HeroText Component - Custom styled for Vishvajeet Tiwari
  */
 const HeroText = ({ position = [0, 0.3, 0] }) => {
     const groupRef = useRef();
@@ -43,7 +43,7 @@ const HeroText = ({ position = [0, 0.3, 0] }) => {
     const floatY = useRef(0);
     const worldPosVec = useRef(new THREE.Vector3());
 
-    // Letter positions for MARIYA split effect
+    // Letter positions for VISHU split effect
     const letters = useMemo(() => {
         const text = "VISHVAJEET TIWARI";
         const charWidth = 0.35; // Reduced to fit screen
@@ -89,7 +89,7 @@ const HeroText = ({ position = [0, 0.3, 0] }) => {
 
         splitAmount.current = THREE.MathUtils.lerp(splitAmount.current, targetSplit.current, 0.08);
 
-        // Apply split to each letter of MARIYA
+        // Apply split to each letter of VISHU
         letterRefs.current.forEach((ref, i) => {
             if (ref) {
                 if (ref.material) ref.material.opacity = 1;
@@ -120,7 +120,7 @@ const HeroText = ({ position = [0, 0.3, 0] }) => {
 
     return (
         <group ref={groupRef} position={position} scale={[scale, scale, 1]}>
-            {/* MARIYA Letters */}
+            {/* VISHU Letters */}
             {letters.map((letter, i) => (
                 <Text
                     key={`${letter.char}-${i}`}

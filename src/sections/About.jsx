@@ -120,7 +120,7 @@ export default function About() {
                 fontWeight: 300
               }}
             >
-              I'm Mariya Ansari, a developer and digital creator focused on building useful, visually distinctive web experiences. From WordPress and custom frontend development to digital products and content platforms, I enjoy turning ideas into products people can actually use.
+              I'm Vishvajeet Tiwari, a developer and digital creator focused on building useful, visually distinctive web experiences. From WordPress and custom frontend development to digital products and content platforms, I enjoy turning ideas into products people can actually use.
             </p>
             <p
               style={{

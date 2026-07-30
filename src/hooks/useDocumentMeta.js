@@ -8,28 +8,28 @@ import { useScene } from '../context/SceneContext';
 const ROOM_META = {
     null: {
         path: '/',
-        title: 'Mariya Ansari — Developer, Creator & Digital Builder',
-        description: 'Portfolio of Mariya Ansari, a developer and digital creator building modern websites, digital products and interactive web experiences.',
+        title: 'Vishvajeet Tiwari — Developer, Creator & Digital Builder',
+        description: 'Portfolio of Vishvajeet Tiwari, a developer and digital creator building modern websites, digital products and interactive web experiences.',
     },
     about: {
         path: '/about',
-        title: 'About Me — Mariya Ansari Portfolio',
-        description: 'Learn about Mariya Ansari — a developer and digital creator focused on building useful, visually distinctive web experiences.',
+        title: 'About Me — Vishvajeet Tiwari Portfolio',
+        description: 'Learn about Vishvajeet Tiwari — a developer and digital creator focused on building useful, visually distinctive web experiences.',
     },
     gallery: {
         path: '/gallery',
-        title: 'Gallery & Projects — Mariya Ansari Portfolio',
-        description: 'Browse the interactive 3D gallery of web development projects by Mariya Ansari. Each project is displayed as a hand-drawn card you can flip and explore.',
+        title: 'Gallery & Projects — Vishvajeet Tiwari Portfolio',
+        description: 'Browse the interactive 3D gallery of web development projects by Vishvajeet Tiwari. Each project is displayed as a hand-drawn card you can flip and explore.',
     },
     studio: {
         path: '/studio',
-        title: 'The Studio — Mariya Ansari Portfolio',
-        description: 'Explore Mariya Ansari\'s content studio — projects, blog posts, and tools displayed on floating monitors in an immersive 3D space.',
+        title: 'The Studio — Vishvajeet Tiwari Portfolio',
+        description: 'Explore Vishvajeet Tiwari\'s content studio — projects, blog posts, and tools displayed on floating monitors in an immersive 3D space.',
     },
     contact: {
         path: '/contact',
-        title: 'Contact — Mariya Ansari Portfolio',
-        description: 'Get in touch with Mariya Ansari. Find social media links and contact forms in this interactive 3D contact room.',
+        title: 'Contact — Vishvajeet Tiwari Portfolio',
+        description: 'Get in touch with Vishvajeet Tiwari. Find social media links and contact forms in this interactive 3D contact room.',
     },
 };
 
@@ -74,12 +74,12 @@ export function useDocumentMeta() {
         if (ogDesc) ogDesc.setAttribute('content', meta.description);
 
         const ogUrl = document.querySelector('meta[property="og:url"]');
-        if (ogUrl) ogUrl.setAttribute('content', `https://mariya.ansari${meta.path}`);
+        if (ogUrl) ogUrl.setAttribute('content', `https://vishvajeet.com${meta.path}`);
 
         // Update canonical link
         const canonicalTag = document.querySelector('link[rel="canonical"]');
         if (canonicalTag) {
-            canonicalTag.setAttribute('href', `https://mariya.ansari${meta.path}`);
+            canonicalTag.setAttribute('href', `https://vishvajeet.com${meta.path}`);
         }
 
         // Push to browser history

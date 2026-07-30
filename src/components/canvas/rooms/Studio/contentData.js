@@ -1,7 +1,7 @@
 /**
  * Studio Content Data
  * 
- * Custom content for Mariya Ansari's monitor towers.
+ * Custom content for Vishvajeet Tiwari's monitor towers.
  */
 
 export const PLATFORM_CONFIG = {
