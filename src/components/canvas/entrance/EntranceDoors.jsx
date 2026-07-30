@@ -626,7 +626,7 @@ const EntranceDoors = ({
 
             {/* === CAPABILITY SIGN BANNERS ABOVE GATE === */}
             {[
-                { text: "AdSense Expert", x: -1.8 },
+                { text: "Vishu", x: -1.8 },
                 { text: "Web Developer", x: -0.6 },
                 { text: "Website Developer", x: 0.6 },
                 { text: "AI Engineer", x: 1.8 }
