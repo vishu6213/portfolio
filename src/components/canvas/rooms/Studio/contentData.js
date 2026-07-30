@@ -134,31 +134,18 @@ const allVishuTextures = [
     '/textures/studio/vishu_studio_12.jpg',
 ];
 
-const ytTextures = allVishuTextures;
-const ytPaintedTextures = allVishuTextures;
-const blogTextures = allVishuTextures;
-const blogPaintedTextures = allVishuTextures;
-const ttTextures = allVishuTextures;
-const ttPaintedTextures = allVishuTextures;
-
-let ytIdx = 0, blogIdx = 0, ttIdx = 0;
-let ytPIdx = 0, blogPIdx = 0, ttPIdx = 0;
-
-export const CONTENT_DATA = RAW_CONTENT_DATA.map((item) => {
+export const CONTENT_DATA = allVishuTextures.map((tex, index) => {
     return {
-        ...item,
+        id: `studio-vishu-${index + 1}`,
+        platform: index % 2 === 0 ? 'blog' : 'tiktok',
         device: 'phone',
+        title: `Vishu Photo #${index + 1}`,
+        description: 'Vishu Personal Portfolio Studio',
+        frontTexture: tex,
+        paintedFrontTexture: tex,
+        thumbnail: null,
         url: instagramUrl,
-        frontTexture: item.frontTexture || (
-            item.platform === 'youtube' ? ytTextures[ytIdx++ % ytTextures.length] :
-                item.platform === 'blog' ? blogTextures[blogIdx++ % blogTextures.length] :
-                    ttTextures[ttIdx++ % ttTextures.length]
-        ),
-        paintedFrontTexture: item.paintedFrontTexture || (
-            item.platform === 'youtube' ? ytPaintedTextures[ytPIdx++ % ytPaintedTextures.length] :
-                item.platform === 'blog' ? blogPaintedTextures[blogPIdx++ % blogPaintedTextures.length] :
-                    ttPaintedTextures[ttPIdx++ % ttPaintedTextures.length]
-        )
+        date: '2026-03-24',
     };
 });
 
