@@ -243,7 +243,7 @@ const StudioRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                         width = 1.6; height = 1; depth = 0.15; // Legacy 1.835 ratio
                         break;
                     case 'phone':
-                        width = 0.6; height = 1.139; depth = 0.1; // Legacy 0.527 ratio
+                        width = 1.0; height = 1.899; depth = 0.15; // Bigger frame size
                         break;
                     default:
                         width = 1.4; height = 1.0; depth = 0.6;
