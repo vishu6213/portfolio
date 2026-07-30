@@ -49,8 +49,6 @@ const RAW_CONTENT_DATA = [
         platform: 'blog',
         title: 'Vishvajeet: Custom WordPress & Audience Building',
         description: 'Building a personal brand and publishing technical guides on advanced WordPress theme edits, responsive layout systems, and user engagement strategies.',
-        frontTexture: '/textures/studio/monitorfront_postnafbdoublewinner.webp',
-        paintedFrontTexture: '/textures/studio/monitorfront_postnafbdoublewinner_painted.webp',
         thumbnail: null,
         url: '#',
         date: '2026-03-24',
@@ -61,8 +59,6 @@ const RAW_CONTENT_DATA = [
         platform: 'blog',
         title: 'DailyDeeper: Designing a Habit Journal App',
         description: 'Crafted a clean, client-side web application for mindfulness logging and habit tracking. Optimized for quick load times and offline accessibility.',
-        frontTexture: '/textures/studio/tvfront_filmikprojektdlamultiego.webp',
-        paintedFrontTexture: '/textures/studio/tvfront_filmikprojektdlamultiego_painted.webp',
         thumbnail: null,
         url: '#',
         date: '2026-02-15',
@@ -73,8 +69,6 @@ const RAW_CONTENT_DATA = [
         platform: 'blog',
         title: 'NS Engineering Works: B2B Industrial Portal',
         description: 'Developed an industrial machinery catalogue and quote calculator. Optimized search index coverage, boosting B2B inquiries by 150%.',
-        frontTexture: '/textures/studio/tvfront_filmikedytowaniezdjec.webp',
-        paintedFrontTexture: '/textures/studio/tvfront_filmikedytowaniezdjec_painted.webp',
         thumbnail: null,
         url: '#',
         date: '2026-01-10',
@@ -105,8 +99,6 @@ const RAW_CONTENT_DATA = [
         platform: 'tiktok',
         title: 'Designing smooth hover states in CSS',
         description: 'Micro-interactions POV: Making static buttons feel alive and dynamic using CSS custom properties and spring transition curves.',
-        frontTexture: '/textures/studio/phonefront_followmeontiktok.webp',
-        paintedFrontTexture: '/textures/studio/phonefront_followmeontiktok_painted.webp',
         thumbnail: null,
         url: '#',
         date: '2026-03-01',
@@ -125,12 +117,14 @@ const RAW_CONTENT_DATA = [
     },
 ];
 
-const ytTextures = ['/textures/studio/tvfront_filmikprojektdlamultiego.webp', '/textures/studio/tvfront_filmikedytowaniezdjec.webp'];
-const ytPaintedTextures = ['/textures/studio/tvfront_filmikprojektdlamultiego_painted.webp', '/textures/studio/tvfront_filmikedytowaniezdjec_painted.webp'];
-const blogTextures = ['/textures/studio/monitorfront_postnafbdoublewinner.webp'];
-const blogPaintedTextures = ['/textures/studio/monitorfront_postnafbdoublewinner_painted.webp'];
-const ttTextures = ['/textures/studio/phonefront_followmeontiktok.webp'];
-const ttPaintedTextures = ['/textures/studio/phonefront_followmeontiktok_painted.webp'];
+const instagramUrl = 'https://www.instagram.com/vi5hu?igsh=b2Y5aHk5MDQxbzR6&utm_source=qr';
+
+const ytTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
+const ytPaintedTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
+const blogTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
+const blogPaintedTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
+const ttTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
+const ttPaintedTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
 
 let ytIdx = 0, blogIdx = 0, ttIdx = 0;
 let ytPIdx = 0, blogPIdx = 0, ttPIdx = 0;
@@ -138,6 +132,7 @@ let ytPIdx = 0, blogPIdx = 0, ttPIdx = 0;
 export const CONTENT_DATA = RAW_CONTENT_DATA.map((item) => {
     return {
         ...item,
+        url: instagramUrl,
         frontTexture: item.frontTexture || (
             item.platform === 'youtube' ? ytTextures[ytIdx++ % ytTextures.length] :
                 item.platform === 'blog' ? blogTextures[blogIdx++ % blogTextures.length] :

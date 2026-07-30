@@ -512,6 +512,28 @@ const ContentCard = ({ content, isOpen, onClose, isMobile }) => {
                                 {content.views && <span>{content.views} views</span>}
                             </div>
 
+                            {/* Photo Preview inside overlay */}
+                            {content.frontTexture && (
+                                <div style={{
+                                    width: '100%',
+                                    maxHeight: '180px',
+                                    overflow: 'hidden',
+                                    borderRadius: '4px',
+                                    border: '2px solid #1a1a1a',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    backgroundColor: '#000',
+                                    ...getStaggerStyle(250)
+                                }}>
+                                    <img 
+                                        src={content.frontTexture} 
+                                        alt={content.title} 
+                                        style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                                    />
+                                </div>
+                            )}
+
                             {/* Description */}
                             <p 
                                 ref={descriptionRef}
@@ -520,7 +542,7 @@ const ContentCard = ({ content, isOpen, onClose, isMobile }) => {
                                 color: '#333',
                                 fontSize: '0.95rem',
                                 margin: 0,
-                                minHeight: '80px', // Prevent layout jump while typing
+                                minHeight: '60px', // Prevent layout jump while typing
                                 ...getStaggerStyle(300)
                             }}>
                                 {content.description}
