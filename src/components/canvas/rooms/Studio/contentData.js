@@ -119,12 +119,23 @@ const RAW_CONTENT_DATA = [
 
 const instagramUrl = 'https://www.instagram.com/vi5hu?igsh=b2Y5aHk5MDQxbzR6&utm_source=qr';
 
-const ytTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
-const ytPaintedTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
-const blogTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
-const blogPaintedTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
-const ttTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
-const ttPaintedTextures = ['/textures/studio/vishu_studio_1.jpg', '/textures/studio/vishu_studio_2.jpg', '/textures/studio/vishu_studio_3.jpg'];
+const allVishuTextures = [
+    '/textures/studio/vishu_studio_1.jpg',
+    '/textures/studio/vishu_studio_2.jpg',
+    '/textures/studio/vishu_studio_3.jpg',
+    '/textures/studio/vishu_studio_4.jpg',
+    '/textures/studio/vishu_studio_5.jpg',
+    '/textures/studio/vishu_studio_6.jpg',
+    '/textures/studio/vishu_studio_7.jpg',
+    '/textures/studio/vishu_studio_8.jpg',
+];
+
+const ytTextures = allVishuTextures;
+const ytPaintedTextures = allVishuTextures;
+const blogTextures = allVishuTextures;
+const blogPaintedTextures = allVishuTextures;
+const ttTextures = allVishuTextures;
+const ttPaintedTextures = allVishuTextures;
 
 let ytIdx = 0, blogIdx = 0, ttIdx = 0;
 let ytPIdx = 0, blogPIdx = 0, ttPIdx = 0;
