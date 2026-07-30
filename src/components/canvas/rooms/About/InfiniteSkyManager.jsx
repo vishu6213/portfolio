@@ -435,10 +435,11 @@ const AWARDS_DATA = {
         layout: 'certificate_grid',
         title: 'Web Development Capabilities',
         items: [
-            { label: 'Custom Frontends (React / Vite)', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'WordPress Custom Gutenberg Blocks', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'High Performance Web Apps', date: '2025', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Responsive Mobile-First Interfaces', date: 'Active', image: '/textures/about/button.webp', url: '#' }
+            { label: 'JPMorgan Chase & Co. - Software Engineering', date: 'Nov 2023', image: '/textures/certificates/cert_jpmorgan_software.jpg', url: '/textures/certificates/cert_jpmorgan_software.jpg' },
+            { label: 'AWS Academy - Cloud Architecting', date: 'Mar 2025', image: '/textures/certificates/cert_aws_academy.png', url: 'https://www.credly.com/go/H0dGDvC6' },
+            { label: 'Infosys Springboard - Internet of Things', date: 'Apr 2025', image: '/textures/certificates/cert_infosys_iot.png', url: 'https://verify.onwingspan.com' },
+            { label: 'Deloitte - Technology Job Simulation', date: 'Jun 2025', image: '/textures/certificates/cert_deloitte_tech_job.png', url: '/textures/certificates/cert_deloitte_tech_job.png' },
+            { label: 'IBM SkillsBuild - Getting Started with AI', date: 'Jul 2025', image: '/textures/certificates/cert_ibm_getting_started_ai.png', url: 'https://www.credly.com/badges/1b9af278-8ff8-45ad-9ffd-7206a92fea99' }
         ],
         platformConfig: {
             label: 'DEVELOPER',
