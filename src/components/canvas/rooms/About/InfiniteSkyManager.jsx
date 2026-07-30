@@ -988,11 +988,16 @@ const BALLOON_CONFIG = [
     { texture: '/textures/about/reactduzybalon.webp', paintedTexture: '/textures/about/reactduzybalon_painted.webp', label: 'React', size: 'large', x: -2.5, y: 2, z: 0.3, phase: 0 },
     { texture: '/textures/about/threejsduzybalon.webp', paintedTexture: '/textures/about/threejsduzybalon_painted.webp', label: 'Three.js', size: 'large', x: 2.5, y: 2.5, z: 0.2, phase: 1.5 },
     { texture: '/textures/about/GSAPduzybalon.webp', paintedTexture: '/textures/about/GSAPduzybalon_painted.webp', label: 'GSAP', size: 'large', x: 0, y: 3, z: 0.5, phase: 3 },
+    { texture: '/textures/about/reactduzybalon.webp', paintedTexture: '/textures/about/reactduzybalon_painted.webp', label: 'Python', isCustomSkill: true, size: 'large', x: 2, y: 1.8, z: 0.4, phase: 2.5 },
+    { texture: '/textures/about/threejsduzybalon.webp', paintedTexture: '/textures/about/threejsduzybalon_painted.webp', label: 'AI', isCustomSkill: true, size: 'large', x: -1.2, y: 4.0, z: 0.3, phase: 2.0 },
 
     // Medium balloons - scattered around
     { texture: '/textures/about/JSSREDNIBALON.webp', paintedTexture: '/textures/about/JSSREDNIBALON_painted.webp', label: 'JavaScript', size: 'medium', x: -4, y: 1, z: -0.3, phase: 0.8 },
     { texture: '/textures/about/csssrednibalon.webp', paintedTexture: '/textures/about/csssrednibalon_painted.webp', label: 'CSS', size: 'medium', x: 4, y: 1.5, z: -0.2, phase: 2.2 },
     { texture: '/textures/about/nextjssrednibalon.webp', paintedTexture: '/textures/about/nextjssrednibalon_painted.webp', label: 'Next.js', size: 'medium', x: 0, y: 0.5, z: -0.4, phase: 4 },
+    { texture: '/textures/about/nextjssrednibalon.webp', paintedTexture: '/textures/about/nextjssrednibalon_painted.webp', label: 'SQL', isCustomSkill: true, size: 'medium', x: -2, y: 1.2, z: -0.1, phase: 1.0 },
+    { texture: '/textures/about/JSSREDNIBALON.webp', paintedTexture: '/textures/about/JSSREDNIBALON_painted.webp', label: 'LLMs', isCustomSkill: true, size: 'medium', x: -3.5, y: 3.2, z: -0.2, phase: 3.8 },
+    { texture: '/textures/about/csssrednibalon.webp', paintedTexture: '/textures/about/csssrednibalon_painted.webp', label: 'RAG', isCustomSkill: true, size: 'medium', x: 3.5, y: 3.5, z: -0.3, phase: 0.5 },
 
     // Small balloons - background accents
     { texture: '/textures/about/htmlmalybalon.webp', paintedTexture: '/textures/about/htmlmalybalon_painted.webp', label: 'HTML', size: 'small', x: -5.5, y: 2.5, z: -0.8, phase: 1.2 },
@@ -1307,6 +1312,20 @@ const SkillBalloon = ({ config, revealFactorRef, spreadFactorRef, timeRef }) => 
                         uProgress={0.0}
                     />
                 </mesh>
+
+                {/* Custom skill text label rendered directly inside the balloon */}
+                {config.isCustomSkill && !isPopping && (
+                    <Text
+                        position={[0, baseHeight * 0.05, 0.005]}
+                        fontSize={baseHeight * 0.22}
+                        color="#311059"
+                        anchorX="center"
+                        anchorY="middle"
+                        font="/fonts/CabinSketch-Bold.ttf"
+                    >
+                        {config.label}
+                    </Text>
+                )}
 
                 {/* Stack Name Text that fades in then out */}
                 {isPopping && textFadeRef.current > 0.01 && (
