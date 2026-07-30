@@ -447,19 +447,19 @@ const AWARDS_DATA = {
         }
     },
     sotm: {
-        id: 'award-sotm',
+        id: 'award-all-rounder',
         layout: 'certificate_grid',
-        title: 'Blogging & SEO Expertise',
+        title: 'Versatile Development & AI Certifications',
         items: [
-            { label: 'Organic Search Optimization', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Google AdSense Integration', date: '2025', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Blogging & Audience Growth', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Canva Content Creation', date: 'Active', image: '/textures/about/button.webp', url: '#' }
+            { label: 'Naukri Campus - AINCAT 2026', date: 'Jun 2026', image: '/textures/certificates/cert_naukri_aincat.png', url: '/textures/certificates/cert_naukri_aincat.png' },
+            { label: 'CodSoft - Android App Development', date: 'Nov 2023', image: '/textures/certificates/cert_codsoft_android.jpg', url: '/textures/certificates/cert_codsoft_android.jpg' },
+            { label: 'Edunet Foundation - AI & Data Analytics', date: 'Aug 2025', image: '/textures/certificates/cert_edunet_ai.png', url: '/textures/certificates/cert_edunet_ai.png' },
+            { label: 'A.N.D Intern - Web Development & Designing', date: 'Aug 2024', image: '/textures/certificates/cert_and_intern_web.png', url: '/textures/certificates/cert_and_intern_web.png' }
         ],
         platformConfig: {
-            label: 'EXPERT',
+            label: 'ALL ROUNDER',
             color: '#311059',
-            icon: '📈'
+            icon: '🌟'
         }
     },
     other: {
