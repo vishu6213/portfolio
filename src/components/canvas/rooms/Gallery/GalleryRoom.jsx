@@ -40,7 +40,7 @@ const FALLBACK_PROJECTS = [
         title: 'NEUROBASE',
         front: '/textures/gallery/bioprzod.webp',
         painted: '/textures/gallery/bioprzod_painted.webp',
-        url: '#',
+        url: 'https://neurobase-ai-zeta.vercel.app/',
         description: 'A powerful neuro-symbolic framework (details to be updated later).',
         techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/jslogo.webp']
     },
@@ -58,7 +58,7 @@ const FALLBACK_PROJECTS = [
         title: 'TEAM TASK MANAGER',
         front: '/textures/gallery/monetuneprzod.webp',
         painted: '/textures/gallery/monetuneprzod_painted.webp',
-        url: '#',
+        url: 'https://team-task-manager-alpha-nine.vercel.app/',
         description: 'A collaborative task management application for teams (details to be updated later).',
         techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
     }
