@@ -19,11 +19,11 @@ const Experience = lazy(() => import('./components/canvas/Experience'));
 
 import './styles/main.scss';
 
-import { 
-  ENTRANCE_TEXTURES, 
-  CORRIDOR_TEXTURES, 
+import {
+  ENTRANCE_TEXTURES,
+  CORRIDOR_TEXTURES,
   UI_TEXTURES,
-  PRELOAD_ALL, 
+  PRELOAD_ALL,
   PRELOAD_LOADER,
   ABOUT_TEXTURES,
   IMAGE_ASSETS,
@@ -57,7 +57,7 @@ if (isLowEnd) {
 } else {
   const filteredAll = filterTexturesByDevice(PRELOAD_ALL, supportsHover);
   const filteredLoader = filterTexturesByDevice(PRELOAD_LOADER, supportsHover);
-  
+
   filteredAll.forEach(path => useTexture.preload(path));
   filteredLoader.forEach(path => useLoader.preload(TextureLoader, path));
 }

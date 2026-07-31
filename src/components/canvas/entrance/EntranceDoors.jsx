@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useMemo } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Text, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
@@ -76,9 +76,10 @@ const EntranceDoors = ({
     const catFrontBodyTexture = useTexture('/textures/entrance/cat_front_body.webp');
     const windowSketchTexture = useTexture('/textures/entrance/window_sketch.webp');
     const avatarWindowTexture = useTexture('/textures/entrance/avatar_window.webp');
-    const treeTexture = useTexture('/textures/entrance/tree_sketch.webp');
+    const treeTexture = useTexture('/textures/entrance/tree_sketch_green.webp');
+    const birdTexture = useTexture('/textures/entrance/bird_sketch.webp');
     const mouseTexture = useTexture('/textures/entrance/mouse_hanging.webp');
-    const potTexture = useTexture('/textures/entrance/pot_with_duck.webp');
+    const potTexture = useTexture('/textures/entrance/pot_with_duck_colored.webp');
     const bugTexture = useTexture('/textures/entrance/bug_sketch.webp');
     const inkSplashTexture = useTexture('/images/ink-splash.webp');
     const speechBubbleTexture = useTexture('/textures/entrance/speech_bubble.webp');
@@ -582,7 +583,7 @@ const EntranceDoors = ({
                 rotation={[-Math.PI / 2, 0, 0]}
             >
                 <planeGeometry args={[pathWidth, pathLength]} />
-                <meshBasicMaterial color="#fcf3c6"
+                <meshBasicMaterial color="#5c534c"
                     map={stonePathTexture}
                     transparent={true}
                 />
@@ -592,19 +593,19 @@ const EntranceDoors = ({
             {/* LEFT WALL PANEL */}
             <mesh position={[-(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
-                <meshBasicMaterial color="#c4a484" roughness={0.95} />
+                <meshBasicMaterial color="#4a4a4a" roughness={0.95} />
             </mesh>
 
             {/* RIGHT WALL PANEL */}
             <mesh position={[(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
-                <meshBasicMaterial color="#c4a484" roughness={0.95} />
+                <meshBasicMaterial color="#4a4a4a" roughness={0.95} />
             </mesh>
 
             {/* TOP WALL PANEL */}
             <mesh position={[0, topWallCenterY, 0]}>
                 <boxGeometry args={[doorOpeningWidth, topWallHeight, wallThickness]} />
-                <meshBasicMaterial color="#c4a484" roughness={0.95} />
+                <meshBasicMaterial color="#4a4a4a" roughness={0.95} />
             </mesh>
 
             {/* === BRICK FACADE === */}
@@ -616,7 +617,7 @@ const EntranceDoors = ({
             <mesh position={[0, wallCenterY + facadeYOffset + 1.65, 0.15]}>
                 {/* args={[Szerokość, Wysokość]} - Zmieniaj te liczby (np. 7, 8) */}
                 <planeGeometry args={[16., 8]} />
-                <meshBasicMaterial color="#c4a484"
+                <meshBasicMaterial color="#4a4a4a"
                     map={bricksTexture}
                     transparent={true}
                     alphaTest={0.01}
@@ -640,7 +641,7 @@ const EntranceDoors = ({
                     {/* Card plane */}
                     <mesh position={[0, 0, -0.001]}>
                         <planeGeometry args={[1.1, 0.35]} />
-                        <meshBasicMaterial color="#fcf3c6" />
+                        <meshBasicMaterial color="#d4a373" />
                     </mesh>
                     {/* Text */}
                     <Text
@@ -956,7 +957,7 @@ const EntranceDoors = ({
                 {/* Pot texture */}
                 <mesh>
                     <planeGeometry args={[3, 1.8]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="white"
                         map={potTexture}
                         transparent={true}
                         alphaTest={0.01}
@@ -1070,13 +1071,17 @@ const EntranceDoors = ({
                 {/* Tree */}
                 <mesh position={[0, 0, 0]}>
                     <planeGeometry args={[6, 8]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="white"
                         map={treeTexture}
                         transparent={true}
                         alphaTest={0.01}
                         depthWrite={false}
                     />
                 </mesh>
+                
+                {/* Animated Birds sitting in the leaves */}
+                <AnimatedBirds texture={birdTexture} />
+
                 {/* Mouse Hanging - Pivot Group for swinging */}
                 {/* Pivot is moved UP by ~2.0 to be near the top of the string/branch */}
                 {/* Original Mesh Y was 0.02. New Pivot Y is 0.02 + 2.0 = 2.02 */}
@@ -1087,7 +1092,7 @@ const EntranceDoors = ({
                     {/* Mesh moves opposite to pivot offset to keep visual position */}
                     <mesh position={[-0.351, 0.456, 0]}>
                         <planeGeometry args={[6, 8]} />
-                        <meshBasicMaterial color="#fcf3c6"
+                        <meshBasicMaterial color="#ffd166"
                             map={mouseTexture}
                             transparent={true}
                             alphaTest={0.01}
@@ -1102,7 +1107,7 @@ const EntranceDoors = ({
                 {/* Body */}
                 <mesh>
                     <planeGeometry args={[1.5, 1.5]} />
-                    <meshBasicMaterial color="gray"
+                    <meshBasicMaterial color="#b0b0b8"
                         map={catFrontBodyTexture}
                         transparent={true}
                         alphaTest={0.01}
@@ -1116,7 +1121,7 @@ const EntranceDoors = ({
                     position={[-0.063, 0.27, -0.02]} // Behind cat
                 >
                     <circleGeometry args={[0.020, 32]} />
-                    <meshBasicMaterial color="black" />
+                    <meshBasicMaterial color="#d4f067" />
                     {/* Oval Scale */}
                     <group scale={[0.8, 1.2, 1]} />
                 </mesh>
@@ -1127,11 +1132,116 @@ const EntranceDoors = ({
                     position={[0.0615, 0.27, -0.02]} // Behind cat
                 >
                     <circleGeometry args={[0.020, 32]} />
-                    <meshBasicMaterial color="black" />
+                    <meshBasicMaterial color="#d4f067" />
                 </mesh>
             </group>
 
         </group>
+    );
+};
+
+/**
+ * FallingPetals - Animated sakura petals gently drifting down
+ * Purely decorative, no interaction
+ */
+const FallingPetals = ({ position, floorY }) => {
+    const petalsRef = useRef();
+    const petalCount = 40;
+    const petals = useMemo(() => {
+        const result = [];
+        for (let i = 0; i < petalCount; i++) {
+            result.push({
+                x: -6 + Math.random() * 12,
+                y: floorY + 1 + Math.random() * 7,
+                z: 0.5 + Math.random() * 3,
+                speed: 0.15 + Math.random() * 0.25,
+                drift: (Math.random() - 0.5) * 0.4,
+                rotSpeed: (Math.random() - 0.5) * 2.5,
+                phase: Math.random() * Math.PI * 2,
+                size: 0.03 + Math.random() * 0.05,
+            });
+        }
+        return result;
+    }, [floorY]);
+
+    useFrame((state) => {
+        if (!petalsRef.current) return;
+        const time = state.clock.elapsedTime;
+        petalsRef.current.children.forEach((child, i) => {
+            const p = petals[i];
+            if (!p) return;
+            // Fall and drift
+            let newY = p.y - ((time * p.speed) % 8);
+            if (newY < floorY - 0.5) newY += 8;
+            child.position.y = newY;
+            child.position.x = p.x + Math.sin(time * 0.5 + p.phase) * p.drift;
+            child.rotation.z = time * p.rotSpeed;
+        });
+    });
+
+    return (
+        <group ref={petalsRef}>
+            {petals.map((p, i) => (
+                <mesh key={i} position={[p.x, p.y, p.z]}>
+                    <planeGeometry args={[p.size * 2, p.size]} />
+                    <meshBasicMaterial
+                        color={i % 3 === 0 ? "#f5b0c0" : i % 3 === 1 ? "#f0a0b5" : "#e8c0d0"}
+                        transparent
+                        opacity={0.7}
+                        side={THREE.DoubleSide}
+                    />
+                </mesh>
+            ))}
+        </group>
+    );
+};
+
+/**
+ * AnimatedBirds - Birds sitting in the tree leaves with pecking/hopping animation
+ */
+const AnimatedBirds = ({ texture }) => {
+    // Array of birds with initial positions relative to the tree group
+    // Tree canopy positions:
+    const birds = [
+        { position: [0.3, 2.5, 0.05], scale: 0.35, offset: 0 },
+        { position: [-1.2, 1.8, 0.05], scale: 0.3, offset: Math.PI / 2 },
+        { position: [1.3, 1.2, 0.05], scale: 0.32, offset: Math.PI }
+    ];
+
+    return (
+        <group>
+            {birds.map((bird, i) => (
+                <SingleBird key={i} {...bird} texture={texture} />
+            ))}
+        </group>
+    );
+};
+
+const SingleBird = ({ position, scale, offset, texture }) => {
+    const ref = useRef();
+    useFrame((state) => {
+        if (!ref.current) return;
+        const time = state.clock.elapsedTime + offset;
+        
+        // Pecking animation: rotate slightly downward periodically
+        const peck = Math.pow(Math.sin(time * 3), 10) * 0.5; // Sharp spikes
+        
+        // Bobbing/breathing animation
+        const hop = Math.pow(Math.sin(time * 2), 2) * 0.03;
+
+        ref.current.rotation.z = -peck * 0.4; // Tilt forward
+        ref.current.position.y = position[1] + hop;
+    });
+
+    return (
+        <mesh ref={ref} position={position} scale={[scale, scale, 1]}>
+            <planeGeometry args={[1, 1]} />
+            <meshBasicMaterial 
+                map={texture} 
+                transparent={true} 
+                depthWrite={false} 
+            />
+        </mesh>
     );
 };
 
