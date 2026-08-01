@@ -15,7 +15,7 @@ const TearLineSVG = ({ svgPathData, pathLength, strokeDashoffset, pathRef }) => 
       ref={pathRef}
       d={svgPathData}
       fill="none"
-      stroke="#1a1a1a"
+      stroke="#ffffff"
       strokeWidth="0.1"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -34,7 +34,7 @@ const RingLoader = () => (
       <circle
         cx="50" cy="50" r="45"
         fill="none"
-        stroke="#311059"
+        stroke="#ffffff"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeDasharray="10 15"
@@ -43,7 +43,7 @@ const RingLoader = () => (
       <circle
         cx="50" cy="50" r="35"
         fill="none"
-        stroke="#311059"
+        stroke="#ffffff"
         strokeWidth="1"
         strokeLinecap="round"
         strokeDasharray="5 10"
@@ -87,9 +87,8 @@ const percentageStyle = {
   zIndex: 20,
   fontFamily: "'Inter', sans-serif",
   fontSize: '2.2rem',
-  color: '#311059',
+  color: '#ffffff',
   fontWeight: 'bold',
-  mixBlendMode: 'multiply',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -106,9 +105,8 @@ const statusStyle = {
   fontFamily: "'Cabin Sketch', cursive",
   fontSize: '1.35rem',
   fontWeight: 'bold',
-  color: '#311059',
-  letterSpacing: '1px',
-  mixBlendMode: 'multiply'
+  color: '#ffffff',
+  letterSpacing: '1px'
 };
 
 const Preloader = ({ onComplete, ready }) => {

@@ -1066,41 +1066,7 @@ const EntranceDoors = ({
 
 
 
-            {/* TREE & MOUSE (Left Side) */}
-            <group position={[-2.9, floorY + 2.7, 1]}>
-                {/* Tree */}
-                <mesh position={[0, 0, 0]}>
-                    <planeGeometry args={[6, 8]} />
-                    <meshBasicMaterial color="white"
-                        map={treeTexture}
-                        transparent={true}
-                        alphaTest={0.01}
-                        depthWrite={false}
-                    />
-                </mesh>
-                
-                {/* Animated Birds sitting in the leaves */}
-                <AnimatedBirds texture={birdTexture} />
-
-                {/* Mouse Hanging - Pivot Group for swinging */}
-                {/* Pivot is moved UP by ~2.0 to be near the top of the string/branch */}
-                {/* Original Mesh Y was 0.02. New Pivot Y is 0.02 + 2.0 = 2.02 */}
-                {/* Mouse Hanging - Pivot Group for swinging */}
-                {/* Pivot: 421, 597px. Offset relative to center: X=0.351, Y=-0.456 */}
-                {/* Group Position shift: (-0.01, 0.02) + (0.351, -0.456) = (0.341, -0.436) */}
-                <group ref={mousePivotRef} position={[0.341, 0.02 - 0.456, 0]}>
-                    {/* Mesh moves opposite to pivot offset to keep visual position */}
-                    <mesh position={[-0.351, 0.456, 0]}>
-                        <planeGeometry args={[6, 8]} />
-                        <meshBasicMaterial color="#ffd166"
-                            map={mouseTexture}
-                            transparent={true}
-                            alphaTest={0.01}
-                            depthWrite={false}
-                        />
-                    </mesh>
-                </group>
-            </group>
+            {/* Left Side Tree & Mouse have been removed */}
 
             {/* CAT SKETCH (Front Facing) */}
             <group position={[-1.5, floorY + 0.6, 0.8]} ref={catGroupRef}>
@@ -1222,10 +1188,10 @@ const SingleBird = ({ position, scale, offset, texture }) => {
     useFrame((state) => {
         if (!ref.current) return;
         const time = state.clock.elapsedTime + offset;
-        
+
         // Pecking animation: rotate slightly downward periodically
         const peck = Math.pow(Math.sin(time * 3), 10) * 0.5; // Sharp spikes
-        
+
         // Bobbing/breathing animation
         const hop = Math.pow(Math.sin(time * 2), 2) * 0.03;
 
@@ -1236,10 +1202,10 @@ const SingleBird = ({ position, scale, offset, texture }) => {
     return (
         <mesh ref={ref} position={position} scale={[scale, scale, 1]}>
             <planeGeometry args={[1, 1]} />
-            <meshBasicMaterial 
-                map={texture} 
-                transparent={true} 
-                depthWrite={false} 
+            <meshBasicMaterial
+                map={texture}
+                transparent={true}
+                depthWrite={false}
             />
         </mesh>
     );
