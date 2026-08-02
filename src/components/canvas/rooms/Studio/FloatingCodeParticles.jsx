@@ -6,51 +6,32 @@ import * as THREE from 'three';
 // ============================================
 // CONFIG
 // ============================================
-const PARTICLE_COUNT = 60;
+const PARTICLE_COUNT = 150;
 const MIN_RADIUS = 4;
 const MAX_RADIUS = 12;
-const VERTICAL_SPREAD = 25;
-const BASE_OPACITY = 0.18;
+const VERTICAL_SPREAD = 35;
+const BASE_OPACITY = 0.35;
 
 // Thresholds for seamless loop
 const LOOP_BOTTOM = -15;
 const LOOP_TOP = 15;
 const LOOP_HEIGHT = LOOP_TOP - LOOP_BOTTOM;
 
-// Symbol definitions with their visual weight
 const SYMBOLS = [
-    // Code brackets - larger
-    { text: '{/}', size: 0.8, weight: 2 },
-    { text: '</>', size: 0.8, weight: 2 },
-    { text: '{ }', size: 0.7, weight: 1 },
-    { text: '{ • }', size: 0.7, weight: 1 },
-
-    // Operators & punctuation - medium
-    { text: ';', size: 0.5, weight: 3 },
-    { text: '::', size: 0.4, weight: 2 },
-    { text: '=>', size: 0.5, weight: 2 },
-    { text: '//', size: 0.5, weight: 2 },
-    { text: '&&', size: 0.4, weight: 1 },
-
-    // Binary - small scattered
-    { text: '0', size: 0.3, weight: 4 },
-    { text: '1', size: 0.3, weight: 4 },
-    { text: '01', size: 0.35, weight: 3 },
-    { text: '0101', size: 0.4, weight: 2 },
-    { text: '00', size: 0.35, weight: 2 },
-
-    // Arrows & misc
-    { text: '↑', size: 0.4, weight: 2 },
-    { text: '→', size: 0.4, weight: 1 },
-    { text: '←', size: 0.4, weight: 1 },
-    { text: '×', size: 0.3, weight: 2 },
-    { text: '•', size: 0.25, weight: 3 },
-    { text: '○', size: 0.3, weight: 2 },
-
-    // Pixel-like patterns
-    { text: '▪▪\n▪', size: 0.25, weight: 2 },
-    { text: '▪ ▪\n ▪', size: 0.25, weight: 1 },
-    { text: '▪▪▪', size: 0.2, weight: 2 },
+    // Glowing dust motes
+    { text: '•', size: 0.25, weight: 6 },
+    { text: '○', size: 0.3, weight: 3 },
+    { text: '✧', size: 0.4, weight: 2 },
+    { text: '✦', size: 0.5, weight: 1 },
+    { text: '·', size: 0.2, weight: 8 },
+    
+    // Cinematic sparks
+    { text: '+', size: 0.3, weight: 3 },
+    { text: '×', size: 0.25, weight: 2 },
+    
+    // Small clusters
+    { text: '··', size: 0.2, weight: 4 },
+    { text: '· ·', size: 0.2, weight: 3 },
 ];
 
 // Weighted random selection
@@ -202,11 +183,10 @@ const FloatingCodeParticles = ({ towerRotationRef, fallOffsetRef }) => {
                     ref={(el) => { meshRefs.current[index] = el; }}
                     position={particle.position}
                     fontSize={particle.symbol.size}
-                    color="#1a1a1a"
+                    color="#00f0ff"
                     anchorX="center"
                     anchorY="middle"
                     fillOpacity={particle.opacity}
-                    font="/fonts/CabinSketch-Bold.ttf"
                 >
                     {particle.symbol.text}
                 </Text>

@@ -50,7 +50,7 @@ const HeroText = ({ position = [0, 0.3, 0] }) => {
         const totalWidth = (text.length - 1) * charWidth;
         return text.split('').map((char, index) => {
             const baseX = (index * charWidth) - (totalWidth / 2);
-            const splitDir = baseX * 1.5; 
+            const splitDir = baseX * 1.5;
             return { char, baseX, splitDir };
         });
     }, []);

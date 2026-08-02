@@ -136,11 +136,11 @@ const SketchDecorations = ({ corridorWidth, corridorHeight, length, zOffset }) =
                 <group key={i}>
                     <mesh position={[-corridorWidth / 2 + 0.01, 0, z]}>
                         <planeGeometry args={[0.015, corridorHeight * 0.6]} />
-                        <meshBasicMaterial color="#fcf3c6" side={2} />
+                        <meshBasicMaterial color="#765034" side={2} />
                     </mesh>
                     <mesh position={[corridorWidth / 2 - 0.01, 0, z]}>
                         <planeGeometry args={[0.015, corridorHeight * 0.6]} />
-                        <meshBasicMaterial color="#fcf3c6" side={2} />
+                        <meshBasicMaterial color="#765034" side={2} />
                     </mesh>
                 </group>
             ))}

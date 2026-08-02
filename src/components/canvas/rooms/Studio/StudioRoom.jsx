@@ -194,7 +194,7 @@ const StudioRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
 
         // Shuffle content for mixed appearance (seeded for consistency)
         let shuffledContent = [...activeContent].sort(() => 0.5 - Math.random());
-        
+
         // Ensure the tower is extremely tall (at least 12 rings = 48 items)
         // so that the teleportation boundaries are far outside the camera's view.
         if (shuffledContent.length > 0) {
@@ -736,7 +736,7 @@ const MonitorBlock = memo(({ item, meshRef, isSelected, onMonitorClick, disabled
         if (!faceConfig) return null;
         return faceConfig.map(f => {
             if (f.painted) return null; // Will use revealMaterial instead
-            const mat = new THREE.MeshBasicMaterial({ color: '#fcf3c6', map: f.sketch });
+            const mat = new THREE.MeshBasicMaterial({ color: '#c5d0d8', map: f.sketch });
             // Apply paint transition shader
             if (paintOnBeforeCompile) {
                 mat.onBeforeCompile = paintOnBeforeCompile;
@@ -839,7 +839,7 @@ const MonitorBlock = memo(({ item, meshRef, isSelected, onMonitorClick, disabled
                     if (face.painted) {
                         // This face has a painted version → use revealMaterial for brush-stroke discard
                         return (
-                            <revealMaterial color="#fcf3c6"
+                            <revealMaterial color="#1a2634"
                                 key={`s${i}`}
                                 ref={matRefs[i]}
                                 attach={`material-${i}`}
@@ -849,6 +849,7 @@ const MonitorBlock = memo(({ item, meshRef, isSelected, onMonitorClick, disabled
                                 paintUniforms={paintUniforms}
                                 paintConfig={STUDIO_PAINT_CONFIG}
                                 uProgress={0.0}
+                                uCinematicTint={1.0}
                             />
                         );
                     } else {

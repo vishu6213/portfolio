@@ -1,67 +1,51 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 
 /**
- * Avatar Component - Hand-drawn sketch style character
+ * Avatar Component - Yuta Okkotsu Manga/Sketch Character
  * 
- * New sketchy avatar with WOW effects:
- * - Parallax depth effect on scroll
- * - Hand-drawn line style matching entrance
- * - Dodges when camera approaches
- * - Frame-by-frame animation (Boomerang effect: 1-6-1)
+ * Full-body manga/sketch Yuta Okkotsu:
+ * - Positioned in center hero section, standing in front of VISHVAJEET TIWARI text
+ * - Interactive cursor parallax, subtle body tilt, and katana/clothing breathing movement
+ * - Subtle anime aura presence effect when mouse gets close
  */
-const Avatar = ({ position = [10, -20, 30] }) => {
+const Avatar = ({ position = [0, -0.61, -0.3] }) => {
     const meshRef = useRef();
     const groupRef = useRef();
-    const [dimensions, setDimensions] = useState({ width: 1.2, height: 2.4 });
-    const { camera } = useThree();
+    const { camera, pointer } = useThree();
 
-    // Dodge state
+    // Dodge & Parallax state
     const dodgeX = useRef(0);
     const targetDodgeX = useRef(0);
     const worldPosVec = useRef(new THREE.Vector3());
 
-    // --- FRAME-BY-FRAME ANIMATION (PING-PONG) ---
-    const TOTAL_FRAMES = 9;
-    const framePaths = Array.from({ length: TOTAL_FRAMES }, (_, i) => `/textures/corridor/avatar_anim/${i + 1}.webp`);
+    // Mouse lerp ref for smooth motion
+    const mouseLerp = useRef({ x: 0, y: 0 });
 
-    // Load all texture frames
-    const textures = useTexture(framePaths);
+    // Load Yuta character texture
+    const texture = useTexture('/textures/corridor/yuta_avatar.png');
 
-    // Animation control refs
-    // start at index 0 (which refers to 1.webp)
-    const currentFrame = useRef(0);
-    const isReversing = useRef(false);
-    const frameTimer = useRef(0);
-
-    // Apply color space and calculate dimensions once
     useEffect(() => {
-        textures.forEach(tex => tex.colorSpace = THREE.SRGBColorSpace);
-
-        if (textures[0] && textures[0].image) {
-            const aspectRatio = textures[0].image.width / textures[0].image.height;
-            const baseHeight = 2.8; // Made slightly smaller
-            setDimensions({
-                width: baseHeight * aspectRatio,
-                height: baseHeight
-            });
+        if (texture) {
+            texture.colorSpace = THREE.SRGBColorSpace;
         }
+    }, [texture]);
 
-        // Set initial texture to avoid white flash, but don't bind it declaratively 
-        // to prevent React from overwriting our useFrame mutations
-        if (meshRef.current && textures[currentFrame.current]) {
-            meshRef.current.material.map = textures[currentFrame.current];
-            meshRef.current.material.needsUpdate = true;
-        }
-    }, [textures]);
+    const baseHeight = 2.5;
+    const aspectRatio = 237 / 600;
+    const dimensions = {
+        width: baseHeight * aspectRatio,
+        height: baseHeight
+    };
 
-    // Main animation loop
-    useFrame((state, delta) => {
+    useFrame((state) => {
         if (!groupRef.current || !meshRef.current) return;
 
-        // === DODGE LOGIC ===
+        const time = state.clock.elapsedTime;
+
+        // === DODGE LOGIC (when camera flies past in corridor) ===
         groupRef.current.getWorldPosition(worldPosVec.current);
         const distance = camera.position.z - worldPosVec.current.z;
 
@@ -82,54 +66,46 @@ const Avatar = ({ position = [10, -20, 30] }) => {
 
         dodgeX.current = THREE.MathUtils.lerp(dodgeX.current, targetDodgeX.current, 0.08);
 
-        groupRef.current.position.x = position[0] + dodgeX.current;
-        groupRef.current.position.y = position[1];
+        // === CURSOR PARALLAX & TILT LOGIC ===
+        mouseLerp.current.x = THREE.MathUtils.lerp(mouseLerp.current.x, pointer.x, 0.06);
+        mouseLerp.current.y = THREE.MathUtils.lerp(mouseLerp.current.y, pointer.y, 0.06);
 
-        // === FRAME ANIMATION LOGIC (PING-PONG) ===
-        // Using delta for consistent speed regardless of monitor Hz
-        const FPS = 20; // Prędkość machania (klatki na sekundę)
-        const frameDuration = 1 / FPS;
+        // Idle breathing & subtle clothing/katana motion
+        const breathY = Math.sin(time * 1.8) * 0.02;
+        const breathRotZ = Math.sin(time * 1.2) * 0.008;
 
-        frameTimer.current += delta;
+        // Cursor parallax movement
+        const parallaxX = mouseLerp.current.x * 0.14;
+        const parallaxY = mouseLerp.current.y * 0.08;
 
-        if (frameTimer.current >= frameDuration) {
-            frameTimer.current = 0; // Reset timer
+        // Subtle body & katana tilt toward cursor
+        const tiltZ = -mouseLerp.current.x * 0.04 + breathRotZ;
+        const tiltX = mouseLerp.current.y * 0.025;
 
-            // Jesteśmy na ostatniej (od prawej)? To machamy do lewej
-            if (currentFrame.current >= TOTAL_FRAMES - 1) {
-                isReversing.current = true;
-            }
-            // Jesteśmy na indeksie 0 (czyli 1.webp)? To machamy z powrotem do prawej
-            else if (currentFrame.current <= 0) {
-                isReversing.current = false;
-            }
+        // Update group position
+        groupRef.current.position.x = position[0] + dodgeX.current + parallaxX;
+        groupRef.current.position.y = position[1] + breathY + parallaxY;
 
-            // Przejście klatki
-            if (isReversing.current) {
-                currentFrame.current -= 1;
-            } else {
-                currentFrame.current += 1;
-            }
+        // Update mesh rotation smoothly
+        meshRef.current.rotation.z = THREE.MathUtils.lerp(meshRef.current.rotation.z, tiltZ, 0.1);
+        meshRef.current.rotation.x = THREE.MathUtils.lerp(meshRef.current.rotation.x, tiltX, 0.1);
 
-            // Zabezpieczenie przed błędem indeksu (nie schodzimy poniżej 0)
-            const safeIndex = Math.max(0, Math.min(TOTAL_FRAMES - 1, currentFrame.current));
-
-            // Aplikacja tekstury
-            meshRef.current.material.map = textures[safeIndex];
-            meshRef.current.material.needsUpdate = true;
-        }
+        // === HOVER PROXIMITY EFFECT ===
+        const mouseDist = Math.sqrt(pointer.x * pointer.x + pointer.y * pointer.y);
+        const targetScale = mouseDist < 0.45 ? 1.018 : 1.0;
+        meshRef.current.scale.setScalar(THREE.MathUtils.lerp(meshRef.current.scale.x, targetScale, 0.1));
     });
 
     return (
         <group ref={groupRef} position={position}>
-            {/* Shift mesh up by 0.25 so feet stay grounded when scaled up */}
-            <mesh ref={meshRef} position={[0, 0.25, 0]}>
+            {/* Yuta Okkotsu Character Mesh */}
+            <mesh ref={meshRef} position={[0, 0.365, 0]}>
                 <planeGeometry args={[dimensions.width, dimensions.height]} />
-                <meshBasicMaterial color="#ffffff"
+                <meshBasicMaterial
+                    map={texture}
                     transparent={true}
                     side={THREE.DoubleSide}
-                    depthWrite={true}
-                    alphaTest={0.1}
+                    depthWrite={false}
                 />
             </mesh>
         </group>

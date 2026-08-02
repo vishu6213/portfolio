@@ -34,6 +34,14 @@ class RevealMaterial extends THREE.MeshBasicMaterial {
         }
     }
 
+    get uCinematicTint() { return this._uCinematicTint || 0.0; }
+    set uCinematicTint(v) {
+        this._uCinematicTint = v;
+        if (this._shader) {
+            this._shader.uniforms.uCinematicTint.value = v;
+        }
+    }
+
     get paintUniforms() { return { uPaintProgress: this._paintProgress, uRoomOrigin: this._roomOrigin }; }
     set paintUniforms(v) {
         if (!v) return;
@@ -55,6 +63,7 @@ class RevealMaterial extends THREE.MeshBasicMaterial {
     onBeforeCompile(shader) {
         this._shader = shader;
         shader.uniforms.uProgress = { value: this._uProgress };
+        shader.uniforms.uCinematicTint = { value: this._uCinematicTint || 0.0 };
 
         const hasPaint = !!this._paintProgress;
         if (hasPaint) {
@@ -87,6 +96,7 @@ class RevealMaterial extends THREE.MeshBasicMaterial {
             '#include <common>',
             /* glsl */`#include <common>
             uniform float uProgress;
+            uniform float uCinematicTint;
             ${paintUniformsStr}
 
             float revealRand(vec2 n) { 
@@ -117,6 +127,18 @@ class RevealMaterial extends THREE.MeshBasicMaterial {
                 float maskValue = (1.0 - vMapUv.y) + rn;
                 float threshold = uProgress * 1.5;
                 if (maskValue < threshold) discard;
+            }
+
+            // Apply cinematic color grading if requested
+            if (uCinematicTint > 0.0) {
+                // Desaturate slightly based on luminance
+                float lum = dot(gl_FragColor.rgb, vec3(0.299, 0.587, 0.114));
+                vec3 desaturated = mix(vec3(lum), gl_FragColor.rgb, 0.3);
+                // Deep misty teal/cyan tint for the cinematic background
+                vec3 cinematicTeal = vec3(0.2, 0.6, 0.7) * 1.8;
+                vec3 gradedColor = desaturated * cinematicTeal;
+                // Mix based on the uniform value
+                gl_FragColor.rgb = mix(gl_FragColor.rgb, gradedColor, uCinematicTint);
             }
             `
         );

@@ -81,6 +81,7 @@ const EntranceDoors = ({
     const mouseTexture = useTexture('/textures/entrance/mouse_hanging.webp');
     const potTexture = useTexture('/textures/entrance/pot_with_duck_colored.webp');
     const bugTexture = useTexture('/textures/entrance/bug_sketch.webp');
+    const lampTexture = useTexture(isMobileDevice ? dummyTex : '/textures/entrance/vintage_street_lamp.png');
     const inkSplashTexture = useTexture('/images/ink-splash.webp');
     const speechBubbleTexture = useTexture('/textures/entrance/speech_bubble.webp');
 
@@ -952,6 +953,9 @@ const EntranceDoors = ({
                 </mesh>
             </group>
 
+            {/* VINTAGE STREET LAMP (Left Side Foreground) */}
+            <AnimatedStreetLamp position={[-3.8, floorY + 2.2, 0.8]} texture={lampTexture} />
+
             {/* DUCK POT (Right Side - Under Window) */}
             <group position={[2.5, floorY + 0.45, 0.4]}>
                 {/* Pot texture */}
@@ -1208,6 +1212,44 @@ const SingleBird = ({ position, scale, offset, texture }) => {
                 depthWrite={false}
             />
         </mesh>
+    );
+};
+
+/**
+ * AnimatedStreetLamp - Vintage double-lantern street lamp
+ */
+const AnimatedStreetLamp = ({ position, texture }) => {
+    const lampLight1Ref = useRef();
+    const lampLight2Ref = useRef();
+
+    useFrame((state) => {
+        const t = state.clock.getElapsedTime();
+        // Subtle flickering and breathing for realistic point lights
+        const flicker = Math.random() * 0.05;
+        const breath = Math.sin(t * 1.5) * 0.15;
+        const intensity = 1.0 + breath + flicker;
+
+        if (lampLight1Ref.current) lampLight1Ref.current.intensity = intensity * 1.4;
+        if (lampLight2Ref.current) lampLight2Ref.current.intensity = intensity * 1.0;
+    });
+
+    return (
+        <group position={position}>
+            {/* The Lamp Post Mesh (Transparent Alpha Cutout) */}
+            <mesh position={[0, 0, 0]} scale={[4.5, 4.5, 1]}>
+                <planeGeometry args={[1, 1]} />
+                <meshBasicMaterial
+                    map={texture}
+                    transparent={true}
+                    alphaTest={0.01}
+                    depthWrite={false}
+                />
+            </mesh>
+
+            {/* Dynamic Point Lights illuminating the brick wall naturally */}
+            <pointLight ref={lampLight1Ref} color="#ffaa33" distance={8} decay={2} intensity={1.4} position={[-0.22, 1.28, 0.5]} />
+            <pointLight ref={lampLight2Ref} color="#ffbb44" distance={6} decay={2} intensity={1.0} position={[0.52, 0.38, 0.5]} />
+        </group>
     );
 };
 

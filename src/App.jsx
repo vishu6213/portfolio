@@ -94,10 +94,14 @@ function DocumentMetaBridge() {
   return null;
 }
 
+import ParallaxStudioBackground from './components/ui/ParallaxStudioBackground';
+import GalleryVideoBackground from './components/ui/GalleryVideoBackground';
+
 function AppContent() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [sceneReady, setSceneReady] = useState(false);
   const { settings, downgradeTier, tier } = usePerformance();
+  const { currentRoom } = useScene();
 
   useEffect(() => {
     initAudio();
@@ -109,63 +113,65 @@ function AppContent() {
     });
   }, []);
 
+  const hasTransparentBackground = currentRoom === 'studio' || currentRoom === 'gallery';
+
   return (
-    <AudioProvider>
-      <SceneProvider>
-        <DocumentMetaBridge />
-        <GlobalAudioEnabler />
-        <div className="app">
-          {/* Full screen 3D Canvas */}
-          <div className="canvas-wrapper">
-            <Canvas
-              camera={{
-                position: [0, 0.2, 28],
-                fov: 60,
-                near: 0.1,
-                far: 150
-              }}
-              gl={{
-                antialias: settings.antialias,
-                alpha: false,
-                powerPreference: settings.powerPreference,
-                localClippingEnabled: true,
-                failIfMajorPerformanceCaveat: true
-              }}
-              dpr={settings.dpr}
-              shadows={settings.shadows}
-            >
-              <color attach="background" args={['#fdf8e2']} /> {/* TINTED TO DEEP PURPLE */}
-              <fog attach="fog" args={['#fdf8e2', 15, 50]} /> {/* FOG TINTED TO DEEP PURPLE */}
+    <>
+      <DocumentMetaBridge />
+      <GlobalAudioEnabler />
+      <div className="app">
+        {currentRoom === 'studio' && <ParallaxStudioBackground />}
+        {currentRoom === 'gallery' && <GalleryVideoBackground />}
+        {/* Full screen 3D Canvas */}
+        <div className="canvas-wrapper">
+          <Canvas
+            camera={{
+              position: [0, 0.2, 28],
+              fov: 60,
+              near: 0.1,
+              far: 150
+            }}
+            gl={{
+              antialias: settings.antialias,
+              alpha: true,
+              powerPreference: settings.powerPreference,
+              localClippingEnabled: true,
+              failIfMajorPerformanceCaveat: true
+            }}
+            dpr={settings.dpr}
+            shadows={settings.shadows}
+          >
+            {!hasTransparentBackground && <color attach="background" args={['#fdf8e2']} />}
+            {!hasTransparentBackground && <fog attach="fog" args={['#fdf8e2', 15, 50]} />}
 
-              <Suspense fallback={null}>
-                <Experience
-                  isLoaded={isLoaded}
-                  onSceneReady={handleSceneReady}
-                  performanceTier={tier}
-                />
-                <Preload all />
-              </Suspense>
-            </Canvas>
-          </div>
-
-          {/* Navigation UI - Hamburger, Map, Back, Audio */}
-          {isLoaded && (
-            <>
-              <NavigationUI />
-              <GlobalOverlay />
-              <PaperTransition />
-              <ScreenReaderOverlay />
-            </>
-          )}
-
-          {/* 2D Preloader */}
-          <Preloader
-            ready={sceneReady}
-            onComplete={() => setIsLoaded(true)}
-          />
+            <Suspense fallback={null}>
+              <Experience
+                isLoaded={isLoaded}
+                onSceneReady={handleSceneReady}
+                performanceTier={tier}
+              />
+              <Preload all />
+            </Suspense>
+          </Canvas>
         </div>
-      </SceneProvider>
-    </AudioProvider>
+
+        {/* Navigation UI - Hamburger, Map, Back, Audio */}
+        {isLoaded && (
+          <>
+            <NavigationUI />
+            <GlobalOverlay />
+            <PaperTransition />
+            <ScreenReaderOverlay />
+          </>
+        )}
+
+        {/* 2D Preloader */}
+        <Preloader
+          ready={sceneReady}
+          onComplete={() => setIsLoaded(true)}
+        />
+      </div>
+    </>
   );
 }
 
@@ -180,7 +186,11 @@ export default function App() {
   return (
     <PerformanceProvider>
       <AchievementsProvider>
-        <AppContent />
+        <AudioProvider>
+          <SceneProvider>
+            <AppContent />
+          </SceneProvider>
+        </AudioProvider>
       </AchievementsProvider>
     </PerformanceProvider>
   );

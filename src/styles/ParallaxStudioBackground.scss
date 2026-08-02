@@ -1,0 +1,53 @@
+.parallax-studio-bg {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #021a32, #011326);
+    z-index: 0; /* behind the canvas wrapper which is z-index 1 */
+
+    .overlay-vignette {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.7));
+    }
+
+    .parallax-layer {
+        position: absolute;
+        pointer-events: none;
+        transition: transform 450ms ease-out;
+        transform-style: preserve-3d;
+        will-change: transform;
+    }
+
+    .parallax-text {
+        position: absolute;
+        z-index: 9;
+        color: white;
+        text-align: center;
+        pointer-events: auto;
+        transition: transform 450ms ease-out;
+        transform-style: preserve-3d;
+
+        h1 {
+            font-weight: 900;
+            font-size: 20rem;
+            line-height: 0.8;
+            margin: 0;
+            font-family: 'Instrument Serif', serif;
+
+            @media (max-width: 1024px) {
+                font-size: 15rem;
+            }
+            @media (max-width: 768px) {
+                font-size: 5.8rem;
+            }
+            @media (max-width: 640px) {
+                font-size: 3.3rem;
+            }
+        }
+    }
+}

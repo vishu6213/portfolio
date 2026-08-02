@@ -415,11 +415,10 @@ const CorridorDecorations = ({ segmentLength, zOffset, corridorWidth = 4, corrid
             height: 2.5 / 1.785,
             y: 0.25,
             id: 'frame-3',
-            signature: "Empty canvas!\nWant your art here?\nContact me!",
-            signatureX: 0,
-            signatureY: 0,
-            signatureSize: 0.12,
-            signatureColor: '#333333'
+            image: '/textures/corridor/portrait.png',
+            imageWidth: 2.25,
+            imageHeight: 2.25 / 1.785,
+            offsetFromWall: 0.1,
         },
         {
             z: zOffset - 55,         // Między About a Connect (relZ -50 do -60)

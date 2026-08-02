@@ -132,7 +132,7 @@ const CorridorSegment = ({
             {/* === WELCOME AREA (Start of segment) - MOVED CLOSER === */}
             <group position={[0, 0, zOffset - 2]}>
                 {/* VISHU Text - centered (VISHU letters adjusted internally) */}
-                <HeroText position={[0, -0.1, -0.5]} />
+                <HeroText position={[0, -0.1, -0.1]} />
 
                 {/* Avatar - center */}
                 <Avatar position={[0, -0.61, -0.3]} />

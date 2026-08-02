@@ -189,7 +189,7 @@ const DoorSection = ({
     const currentTilt = useRef(0);
 
     // Load wall texture
-    const originalWallTexture = useTexture('/textures/corridor/wall_texture.webp');
+    const originalWallTexture = useTexture('/textures/corridor/wall_wood_panels.webp');
 
     // Clone texture to have independent repeat settings (fixes scaling issues)
     const wallTexture = useMemo(() => {
@@ -827,7 +827,7 @@ const DoorSection = ({
         if (hoverAudioRef.current && !isHovered) {
             const vol = isMuted ? 0 : DOOR_AUDIO_SETTINGS.hoverVolume * globalVolume;
             hoverAudioRef.current.setVolume(vol);
-            
+
             // Only play if AudioContext is already running to avoid console warnings
             // Browsers block audio until a user click, and hover is not always enough.
             if (hoverAudioRef.current.isPlaying) hoverAudioRef.current.stop();
@@ -950,7 +950,7 @@ const DoorSection = ({
             <group ref={groupRef}>
                 {/* Wall segment with door hole */}
                 <mesh position={[wallOffsetX, 0, 0]} geometry={wallWithHoleGeometry}>
-                    <meshBasicMaterial color="#fcf3c6" map={wallTexture} roughness={1} metalness={0} side={THREE.DoubleSide} />
+                    <meshBasicMaterial color="#ffffff" map={wallTexture} roughness={1} metalness={0} side={THREE.DoubleSide} />
                 </mesh>
 
                 {/* === ARROW DECORATION === */}

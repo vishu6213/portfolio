@@ -55,14 +55,14 @@ const DoorWallSegment = ({ position, baseRotationY, width, corridorHeight, wallT
     const segTexture = useMemo(() => {
         const tex = wallTexture.clone();
         tex.needsUpdate = true;
-        tex.repeat.set(width / 2, corridorHeight / 2);
+        tex.repeat.set(width / 3.5, 1);
         return tex;
     }, [wallTexture, width, corridorHeight]);
 
     return (
         <mesh ref={meshRef} position={position}>
             <planeGeometry args={[width, corridorHeight]} />
-            <meshBasicMaterial color="#fcf3c6" map={segTexture} roughness={1} metalness={0} />
+            <meshBasicMaterial color="#ffffff" map={segTexture} roughness={1} metalness={0} />
         </mesh>
     );
 };
@@ -81,8 +81,8 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
     // =============================================
     // USTAWIENIA PODŁOGI (FLOOR SETTINGS)
     // =============================================
-    // Tekstura kawałka podłogi - ręcznie rysowane deski
-    const floorTexture = useTexture('/textures/corridor/kawalekpodlogi.webp');
+    // Tekstura kawałka podłogi - ręcznie rysowane deski (warm wood tinted)
+    const floorTexture = useTexture('/textures/corridor/floor_wood_tinted.webp');
     floorTexture.wrapS = floorTexture.wrapT = THREE.ClampToEdgeWrapping;
 
     // Tekstura listwy przypodłogowej (baseboards)
@@ -92,11 +92,11 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
     baseboardTexture.colorSpace = THREE.SRGBColorSpace;
 
     // Load wall texture
-    const wallTexture = useTexture('/textures/corridor/wall_texture.webp');
+    const wallTexture = useTexture('/textures/corridor/wall_wood_panels.webp');
     wallTexture.wrapS = wallTexture.wrapT = THREE.RepeatWrapping;
 
     // Load ceiling texture
-    const ceilingTexture = useTexture('/textures/corridor/ceiling_texture.webp');
+    const ceilingTexture = useTexture('/textures/corridor/ceiling_wood_panels.webp');
     ceilingTexture.wrapS = ceilingTexture.wrapT = THREE.RepeatWrapping;
 
     // Calculate effective geometry based on clipping
@@ -317,7 +317,7 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
                             scale={[isMirrored ? -1 : 1, 1, 1]}
                         >
                             <planeGeometry args={[TILE_LENGTH, CENTER_WIDTH]} />
-                            <meshBasicMaterial color="#fcf3c6"
+                            <meshBasicMaterial color="#ffffff"
                                 map={floorTexture}
                                 side={THREE.DoubleSide}
                                 roughness={1}
@@ -335,7 +335,7 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
                             scale={[isMirrored ? -1 : 1, 1, 1]}
                         >
                             <planeGeometry args={[TILE_LENGTH, SIDE_WIDTH]} />
-                            <meshBasicMaterial color="#fcf3c6"
+                            <meshBasicMaterial color="#ffffff"
                                 map={leftSideTexture}
                                 side={THREE.DoubleSide}
                                 roughness={1}
@@ -353,7 +353,7 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
                             scale={[isMirrored ? -1 : 1, 1, 1]}
                         >
                             <planeGeometry args={[TILE_LENGTH, SIDE_WIDTH]} />
-                            <meshBasicMaterial color="#fcf3c6"
+                            <meshBasicMaterial color="#ffffff"
                                 map={rightSideTexture}
                                 side={THREE.DoubleSide}
                                 roughness={1}
@@ -396,7 +396,7 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
                             scale={[isMirrored ? -1 : 1, 1, 1]}
                         >
                             <planeGeometry args={[tileWidth, tileLength]} />
-                            <meshBasicMaterial color="#fcf3c6"
+                            <meshBasicMaterial color="#ffffff"
                                 map={ceilingTexture}
                                 map-repeat={[tileWidth / 2, tileLength / 2]}
                                 side={THREE.DoubleSide}
@@ -418,7 +418,7 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
                     // Wall texture clone (same pattern for wall + baseboard)
                     const segTexture = wallTexture.clone();
                     segTexture.needsUpdate = true;
-                    segTexture.repeat.set(seg.width / 2, corridorHeight / 2);
+                    segTexture.repeat.set(seg.width / 3.5, 1);
 
                     // Baseboard texture clone
                     // Texture: 1582x94 px. Natural tile = (1582/94)*0.15 = 2.524 units wide
@@ -461,7 +461,7 @@ const CorridorWalls = ({ zStart = 10, length = 80, doorPositions = [], zClip = 1
                             {/* Main Wall Segment */}
                             <mesh>
                                 <planeGeometry args={[seg.width, corridorHeight]} />
-                                <meshBasicMaterial color="#fcf3c6"
+                                <meshBasicMaterial color="#ffffff"
                                     map={segTexture}
                                     roughness={1}
                                     metalness={0}

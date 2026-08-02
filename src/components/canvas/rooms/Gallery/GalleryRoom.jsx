@@ -9,7 +9,6 @@ import { useScene } from '../../../../context/SceneContext';
 gsap.registerPlugin(Observer);
 import { useAchievements } from '../../../../context/AchievementsContext';
 import PaperMaterial from './PaperMaterial';
-import GalleryClouds from './GalleryClouds';
 import { useAudio } from '../../../../context/AudioManager';
 import { usePaintMaterial } from './usePaintMaterial';
 import { useGalleryProjects } from '../../../../hooks/useSanityData';
@@ -105,10 +104,10 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
 
     // Setup Paint Transition
     const { onBeforeCompile, animatePaint, resetPaint, uniformsData, updateRoomOrigin } = usePaintMaterial();
-    
+
     // Track transition state to disable interactions
     const [isTransitioning, setIsTransitioning] = useState(false);
-    
+
     // Track if user teleported into this room 
     const wasTeleportedRef = useRef(false);
     useEffect(() => {
@@ -128,7 +127,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 resetPaint();
                 // Start the paint animation with a slight delay so it happens *during* fly-in
                 animatePaint(0.2, 2.5);
-                
+
                 // Re-enable interactions once painting finishes
                 setTimeout(() => {
                     setIsTransitioning(false);
@@ -236,7 +235,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
             return `/textures/gallery/${name}_painted.webp`;
         });
     }, [canHover]);
-    
+
     useTexture(allLogos);
 
     // Construct the full list of projects (repeated) with textures attached
@@ -375,20 +374,20 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
     const materials = useMemo(() => {
         const floorMat = new THREE.MeshBasicMaterial({
             map: floorTexture,
-            color: '#fcf3c6',
+            color: '#8b5a2b',
             side: THREE.DoubleSide
         });
         floorMat.onBeforeCompile = onBeforeCompile;
         floorMat.transparent = true;
         floorMat.needsUpdate = true;
-        
+
         const ropeMat = new THREE.MeshBasicMaterial({ color: '#666666' });
         ropeMat.onBeforeCompile = onBeforeCompile;
         ropeMat.transparent = true;
         ropeMat.needsUpdate = true;
 
         const thresholdMat = new THREE.MeshBasicMaterial({
-            color: '#fcf3c6',
+            color: '#8b5a2b',
             map: (() => {
                 const t = new THREE.TextureLoader().load('/textures/corridor/texturadoprogow.webp');
                 t.colorSpace = THREE.SRGBColorSpace;
@@ -473,7 +472,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 {/* Railing */}
                 <mesh position={[0, RAILING_HEIGHT / 2, -3.9]}>
                     <planeGeometry args={[20, RAILING_HEIGHT]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="#6b4226"
                         map={railingTexture}
                         transparent={true}
                         side={THREE.DoubleSide}
@@ -523,7 +522,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 {/* Houses - center */}
                 <mesh position={[0, -1, -9]} scale={[1, 1, 1]}>
                     <planeGeometry args={[15, 15 / 2.357]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="#e8b79b"
                         map={housesTexture}
                         transparent={true}
                         alphaTest={0.1}
@@ -534,7 +533,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 {/* Houses - left side (mirrored) */}
                 <mesh position={[-15, -1, -9]} scale={[-1, 1, 1]}>
                     <planeGeometry args={[15, 15 / 2.357]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="#e8b79b"
                         map={housesTexture}
                         transparent={true}
                         alphaTest={0.1}
@@ -553,7 +552,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 {/* City skyline - center */}
                 <mesh position={[0, 3.4, -17]} scale={[1, 1, 1]}>
                     <planeGeometry args={[30, 30 / 2.357]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="#b5c4d6"
                         map={cityTexture}
                         transparent={true}
                         alphaTest={0.1}
@@ -564,7 +563,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 {/* City skyline - left (mirrored) */}
                 <mesh position={[-30, 3.4, -17]} scale={[-1, 1, 1]}>
                     <planeGeometry args={[30, 30 / 2.357]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="#b5c4d6"
                         map={cityTexture}
                         transparent={true}
                         alphaTest={0.1}
@@ -575,7 +574,7 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 {/* City skyline - right (mirrored) */}
                 <mesh position={[30, 3.4, -17]} scale={[-1, 1, 1]}>
                     <planeGeometry args={[30, 30 / 2.357]} />
-                    <meshBasicMaterial color="#fcf3c6"
+                    <meshBasicMaterial color="#b5c4d6"
                         map={cityTexture}
                         transparent={true}
                         alphaTest={0.1}
@@ -588,13 +587,9 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
                 <FlyingBird texture={birdTexture} />
 
                 {/* Clouds scattered above */}
-                <GalleryClouds count={65} seed={123} />
+                {/* Removed clouds to make background video more visible */}
 
-                {/* Skybox/Environment */}
-                <mesh position={[0, 5, -20]}>
-                    <sphereGeometry args={[40, 32, 32]} />
-                    <meshBasicMaterial color="#f0f0f0" side={THREE.BackSide} transparent opacity={0.5} onBeforeCompile={onBeforeCompile} />
-                </mesh>
+                {/* Skybox/Environment removed to make background video fully visible */}
             </group>
         </group>
     );
@@ -942,7 +937,7 @@ const ProjectCard = memo(forwardRef(({ index, project, clothespinTexture, curren
             const p = paintProgress.value;
             // Instantly reveal if we teleported
             const expectedOpacity = p >= 1.0 ? 1.0 : THREE.MathUtils.clamp((p - 0.3) * 2.0, 0.0, 1.0);
-            
+
             if (textRef.current.fillOpacity !== expectedOpacity) {
                 const applyOpacity = (ref) => {
                     if (ref.current) {
@@ -1329,7 +1324,7 @@ const RightSideHouses = ({ texture, baseWidth, baseHeight, cropAmount }) => {
     return (
         <mesh position={[newX, -1, -9]} scale={[-1, 1, 1]}>
             <planeGeometry args={[newWidth, baseHeight]} />
-            <meshBasicMaterial color="#fcf3c6"
+            <meshBasicMaterial color="#e8b79b"
                 map={croppedTexture}
                 transparent={true}
                 alphaTest={0.1}

@@ -38,11 +38,15 @@ export const ENTRANCE_TEXTURES = [
 export const CORRIDOR_TEXTURES = [
     // Walls/Floor/Ceiling
     '/textures/corridor/wall_texture.webp',
+    '/textures/corridor/wall_wood_panels.webp',
     '/textures/corridor/kawalekpodlogi.webp',
+    '/textures/corridor/floor_wood_tinted.webp',
     '/textures/corridor/texturadoprogow.webp',
     '/textures/corridor/texturadrewnadonozekbiurka.webp',
     '/textures/corridor/ceiling_texture.webp',
+    '/textures/corridor/ceiling_wood_panels.webp',
     '/textures/corridor/avatar_sketch.webp',
+    '/textures/corridor/yuta_avatar.png',
     // Double doors (end of corridor)
     '/textures/corridor/doors/frame_sketch.webp',
     '/textures/corridor/doors/doorrleft.webp',

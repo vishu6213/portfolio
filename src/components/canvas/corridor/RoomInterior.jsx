@@ -41,9 +41,9 @@ const RoomInterior = memo(({ label, showRoom, onReady, isExiting }) => {
     const roomZ = -corridorDepth - roomDepth / 2;
 
     // Load corridor textures
-    const floorTexSrc = useTexture('/textures/corridor/kawalekpodlogi.webp');
+    const floorTexSrc = useTexture('/textures/corridor/floor_wood_tinted.webp');
     const wallTexSrc = useTexture('/textures/corridor/wall_texture.webp');
-    const ceilingTexSrc = useTexture('/textures/corridor/ceiling_texture.webp');
+    const ceilingTexSrc = useTexture('/textures/corridor/ceiling_wood_panels.webp');
     const bbTexSrc = useTexture('/textures/corridor/texturadoprogow.webp');
 
     // Memoize textured materials for mini-corridor
@@ -85,10 +85,10 @@ const RoomInterior = memo(({ label, showRoom, onReady, isExiting }) => {
         bbRight.repeat.set(corridorDepth / NATURAL_TILE_W, 1);
 
         return {
-            corridorFloor: new THREE.MeshBasicMaterial({ color: '#fcf3c6',  map: floorTex, side: THREE.DoubleSide }),
+            corridorFloor: new THREE.MeshBasicMaterial({ color: '#ffffff',  map: floorTex, side: THREE.DoubleSide }),
             corridorWallL: new THREE.MeshBasicMaterial({ color: '#fcf3c6',  map: wallTexL, side: THREE.DoubleSide }),
             corridorWallR: new THREE.MeshBasicMaterial({ color: '#fcf3c6',  map: wallTexR, side: THREE.DoubleSide }),
-            corridorCeiling: new THREE.MeshBasicMaterial({ color: '#fcf3c6',  map: ceilTex, side: THREE.DoubleSide }),
+            corridorCeiling: new THREE.MeshBasicMaterial({ color: '#ffffff',  map: ceilTex, side: THREE.DoubleSide }),
             bbLeft: new THREE.MeshBasicMaterial({ color: '#fcf3c6',  map: bbLeft, side: THREE.DoubleSide }),
             bbRight: new THREE.MeshBasicMaterial({ color: '#fcf3c6',  map: bbRight, side: THREE.DoubleSide }),
             threshold: new THREE.MeshBasicMaterial({ color: '#fcf3c6', 

@@ -48,7 +48,7 @@ const SegmentDoors = ({
     const handleRightTexture = useTexture('/textures/corridor/doors/handle_right_sketch.webp');
     const doorBackTexture = useTexture('/textures/corridor/doors/door_back.webp');
     const edgeTexture = useTexture('/textures/corridor/doors/pien.webp');
-    const wallTexture = useTexture('/textures/corridor/wall_texture.webp');
+    const wallTexture = useTexture('/textures/corridor/wall_wood_panels.webp');
 
     wallTexture.wrapS = wallTexture.wrapT = THREE.RepeatWrapping;
 
@@ -158,7 +158,7 @@ const SegmentDoors = ({
             {/* === LEFT WALL PANEL (Brainstorming) === */}
             <mesh position={[-(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
-                <meshBasicMaterial color="#fcf3c6" map={wallTexture} roughness={0.95} />
+                <meshBasicMaterial color="#ffffff" map={wallTexture} roughness={0.95} />
             </mesh>
             {/* Decoration Left (Idea Process) */}
             {/* 
@@ -182,7 +182,7 @@ const SegmentDoors = ({
             {/* === RIGHT WALL PANEL (Coffee & Bug) === */}
             <mesh position={[(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
-                <meshBasicMaterial color="#fcf3c6" map={wallTexture} roughness={0.95} />
+                <meshBasicMaterial color="#ffffff" map={wallTexture} roughness={0.95} />
             </mesh>
             {/* Decoration Right (Coffee) */}
             {/* 
@@ -204,7 +204,7 @@ const SegmentDoors = ({
             {/* === TOP WALL PANEL (While True) === */}
             <mesh position={[0, topWallCenterY, 0]}>
                 <boxGeometry args={[doorOpeningWidth, topWallHeight, wallThickness]} />
-                <meshBasicMaterial color="#fcf3c6" map={wallTexture} roughness={0.95} />
+                <meshBasicMaterial color="#ffffff" map={wallTexture} roughness={0.95} />
             </mesh>
             {/* Decoration Top (While True) */}
             <mesh position={[0, topWallCenterY, 0.07]}>
