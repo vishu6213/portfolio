@@ -1,5 +1,5 @@
 import { useMemo, useState, useRef, useEffect } from 'react';
-import { useTexture, Text } from '@react-three/drei';
+import { useTexture, Text, useVideoTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
 import gsap from 'gsap';
@@ -27,6 +27,19 @@ const tempQuat = new THREE.Quaternion();
 
 
 const CABIN_SKETCH_URL = '/fonts/CabinSketch-Regular.ttf';
+
+const VideoContent = ({ videoPath, width, height }) => {
+    const texture = useVideoTexture(videoPath, { muted: true, loop: true, start: true });
+    return (
+        <group position={[0, 0, 0.01]}>
+            <mesh position={[0, 0, 0]}>
+                <planeGeometry args={[width, height]} />
+                <meshBasicMaterial color="#ffffff" map={texture} />
+            </mesh>
+        </group>
+    );
+};
+
 
 const PictureContent = ({ imagePath, imagePaintedPath, width, height, isPainted }) => {
     const texture = useTexture(imagePath);
@@ -287,7 +300,13 @@ const InspectableFrame = ({ frame, wallX, frameTexture, framePaintedTexture, CAB
             </mesh>
 
             {/* OBRAZEK WEWNĄTRZ */}
-            {frame.image && (
+            {frame.video ? (
+                <VideoContent 
+                    videoPath={frame.video} 
+                    width={frame.videoWidth || frame.width * 0.7} 
+                    height={frame.videoHeight || frame.height * 0.7} 
+                />
+            ) : frame.image ? (
                 <group position={[0, 0, 0]}>
                     {frame.imageBgColor && (
                         <mesh position={[0, 0, 0.005]}>
@@ -303,7 +322,7 @@ const InspectableFrame = ({ frame, wallX, frameTexture, framePaintedTexture, CAB
                         isPainted={isHovered || isInspected}
                     />
                 </group>
-            )}
+            ) : null}
 
             {/* PODPIS */}
             {frame.signature && (
@@ -427,11 +446,9 @@ const CorridorDecorations = ({ segmentLength, zOffset, corridorWidth = 4, corrid
             height: 2.5 / 1.785,
             y: 0.35,
             id: 'frame-4',
-            signature: "Empty canvas!\nWant your art here?\nContact me!",
-            signatureX: 0,
-            signatureY: 0,
-            signatureSize: 0.12,
-            signatureColor: '#333333'
+            video: '/videos/obsidian-k9.mp4',
+            videoWidth: 2.2,
+            videoHeight: 2.2 / 1.777,
         },
     ], [zOffset]);
 

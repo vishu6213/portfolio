@@ -371,7 +371,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
             {/* Avatar on cloud - floating + spreads up-left */}
             <mesh ref={avatarRef} position={[0, baseY, 0]}>
                 <planeGeometry args={[avatarWidth, avatarHeight]} />
-                <meshBasicMaterial color="#fcf3c6"
+                <meshBasicMaterial color="#feca57"
                     map={avatarTexture}
                     transparent
                     side={THREE.DoubleSide}
@@ -471,17 +471,17 @@ const AWARDS_DATA = {
         layout: 'certificate_grid',
         title: 'AI Engineer & Data Analytics Certifications',
         items: [
-            { 
-                label: 'Deloitte - Data Analytics Job Simulation', 
-                date: 'June 2025', 
-                image: '/textures/certificates/cert_deloitte_data_analytics.png', 
-                url: '/textures/certificates/cert_deloitte_data_analytics.png' 
+            {
+                label: 'Deloitte - Data Analytics Job Simulation',
+                date: 'June 2025',
+                image: '/textures/certificates/cert_deloitte_data_analytics.png',
+                url: '/textures/certificates/cert_deloitte_data_analytics.png'
             },
-            { 
-                label: 'IBM SkillsBuild - Journey to Cloud', 
-                date: 'July 2025', 
-                image: '/textures/certificates/cert_ibm_cloud_solution.png', 
-                url: 'https://www.credly.com/badges/4c060896-ec12-4ae9-8983-59ed49c69caf' 
+            {
+                label: 'IBM SkillsBuild - Journey to Cloud',
+                date: 'July 2025',
+                image: '/textures/certificates/cert_ibm_cloud_solution.png',
+                url: 'https://www.credly.com/badges/4c060896-ec12-4ae9-8983-59ed49c69caf'
             },
             { label: 'Forage - GenAI Powered Data Analytics', date: 'Nov 2025', image: '/textures/certificates/cert_forage_genai.png', url: '/textures/certificates/cert_forage_genai.png' },
             { label: 'Intel - AI Appreciate Stage', date: 'Sep 2025', image: '/textures/certificates/cert_intel_ai_appreciate.png', url: '/textures/certificates/cert_intel_ai_appreciate.png' },

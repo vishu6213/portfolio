@@ -1,277 +1,70 @@
 // =============================================================================
-// MANGA PRELOADER STYLES - Exact Visual Reference Match
+// PRELOADER STYLES - Paper Tear Edition
 // =============================================================================
 
 @use 'variables' as *;
 @use 'mixins' as *;
 
-@font-face {
-    font-family: 'CabinSketch-Bold';
-    src: url('/fonts/CabinSketch-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-.manga-loader {
+.preloader {
     @include fullscreen;
     z-index: $z-preloader;
+    // No background on container itself, the halves handle it
     pointer-events: auto;
     cursor: auto;
-    overflow: hidden;
-    background-color: #ece9e2;
-    font-family: 'Inter', sans-serif;
-    user-select: none;
-
-    // Soft grain texture overlay
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0);
-        background-size: 8px 8px;
-        opacity: 0.6;
-        pointer-events: none;
-        z-index: 3;
-    }
 
     &__half {
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 100%;
+        width: 100%; // Each half takes full width but is clipped
         height: 100%;
-        will-change: transform;
-        z-index: 10;
+        background-color: $color-white;
+        background-image: url('/textures/paper-texture.webp');
+        background-size: cover;
+        background-position: center;
+        // background-blend-mode: multiply; // Optional depending on look
 
-        &--left {
-            left: 0;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-        }
+        will-change: transform; // Optimize for the big move
 
-        &--right {
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
+        // Shadow to give depth to the tear? 
+        // Hard to do with clip-path on the element itself.
+        // We'd need an inner wrapper or drop-shadow filter (heavy).
+        // Let's keep it flat for now or maybe add a slight filter.
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
     }
 
-    &__bg {
-        position: absolute;
-        inset: 0;
-        background-color: #ece9e2;
-        z-index: 1;
+    &__half--left {
+        left: 0;
+        // clip-path set inline
     }
 
-    // Left Character Styling
-    &__character-wrapper {
-        position: relative;
-        z-index: 12;
-        left: 5%;
-        bottom: 0;
-        height: 88vh;
-        max-height: 820px;
-        display: flex;
-        align-items: flex-end;
-        will-change: transform;
-        pointer-events: none;
+    &__half--right {
+        right: 0;
+        // clip-path set inline
     }
 
-    &__character-img {
-        height: 100%;
-        width: auto;
-        object-fit: contain;
-        object-position: bottom left;
-        filter: contrast(1.08) brightness(0.97);
-        drop-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    }
-
-    // Vertical Torn Paper Divider SVG
-    &__tear-svg {
+    &__overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 25;
+        z-index: 10;
         pointer-events: none;
 
-        path {
-            stroke: #121212;
-            stroke-width: 0.65;
-            stroke-linecap: round;
-        }
+        // Depending on implementation, SVG might need to scale differently
+        // We used preserveAspectRatio="none" in JSX to stretch it to viewport
     }
 
-    // Right Content Box: Live Percentage, WELCOME, Progress Line
-    &__content-right {
-        position: relative;
+    &__percentage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: $font-handwritten; // Or title font
+        font-size: 2rem;
+        color: $color-black; // Or opacity
         z-index: 20;
-        right: 18%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 0.6rem;
-    }
-
-    &__counter {
-        font-family: 'CabinSketch-Bold', cursive, sans-serif;
-        font-size: 5.5rem;
-        font-weight: 700;
-        color: #121212;
-        line-height: 1;
-        letter-spacing: 0.02em;
-        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
-
-        @media (max-width: 1024px) {
-            font-size: 4.2rem;
-        }
-    }
-
-    &__welcome {
-        font-family: 'Inter', sans-serif;
-        font-size: 0.95rem;
-        font-weight: 700;
-        letter-spacing: 0.42em;
-        color: #1e1e1e;
-        text-transform: uppercase;
-        margin-top: 0.2rem;
-
-        @media (max-width: 1024px) {
-            font-size: 0.85rem;
-            letter-spacing: 0.35em;
-        }
-    }
-
-    &__progress-svg {
-        margin-top: 0.5rem;
-        overflow: visible;
-    }
-
-    // Floating Bird Silhouettes & Ink Specks
-    &__particles {
-        position: absolute;
-        inset: 0;
-        z-index: 5;
-        pointer-events: none;
-    }
-
-    &__bird {
-        position: absolute;
-        animation: bird-float 12s ease-in-out infinite alternate;
-
-        &--1 {
-            top: 14%;
-            right: 18%;
-            animation-duration: 9s;
-        }
-
-        &--2 {
-            top: 22%;
-            right: 14%;
-            animation-duration: 11s;
-            animation-delay: -2s;
-        }
-
-        &--3 {
-            top: 15%;
-            left: 12%;
-            animation-duration: 14s;
-            animation-delay: -4s;
-        }
-    }
-
-    &__speck {
-        position: absolute;
-        background-color: #1a1a1a;
-        border-radius: 50%;
-
-        &.speck--1 {
-            width: 3px;
-            height: 3px;
-            top: 35%;
-            left: 45%;
-            opacity: 0.4;
-        }
-
-        &.speck--2 {
-            width: 2px;
-            height: 2px;
-            top: 68%;
-            right: 28%;
-            opacity: 0.5;
-        }
-
-        &.speck--3 {
-            width: 4px;
-            height: 2px;
-            top: 28%;
-            right: 40%;
-            opacity: 0.3;
-            transform: rotate(25deg);
-        }
-
-        &.speck--4 {
-            width: 2px;
-            height: 2px;
-            top: 78%;
-            left: 30%;
-            opacity: 0.45;
-        }
-    }
-
-    // Responsive Adjustments
-    @media (max-width: 900px) {
-        &__character-wrapper {
-            left: 2%;
-            height: 65vh;
-            max-height: 500px;
-        }
-
-        &__content-right {
-            right: 8%;
-        }
-
-        &__counter {
-            font-size: 4rem;
-        }
-    }
-
-    @media (max-width: 600px) {
-        &__character-wrapper {
-            left: -10%;
-            height: 55vh;
-            opacity: 0.85;
-        }
-
-        &__content-right {
-            right: 5%;
-            transform: scale(0.9);
-        }
-
-        &__counter {
-            font-size: 3.5rem;
-        }
-
-        &__welcome {
-            font-size: 0.8rem;
-            letter-spacing: 0.3em;
-        }
-    }
-}
-
-@keyframes bird-float {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-        transform: translate(-10px, -8px) rotate(2deg);
-    }
-    100% {
-        transform: translate(12px, -15px) rotate(-2deg);
+        mix-blend-mode: multiply; // Make it look written on paper
     }
 }

@@ -252,7 +252,7 @@ const AboutRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
             <group ref={airplaneGroupRef} position={[0, -0.3, 1]}>
                 <PaperAirplane
                     scale={0.8}
-                    color="#faf8f5"
+                    color="#48dbfb"
                 />
             </group>
 
@@ -262,7 +262,7 @@ const AboutRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
             {/* === SKY BACKDROP === */}
             <mesh position={[0, 0, -200]}>
                 <planeGeometry args={[300, 150]} />
-                <meshBasicMaterial color="#87CEEB" side={THREE.DoubleSide} />
+                <meshBasicMaterial color="#2d1b4e" side={THREE.DoubleSide} />
             </mesh>
         </group>
     );
