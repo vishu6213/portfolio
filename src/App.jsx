@@ -97,6 +97,21 @@ function DocumentMetaBridge() {
 import ParallaxStudioBackground from './components/ui/ParallaxStudioBackground';
 import GalleryVideoBackground from './components/ui/GalleryVideoBackground';
 
+function ResponsiveCamera() {
+  const { camera, size } = useThree();
+  useEffect(() => {
+    const aspect = size.width / size.height;
+    if (aspect < 1) {
+      // Mobile portrait - increase FOV
+      camera.fov = 60 + (1 - aspect) * 45;
+    } else {
+      camera.fov = 60; // Default desktop FOV
+    }
+    camera.updateProjectionMatrix();
+  }, [camera, size]);
+  return null;
+}
+
 function AppContent() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [sceneReady, setSceneReady] = useState(false);
@@ -147,6 +162,8 @@ function AppContent() {
           >
             {!hasTransparentBackground && <color attach="background" args={['#fdf8e2']} />}
             {!hasTransparentBackground && <fog attach="fog" args={['#fdf8e2', 15, 50]} />}
+
+            <ResponsiveCamera />
 
             <Suspense fallback={null}>
               <Experience

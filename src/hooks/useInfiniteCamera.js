@@ -191,7 +191,7 @@ const useInfiniteCamera = ({
 
         // Vertical scroll - only when scroll enabled
         if (scrollEnabledRef.current) {
-            const deltaY = (touchStart.current.y - currentY) * scrollSpeed * 1.5;
+            const deltaY = (touchStart.current.y - currentY) * scrollSpeed * 2.5; // Increased for better mobile feel
             targetZ.current -= deltaY;
             unlockAchievement('corridor_explore');
         }
