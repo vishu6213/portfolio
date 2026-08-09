@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
 import { useAudio } from '../../context/AudioManager';
+import { LoadingBreadcrumb } from '../ui/animated-loading-svg-text-shimmer';
 
 // Reusable SVG Line Component (now accepts ref)
 const TearLineSVG = ({ svgPathData, pathLength, strokeDashoffset, pathRef }) => (
@@ -351,46 +352,20 @@ const Preloader = ({ onComplete, ready }) => {
       pencilSoundRef.current.stop();
       pencilSoundRef.current = null;
     }
-    play('tear', { volume: 0.8 });
+    // play('tear', { volume: 0.8 }); // Removing tear sound as it's a generic loader now
 
     const tl = gsap.timeline({
       onComplete: () => {
         setIsDone(true);
-        
-        const exitEnd = performance.now();
-        const totalDuration = ((exitEnd - loadStartTime.current) / 1000).toFixed(2);
-        // console.group("⏱️ Portfolio Loading Performance");
-        // console.log(`- Start: %c${loadStartTime.current.toFixed(0)}ms`, "color: #888");
-        // console.log(`- Total Duration: %c${totalDuration}s`, "color: #00ff00; font-weight: bold;");
-        // console.groupEnd();
-        
         onComplete?.();
       }
     });
 
-    // 1. Quick pause before tear
-    tl.to({}, { duration: 0.1 });
-
-    // 2. Tear Apart
-    tl.to(leftHalfRef.current, {
-      xPercent: -100,
-      rotation: -2,
-      duration: 1.8,
-      ease: "power3.inOut"
-    }, 'tear');
-
-    tl.to(rightHalfRef.current, {
-      xPercent: 100,
-      rotation: 2,
-      duration: 1.8,
-      ease: "power3.inOut"
-    }, 'tear');
-
-    // 3. Fade container
+    // Fade container
     tl.to(containerRef.current, {
       opacity: 0,
       duration: 0.5
-    }, '-=0.5');
+    });
   };
 
   if (isDone) return null;
@@ -402,43 +377,14 @@ const Preloader = ({ onComplete, ready }) => {
   const percentageText = `${Math.round(safeProgress)}%`;
 
   return (
-    <div className="preloader" ref={containerRef}>
-      {/* LEFT HALF */}
-      <div
-        className="preloader__half preloader__half--left"
-        ref={leftHalfRef}
-        style={{ clipPath: leftClipPoly }}
-      >
-        {/* Content: Percentage & Line */}
-        <div className="preloader__percentage" style={percentageStyle}>
-          <span ref={textLeftRef}>{percentageText}</span>
-          <RingLoader />
-        </div>
-        <div className="preloader__status" style={statusStyle} ref={statusLeftRef}>
-          Initializing Sketchbook...
-        </div>
+    <div className="preloader" ref={containerRef} style={{ display: 'flex', flexDirection: 'column', height: '100vh', width: '100vw', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fdf8e2', position: 'fixed', top: 0, left: 0, zIndex: 9999 }}>
+      
+      {/* Centered Loading Animation */}
+      <LoadingBreadcrumb text="Cooking" />
 
-        {/* SVG is now INSIDE the clipped half */}
-        <TearLineSVG pathRef={pathLeftRef} svgPathData={svgPathData} pathLength={pathLength} strokeDashoffset={strokeDashoffset} />
-      </div>
-
-      {/* RIGHT HALF */}
-      <div
-        className="preloader__half preloader__half--right"
-        ref={rightHalfRef}
-        style={{ clipPath: rightClipPoly }}
-      >
-        {/* Content: Percentage & Line */}
-        <div className="preloader__percentage" style={percentageStyle}>
-          <span ref={textRightRef}>{percentageText}</span>
-          <RingLoader />
-        </div>
-        <div className="preloader__status" style={statusStyle} ref={statusRightRef}>
-          Initializing Sketchbook...
-        </div>
-
-        {/* SVG is now INSIDE the clipped half */}
-        <TearLineSVG pathRef={pathRightRef} svgPathData={svgPathData} pathLength={pathLength} strokeDashoffset={strokeDashoffset} />
+      {/* Percentage at left side bottom */}
+      <div style={{ position: 'absolute', bottom: '2rem', left: '2rem', fontSize: '1.5rem', fontWeight: 'bold', color: '#18181b', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'monospace' }}>
+        <span ref={textLeftRef}>{percentageText}</span>
       </div>
     </div>
   );
