@@ -1,4 +1,4 @@
-import { useRef, useState, Suspense } from 'react';
+import { useRef, useState, Suspense, useEffect } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 
 // Eagerly import all room components
@@ -27,6 +27,19 @@ const RoomWarmup = ({ onWarmupComplete, isLowTier }) => {
 
     // Wait for rooms to render a few frames, then compile and unmount
     const warmupStart = useRef(performance.now());
+
+    // Safety fallback: Ensure onWarmupComplete ALWAYS fires within 1.5s max
+    useEffect(() => {
+        const safetyTimer = setTimeout(() => {
+            if (!completeFired.current && !isDone) {
+                console.warn('RoomWarmup: Safety fallback triggered');
+                completeFired.current = true;
+                setIsDone(true);
+                onWarmupComplete?.();
+            }
+        }, 1500);
+        return () => clearTimeout(safetyTimer);
+    }, [isDone, onWarmupComplete]);
 
     useFrame(() => {
         if (isDone || completeFired.current) return;

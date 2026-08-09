@@ -371,7 +371,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
             {/* Avatar on cloud - floating + spreads up-left */}
             <mesh ref={avatarRef} position={[0, baseY, 0]}>
                 <planeGeometry args={[avatarWidth, avatarHeight]} />
-                <meshBasicMaterial color="#feca57"
+                <meshBasicMaterial color="#ffffff"
                     map={avatarTexture}
                     transparent
                     side={THREE.DoubleSide}
@@ -1006,16 +1006,20 @@ const BALLOON_CONFIG = [
     { texture: '/textures/about/reactduzybalon.webp', paintedTexture: '/textures/about/reactduzybalon_painted.webp', label: 'React', size: 'large', x: -2.5, y: 2, z: 0.3, phase: 0 },
     { texture: '/textures/about/threejsduzybalon.webp', paintedTexture: '/textures/about/threejsduzybalon_painted.webp', label: 'Three.js', size: 'large', x: 2.5, y: 2.5, z: 0.2, phase: 1.5 },
     { texture: '/textures/about/GSAPduzybalon.webp', paintedTexture: '/textures/about/GSAPduzybalon_painted.webp', label: 'GSAP', size: 'large', x: 0, y: 3, z: 0.5, phase: 3 },
-    { texture: '/textures/about/reactduzybalon.webp', paintedTexture: '/textures/about/reactduzybalon_painted.webp', label: 'Python', isCustomSkill: true, size: 'large', x: 2, y: 1.8, z: 0.4, phase: 2.5 },
-    { texture: '/textures/about/threejsduzybalon.webp', paintedTexture: '/textures/about/threejsduzybalon_painted.webp', label: 'AI', isCustomSkill: true, size: 'large', x: -1.2, y: 4.0, z: 0.3, phase: 2.0 },
+    { texture: '/textures/about/clean_duzybalon.webp', paintedTexture: '/textures/about/clean_duzybalon_painted.webp', label: 'Python', isCustomSkill: true, size: 'large', x: 2, y: 1.8, z: 0.4, phase: 2.5 },
+    { texture: '/textures/about/clean_duzybalon.webp', paintedTexture: '/textures/about/clean_duzybalon_painted.webp', label: 'AI', isCustomSkill: true, size: 'large', x: -1.2, y: 4.0, z: 0.3, phase: 2.0 },
+    { texture: '/textures/about/clean_duzybalon.webp', paintedTexture: '/textures/about/clean_duzybalon_painted.webp', label: 'Gen AI', isCustomSkill: true, size: 'large', x: -3.2, y: 3.0, z: 0.6, phase: 1.2 },
 
     // Medium balloons - scattered around
     { texture: '/textures/about/JSSREDNIBALON.webp', paintedTexture: '/textures/about/JSSREDNIBALON_painted.webp', label: 'JavaScript', size: 'medium', x: -4, y: 1, z: -0.3, phase: 0.8 },
     { texture: '/textures/about/csssrednibalon.webp', paintedTexture: '/textures/about/csssrednibalon_painted.webp', label: 'CSS', size: 'medium', x: 4, y: 1.5, z: -0.2, phase: 2.2 },
     { texture: '/textures/about/nextjssrednibalon.webp', paintedTexture: '/textures/about/nextjssrednibalon_painted.webp', label: 'Next.js', size: 'medium', x: 0, y: 0.5, z: -0.4, phase: 4 },
-    { texture: '/textures/about/nextjssrednibalon.webp', paintedTexture: '/textures/about/nextjssrednibalon_painted.webp', label: 'SQL', isCustomSkill: true, size: 'medium', x: -2, y: 1.2, z: -0.1, phase: 1.0 },
-    { texture: '/textures/about/JSSREDNIBALON.webp', paintedTexture: '/textures/about/JSSREDNIBALON_painted.webp', label: 'LLMs', isCustomSkill: true, size: 'medium', x: -3.5, y: 3.2, z: -0.2, phase: 3.8 },
-    { texture: '/textures/about/csssrednibalon.webp', paintedTexture: '/textures/about/csssrednibalon_painted.webp', label: 'RAG', isCustomSkill: true, size: 'medium', x: 3.5, y: 3.5, z: -0.3, phase: 0.5 },
+    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'SQL', isCustomSkill: true, size: 'medium', x: -2, y: 1.2, z: -0.1, phase: 1.0 },
+    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'LLMs', isCustomSkill: true, size: 'medium', x: -3.5, y: 3.2, z: -0.2, phase: 3.8 },
+    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'RAG', isCustomSkill: true, size: 'medium', x: 3.5, y: 3.5, z: -0.3, phase: 0.5 },
+    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'Soft Eng', isCustomSkill: true, size: 'medium', x: 1.5, y: 4.2, z: -0.2, phase: 2.7 },
+    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'ML', isCustomSkill: true, size: 'medium', x: 2.8, y: 0.8, z: -0.5, phase: 1.8 },
+    { texture: '/textures/about/clean_srednibalon.webp', paintedTexture: '/textures/about/clean_srednibalon_painted.webp', label: 'Deep Learning', isCustomSkill: true, size: 'medium', x: -1.5, y: 2.5, z: -0.4, phase: 3.1 },
 
     // Small balloons - background accents
     { texture: '/textures/about/htmlmalybalon.webp', paintedTexture: '/textures/about/htmlmalybalon_painted.webp', label: 'HTML', size: 'small', x: -5.5, y: 2.5, z: -0.8, phase: 1.2 },
@@ -1072,6 +1076,8 @@ const SkillBalloon = ({ config, revealFactorRef, spreadFactorRef, timeRef }) => 
         'reactduzybalon.webp': 736 / 1447,
         'threejsduzybalon.webp': 1141 / 1964,
         'GSAPduzybalon.webp': 1.0, // GSAP balloon is square
+        'clean_duzybalon.webp': 600 / 1120, // Approx aspect
+        'clean_srednibalon.webp': 600 / 1120, // Approx aspect
         'default_small_medium': 631 / 1482 // Common ratio for others
     };
 

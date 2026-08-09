@@ -153,7 +153,7 @@ export default function About() {
             >
               Core Capabilities
             </h3>
-            
+
             <div
               style={{
                 display: 'grid',

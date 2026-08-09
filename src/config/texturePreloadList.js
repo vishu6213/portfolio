@@ -209,6 +209,8 @@ export const ABOUT_TEXTURES = [
     '/textures/about/threejsduzybalon_painted.webp',
     '/textures/about/GSAPduzybalon.webp',
     '/textures/about/GSAPduzybalon_painted.webp',
+    '/textures/about/clean_duzybalon.webp',
+    '/textures/about/clean_duzybalon_painted.webp',
     // Skill balloons - medium
     '/textures/about/JSSREDNIBALON.webp',
     '/textures/about/JSSREDNIBALON_painted.webp',
@@ -216,6 +218,8 @@ export const ABOUT_TEXTURES = [
     '/textures/about/csssrednibalon_painted.webp',
     '/textures/about/nextjssrednibalon.webp',
     '/textures/about/nextjssrednibalon_painted.webp',
+    '/textures/about/clean_srednibalon.webp',
+    '/textures/about/clean_srednibalon_painted.webp',
     // Skill balloons - small
     '/textures/about/htmlmalybalon.webp',
     '/textures/about/htmlmalybalon_painted.webp',
@@ -311,14 +315,14 @@ export const PRELOAD_LOADER = [
 export const filterTexturesByDevice = (list, usePainted) => {
     // 1. Identify all paths that have a _painted version available
     const paintedVersions = new Set(list.filter(p => p.includes('_painted.webp')));
-    
+
     // Also include the special css3logo case
     const hasCss3Painted = list.some(p => p.includes('css3logo_painted.webp'));
-    
+
     return list.filter(path => {
         const isPainted = path.includes('_painted.webp');
         const isCss3 = path.includes('css3logo_painted.webp');
-        
+
         // Find the "standard" version for this path if it's a painted one
         let standardVersion = null;
         if (isPainted) {
@@ -331,7 +335,7 @@ export const filterTexturesByDevice = (list, usePainted) => {
             const css3Version = path.replace('csslogo.webp', 'css3logo_painted.webp');
             if (list.includes(pVersion) || (path.includes('csslogo.webp') && hasCss3Painted)) {
                 // Return true to keep the standard version! Both desktop and mobile need it.
-                return true; 
+                return true;
             }
             // If it doesn't have a painted version, it's a static texture (always keep)
             return true;

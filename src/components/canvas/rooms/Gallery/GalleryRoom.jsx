@@ -40,8 +40,8 @@ const FALLBACK_PROJECTS = [
         front: '/textures/gallery/bioprzod.webp',
         painted: '/textures/gallery/bioprzod_painted.webp',
         url: 'https://neurobase-ai-zeta.vercel.app/',
-        description: 'A powerful neuro-symbolic framework (details to be updated later).',
-        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/jslogo.webp']
+        description: 'AI agentic crypto companion: swap, analyze, and send tokens securely via conversational chat.',
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/tailwindlogo.webp', '/textures/gallery/htmllogo.webp']
     },
     {
         id: 'rag',
@@ -49,8 +49,8 @@ const FALLBACK_PROJECTS = [
         front: '/textures/gallery/timberkittyprzod.webp',
         painted: '/textures/gallery/timberkittyprzod_painted.webp',
         url: '#',
-        description: 'Retrieval-Augmented Generation system (details to be updated later).',
-        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/csslogo.webp']
+        description: 'Highly optimized Retrieval-Augmented Generation engine for hallucination-free querying over private documents.',
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/tailwindlogo.webp', '/textures/gallery/htmllogo.webp']
     },
     {
         id: 'team-task-manager',
@@ -58,8 +58,8 @@ const FALLBACK_PROJECTS = [
         front: '/textures/gallery/monetuneprzod.webp',
         painted: '/textures/gallery/monetuneprzod_painted.webp',
         url: 'https://team-task-manager-alpha-nine.vercel.app/',
-        description: 'A collaborative task management application for teams (details to be updated later).',
-        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
+        description: 'Real-time collaborative workspace with Kanban boards, chat, and automated sprint metrics.',
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/firebaselogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/tailwindlogo.webp']
     }
 ];
 
@@ -1243,10 +1243,9 @@ const ProjectCard = memo(forwardRef(({ index, project, clothespinTexture, curren
                     {/* Kontener na loga układane poziomo */}
                     <group position={[0, -0.05, 0.01]}>
                         {project.techStack && project.techStack.map((logoPath, idx) => {
-                            // Rozstawienie kwadracików (4 sztuki wyśrodkowane)
-                            const spacing = 0.30;
-                            const startX = -((project.techStack.length - 1) * spacing) / 2;
-                            const xPos = startX + (idx * spacing);
+                            // Rozstawienie kwadracików (wyrównane do 4 pre-drawn boksów na szablonie kartki)
+                            const boxPositions = [-0.45, -0.15, 0.15, 0.45];
+                            const xPos = boxPositions[idx] !== undefined ? boxPositions[idx] : 0;
 
                             return (
                                 <TechStackLogo key={idx} path={logoPath} position={[xPos, 0, 0]} />

@@ -252,7 +252,7 @@ const AboutRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
             <group ref={airplaneGroupRef} position={[0, -0.3, 1]}>
                 <PaperAirplane
                     scale={0.8}
-                    color="#48dbfb"
+                    color="#ffffff"
                 />
             </group>
 

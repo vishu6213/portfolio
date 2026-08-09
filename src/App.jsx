@@ -125,6 +125,11 @@ function AppContent() {
         {/* Full screen 3D Canvas */}
         <div className="canvas-wrapper">
           <Canvas
+            onCreated={({ gl }) => {
+              gl.domElement.addEventListener('webglcontextlost', (e) => {
+                e.preventDefault();
+              }, false);
+            }}
             camera={{
               position: [0, 0.2, 28],
               fov: 60,
@@ -135,8 +140,7 @@ function AppContent() {
               antialias: settings.antialias,
               alpha: true,
               powerPreference: settings.powerPreference,
-              localClippingEnabled: true,
-              failIfMajorPerformanceCaveat: true
+              localClippingEnabled: true
             }}
             dpr={settings.dpr}
             shadows={settings.shadows}

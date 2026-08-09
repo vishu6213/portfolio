@@ -6,7 +6,7 @@ import * as THREE from 'three';
 // ============================================
 // CONFIG
 // ============================================
-const PARTICLE_COUNT = 150;
+const PARTICLE_COUNT = 40; // Reduced from 150 to heavily improve performance (less draw calls)
 const MIN_RADIUS = 4;
 const MAX_RADIUS = 12;
 const VERTICAL_SPREAD = 35;

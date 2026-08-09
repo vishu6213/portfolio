@@ -237,6 +237,15 @@ const Preloader = ({ onComplete, ready }) => {
     }
 
     setTargetProgress(prev => Math.max(prev, newTarget));
+    
+    // Safety Fallback: if assets are loaded but scene is not ready, force 100% after 2.5s
+    const fallbackTimer = setTimeout(() => {
+        if (!active && !ready) {
+            console.warn('Preloader: Forcing 100% due to ready signal timeout');
+            setTargetProgress(100);
+        }
+    }, 2500);
+    return () => clearTimeout(fallbackTimer);
   }, [realProgress, active, ready]);
 
   // Handle Pencil Sound & Exit checking dynamically
@@ -316,11 +325,22 @@ const Preloader = ({ onComplete, ready }) => {
   // ----------------------------------------
   const exitStarted = useRef(false);
 
-  // Fallback trigger if ready becomes true AFTER 99.5% reached
+  // Fallback trigger if ready becomes true AFTER 99.5% reached or force exit after 1.5s
   useEffect(() => {
-    if (displayProgressRef.current >= 99.5 && ready && !exitStarted.current) {
-      exitStarted.current = true;
-      startExit();
+    if (displayProgressRef.current >= 99.5 && !exitStarted.current) {
+      if (ready) {
+        exitStarted.current = true;
+        startExit();
+      } else {
+        const forceExitTimer = setTimeout(() => {
+            if (!exitStarted.current) {
+                console.warn('Preloader: Forcing exit sequence');
+                exitStarted.current = true;
+                startExit();
+            }
+        }, 1500);
+        return () => clearTimeout(forceExitTimer);
+      }
     }
   }, [ready]);
 
