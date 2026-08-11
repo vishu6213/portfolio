@@ -13,6 +13,7 @@ import NavigationUI from './components/ui/NavigationUI';
 import GlobalOverlay from './components/ui/GlobalOverlay';
 import ScreenReaderOverlay from './components/ui/ScreenReaderOverlay';
 import { useDocumentMeta } from './hooks/useDocumentMeta';
+import RotatePhonePrompt from './components/ui/RotatePhonePrompt';
 
 // Lazy load the heavy 3D experience
 const Experience = lazy(() => import('./components/canvas/Experience'));
@@ -192,6 +193,7 @@ function AppContent() {
           onComplete={() => setIsLoaded(true)}
         />
       </div>
+      <RotatePhonePrompt />
     </>
   );
 }

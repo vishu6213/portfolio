@@ -249,7 +249,6 @@ const InspectableFrame = ({ frame, wallX, frameTexture, framePaintedTexture, CAB
                 position={[0, 0, 0.05]}
                 onClick={(e) => {
                     e.stopPropagation();
-                    if (isMobile) return; // Całkowite wyłączenie na mobile
                     setIsInspected((prev) => {
                         const next = !prev;
                         if (setCameraOverride) setCameraOverride(next); // Blokowanie / odblokowanie poruszania kamerą
