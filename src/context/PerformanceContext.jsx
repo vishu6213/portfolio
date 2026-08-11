@@ -20,22 +20,22 @@ const SETTINGS = {
     particleCount: 1.0, // 100% particles
   },
   [TIERS.MEDIUM]: {
-    dpr: [1, 1.5], // Cap at 1.5x on mobile to balance quality and GPU fillrate
+    dpr: [1, 2], // Allow up to 2x pixel density for better quality on mobile
     shadows: false, // Disable shadows for better mobile performance
     antialias: true,
     powerPreference: "default",
     physicsStep: 1 / 60,
-    textureQuality: "medium",
-    particleCount: 0.6, // 60% particles
+    textureQuality: "high", // Boosted for better quality
+    particleCount: 0.8, // Increased particles
   },
   [TIERS.LOW]: {
-    dpr: [0.8, 1], // Minimum 0.8x pixel density to avoid extreme pixelation
+    dpr: [1, 1.5], // Prevent extreme pixelation by keeping minimum dpr at 1
     shadows: false, // Disable shadows completely
-    antialias: false, // Disable AA to maximize FPS
+    antialias: true, // Enable AA to improve quality on low-end
     powerPreference: "low-power",
     physicsStep: 1 / 45, // Slower physics updates if needed
-    textureQuality: "low",
-    particleCount: 0.3, // 30% particles
+    textureQuality: "medium", // Increased from low to medium
+    particleCount: 0.5, // Increased particles
   },
 };
 

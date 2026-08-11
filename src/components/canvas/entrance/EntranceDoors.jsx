@@ -81,7 +81,7 @@ const EntranceDoors = ({
     const mouseTexture = useTexture('/textures/entrance/mouse_hanging.webp');
     const potTexture = useTexture('/textures/entrance/pot_with_duck_colored.webp');
     const bugTexture = useTexture('/textures/entrance/bug_sketch.webp');
-    const lampTexture = useTexture(isMobileDevice ? dummyTex : '/textures/entrance/vintage_street_lamp.png');
+    const lampTexture = useTexture('/textures/entrance/vintage_street_lamp.png');
     const inkSplashTexture = useTexture('/images/ink-splash.webp');
     const speechBubbleTexture = useTexture('/textures/entrance/speech_bubble.webp');
 
