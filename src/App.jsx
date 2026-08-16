@@ -113,6 +113,54 @@ function ResponsiveCamera() {
   return null;
 }
 
+const StudioIframe = ({ isVisible }) => {
+  const [render, setRender] = useState(isVisible);
+
+  useEffect(() => {
+    if (isVisible) setRender(true);
+  }, [isVisible]);
+
+  const handleAnimationEnd = () => {
+    if (!isVisible) setRender(false);
+  };
+
+  if (!render) return null;
+
+  return (
+    <>
+      <style>
+        {`
+          @keyframes studioFadeIn {
+            from { opacity: 0; transform: scale(1.02); }
+            to { opacity: 1; transform: scale(1); }
+          }
+          @keyframes studioFadeOut {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0; transform: scale(1.02); }
+          }
+        `}
+      </style>
+      <iframe
+        src="/nootturno-experience/index.html"
+        title="Studio Experience"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 99,
+          border: 'none',
+          backgroundColor: '#000',
+          animation: `${isVisible ? 'studioFadeIn' : 'studioFadeOut'} 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards`,
+        }}
+        onAnimationEnd={handleAnimationEnd}
+        allow="autoplay; fullscreen"
+      />
+    </>
+  );
+};
+
 function AppContent() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [sceneReady, setSceneReady] = useState(false);
@@ -136,9 +184,8 @@ function AppContent() {
       <DocumentMetaBridge />
       <GlobalAudioEnabler />
       <div className="app">
-        {currentRoom === 'studio' && <ParallaxStudioBackground />}
+        <StudioIframe isVisible={currentRoom === 'studio'} />
         {currentRoom === 'gallery' && <GalleryVideoBackground />}
-        {/* Full screen 3D Canvas */}
         <div className="canvas-wrapper">
           <Canvas
             onCreated={({ gl }) => {

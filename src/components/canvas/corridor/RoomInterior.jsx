@@ -29,6 +29,14 @@ const SUBTITLES = {
 // Naturalny kafelek listwy: 1582x94px przy wysokości 0.15 → ~2.524 units szerokości
 const NATURAL_TILE_W = (1582 / 94) * 0.15;
 
+// Helper component for Studio so it doesn't block transitions while rendering via iframe
+const DummyStudioRoom = ({ onReady }) => {
+    useEffect(() => {
+        if (onReady) onReady();
+    }, [onReady]);
+    return null;
+};
+
 /**
  * RoomInterior Component
  *
@@ -200,11 +208,9 @@ const RoomInterior = memo(({ label, showRoom, onReady, isExiting }) => {
                             </Suspense>
                         </group>
                     ) : label === 'THE STUDIO' ? (
-                        // === NEW STUDIO ROOM ===
+                        // === STUDIO SECTION (Rendered via IFrame in App.jsx) ===
                         <group position={[0, -0.5, -corridorDepth]}>
-                            <Suspense fallback={null}>
-                                <StudioRoom showRoom={showRoom} onReady={onReady} isExiting={isExiting} />
-                            </Suspense>
+                            <DummyStudioRoom onReady={onReady} />
                         </group>
                     ) : label === 'THE ABOUT' ? (
                         // === NEW ABOUT ROOM ===

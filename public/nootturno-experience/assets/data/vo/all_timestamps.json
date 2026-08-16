@@ -1,0 +1,5098 @@
+{
+  "1": {
+    "text": "In an immense land of nothingness, a lonely figure wanders through the mist.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "In",
+        "start": 0.259,
+        "end": 0.379,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.379,
+        "end": 0.439,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "an",
+        "start": 0.439,
+        "end": 0.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.539,
+        "end": 0.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "immense",
+        "start": 0.579,
+        "end": 1.12,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.12,
+        "end": 1.24,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "land",
+        "start": 1.24,
+        "end": 1.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.539,
+        "end": 1.559,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 1.559,
+        "end": 1.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.699,
+        "end": 1.739,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "nothingness.\n",
+        "start": 1.74,
+        "end": 2.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.539,
+        "end": 3.359,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "A",
+        "start": 3.359,
+        "end": 3.439,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.439,
+        "end": 3.479,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "lonely",
+        "start": 3.48,
+        "end": 3.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.799,
+        "end": 3.959,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "figure",
+        "start": 3.959,
+        "end": 4.339,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.339,
+        "end": 4.519,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "wanders",
+        "start": 4.519,
+        "end": 5.279,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.279,
+        "end": 5.339,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "through",
+        "start": 5.339,
+        "end": 5.46,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.46,
+        "end": 5.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 5.5,
+        "end": 5.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.539,
+        "end": 5.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "mist.",
+        "start": 5.659,
+        "end": 6.179,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "2": {
+    "text": "Distant whispers alert the traveler the saint removes his hood to look around eyes unsure and fearful",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "Distant",
+        "start": 0.219,
+        "end": 0.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.699,
+        "end": 0.779,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "whispers",
+        "start": 0.779,
+        "end": 1.459,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.459,
+        "end": 1.519,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "alert",
+        "start": 1.519,
+        "end": 1.899,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.899,
+        "end": 1.979,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 1.979,
+        "end": 2.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.079,
+        "end": 2.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "traveler.",
+        "start": 2.139,
+        "end": 2.72,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.72,
+        "end": 3.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "The",
+        "start": 3.679,
+        "end": 3.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.839,
+        "end": 3.899,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 3.899,
+        "end": 4.199,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.199,
+        "end": 4.259,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "removes",
+        "start": 4.259,
+        "end": 4.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.779,
+        "end": 4.819,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "his",
+        "start": 4.819,
+        "end": 5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5,
+        "end": 5.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "hood",
+        "start": 5.099,
+        "end": 5.38,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.38,
+        "end": 5.42,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 5.42,
+        "end": 5.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.559,
+        "end": 5.599,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "look",
+        "start": 5.599,
+        "end": 5.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.699,
+        "end": 5.819,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "around",
+        "start": 5.819,
+        "end": 6.399,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.399,
+        "end": 6.999,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "eyes",
+        "start": 7,
+        "end": 7.419,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.419,
+        "end": 7.499,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "unsure",
+        "start": 7.5,
+        "end": 8.199,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.199,
+        "end": 8.26,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 8.26,
+        "end": 8.4,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.4,
+        "end": 8.559,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "fearful.",
+        "start": 8.559,
+        "end": 9.439,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "3": {
+    "text": "The saint finally catches a glimpse of what he was seeking since he went on his pilgrimage.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "The",
+        "start": 0.239,
+        "end": 0.419,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.419,
+        "end": 0.459,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 0.459,
+        "end": 0.719,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.719,
+        "end": 0.899,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "finally",
+        "start": 0.899,
+        "end": 1.399,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.399,
+        "end": 1.459,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "catches",
+        "start": 1.459,
+        "end": 1.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.779,
+        "end": 1.839,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 1.839,
+        "end": 1.959,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.959,
+        "end": 1.999,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "glimpse",
+        "start": 2,
+        "end": 2.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.359,
+        "end": 2.399,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 2.399,
+        "end": 2.5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.5,
+        "end": 2.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "what",
+        "start": 2.579,
+        "end": 2.72,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.72,
+        "end": 2.74,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "he",
+        "start": 2.74,
+        "end": 2.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.839,
+        "end": 2.879,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "was",
+        "start": 2.879,
+        "end": 3.099,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.099,
+        "end": 3.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "seeking",
+        "start": 3.159,
+        "end": 3.619,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.619,
+        "end": 4.179,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "since",
+        "start": 4.179,
+        "end": 4.339,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.339,
+        "end": 4.359,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "he",
+        "start": 4.36,
+        "end": 4.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.519,
+        "end": 4.559,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "went",
+        "start": 4.559,
+        "end": 4.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.779,
+        "end": 4.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "on",
+        "start": 4.799,
+        "end": 4.94,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.94,
+        "end": 5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "his",
+        "start": 5,
+        "end": 5.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.119,
+        "end": 5.239,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "pilgrimage.",
+        "start": 5.239,
+        "end": 6.019,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "4": {
+    "text": "At the sight of it, he stands taller, gaze fixated, and determination burning within.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "At",
+        "start": 0.299,
+        "end": 0.46,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.46,
+        "end": 0.479,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 0.479,
+        "end": 0.639,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.639,
+        "end": 0.68,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "sight",
+        "start": 0.68,
+        "end": 0.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.859,
+        "end": 0.899,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 0.899,
+        "end": 1,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1,
+        "end": 1.039,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "it,",
+        "start": 1.039,
+        "end": 1.24,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.24,
+        "end": 1.839,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "he",
+        "start": 1.839,
+        "end": 1.979,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.979,
+        "end": 2.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "stands",
+        "start": 2.059,
+        "end": 2.5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.5,
+        "end": 2.599,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "taller,",
+        "start": 2.599,
+        "end": 3.099,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.099,
+        "end": 3.719,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "gaze",
+        "start": 3.72,
+        "end": 4.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.079,
+        "end": 4.219,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "fixated,",
+        "start": 4.219,
+        "end": 4.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.799,
+        "end": 5.519,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 5.519,
+        "end": 5.659,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.659,
+        "end": 5.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "determination",
+        "start": 5.679,
+        "end": 6.739,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.739,
+        "end": 6.779,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "burning",
+        "start": 6.779,
+        "end": 7.239,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.239,
+        "end": 7.299,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "within.",
+        "start": 7.299,
+        "end": 7.859,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "5": {
+    "text": "An ominous structure stands before the saint. The humming sound seems to come from its direction. A vivid light shines through the circular portal at the base of the great monolith. Not completely believing it, the saint pauses for a moment to get his senses back.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "An",
+        "start": 0.119,
+        "end": 0.239,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.239,
+        "end": 0.319,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "ominous",
+        "start": 0.319,
+        "end": 0.819,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.819,
+        "end": 0.879,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "structure",
+        "start": 0.879,
+        "end": 1.379,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.379,
+        "end": 1.519,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "stands",
+        "start": 1.519,
+        "end": 1.939,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.939,
+        "end": 2.039,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "before",
+        "start": 2.039,
+        "end": 2.44,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.44,
+        "end": 2.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 2.5,
+        "end": 2.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.559,
+        "end": 2.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint.",
+        "start": 2.679,
+        "end": 3.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.119,
+        "end": 3.959,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "The",
+        "start": 3.959,
+        "end": 4.039,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.039,
+        "end": 4.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "humming",
+        "start": 4.099,
+        "end": 4.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.519,
+        "end": 4.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "sound",
+        "start": 4.579,
+        "end": 5.039,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.039,
+        "end": 5.119,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "seems",
+        "start": 5.119,
+        "end": 5.42,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.42,
+        "end": 5.48,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 5.48,
+        "end": 5.599,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.599,
+        "end": 5.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "come",
+        "start": 5.659,
+        "end": 5.9,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.9,
+        "end": 6.039,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "from",
+        "start": 6.039,
+        "end": 6.159,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.159,
+        "end": 6.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "its",
+        "start": 6.199,
+        "end": 6.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.359,
+        "end": 6.439,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "direction.",
+        "start": 6.44,
+        "end": 7.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.079,
+        "end": 7.079,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "A",
+        "start": 8.239,
+        "end": 8.279,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.279,
+        "end": 8.42,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "vivid",
+        "start": 8.42,
+        "end": 8.679,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.679,
+        "end": 8.779,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "light",
+        "start": 8.779,
+        "end": 9.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.079,
+        "end": 9.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "shines",
+        "start": 9.159,
+        "end": 9.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.539,
+        "end": 9.619,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "through",
+        "start": 9.619,
+        "end": 9.76,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.76,
+        "end": 9.8,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 9.8,
+        "end": 9.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.859,
+        "end": 10,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "circular",
+        "start": 10,
+        "end": 10.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.519,
+        "end": 10.599,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "portal",
+        "start": 10.599,
+        "end": 10.979,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.979,
+        "end": 11.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "at",
+        "start": 11.059,
+        "end": 11.159,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.159,
+        "end": 11.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 11.199,
+        "end": 11.26,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.26,
+        "end": 11.38,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "base",
+        "start": 11.38,
+        "end": 11.659,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.659,
+        "end": 11.719,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 11.719,
+        "end": 11.819,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.819,
+        "end": 11.859,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 11.859,
+        "end": 11.92,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.92,
+        "end": 12.019,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "great",
+        "start": 12.019,
+        "end": 12.259,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.259,
+        "end": 12.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "monolith.",
+        "start": 12.38,
+        "end": 13.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 13.059,
+        "end": 13.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "Not",
+        "start": 14.5,
+        "end": 14.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 14.699,
+        "end": 14.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "completely",
+        "start": 14.799,
+        "end": 15.46,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 15.46,
+        "end": 15.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "believing",
+        "start": 15.579,
+        "end": 16.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 16.119,
+        "end": 16.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "it,",
+        "start": 16.199,
+        "end": 16.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 16.359,
+        "end": 17.039,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 17.039,
+        "end": 17.139,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 17.139,
+        "end": 17.18,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 17.18,
+        "end": 17.459,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 17.459,
+        "end": 17.539,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "pauses",
+        "start": 17.539,
+        "end": 18.019,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 18.019,
+        "end": 18.079,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "for",
+        "start": 18.079,
+        "end": 18.159,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 18.159,
+        "end": 18.239,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 18.239,
+        "end": 18.299,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 18.299,
+        "end": 18.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "moment",
+        "start": 18.379,
+        "end": 18.739,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 18.739,
+        "end": 19.079,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 19.079,
+        "end": 19.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 19.179,
+        "end": 19.219,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "get",
+        "start": 19.219,
+        "end": 19.319,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 19.319,
+        "end": 19.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "his",
+        "start": 19.379,
+        "end": 19.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 19.559,
+        "end": 19.619,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "senses",
+        "start": 19.619,
+        "end": 20.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 20.079,
+        "end": 20.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "back.",
+        "start": 20.159,
+        "end": 20.52,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "6": {
+    "text": "There's no time. He must see it through the end.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "There's",
+        "start": 0.28,
+        "end": 0.62,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "no",
+        "start": 0.659,
+        "end": 0.879,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.879,
+        "end": 0.919,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "time.\n",
+        "start": 0.919,
+        "end": 1.399,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.399,
+        "end": 2.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "He",
+        "start": 2.099,
+        "end": 2.259,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.259,
+        "end": 2.299,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "must",
+        "start": 2.299,
+        "end": 2.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.539,
+        "end": 2.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "see",
+        "start": 2.579,
+        "end": 2.74,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.74,
+        "end": 2.74,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "it",
+        "start": 2.74,
+        "end": 2.919,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.919,
+        "end": 2.939,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "through",
+        "start": 2.939,
+        "end": 3.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.119,
+        "end": 3.179,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 3.179,
+        "end": 3.299,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.299,
+        "end": 3.359,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "end.",
+        "start": 3.359,
+        "end": 3.72,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "7": {
+    "text": "As he approaches the portal, the holy sound grows stronger, shaking him to the core. Light begins to pulsate, inviting him closer.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "As",
+        "start": 0.28,
+        "end": 0.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.519,
+        "end": 0.56,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "he",
+        "start": 0.56,
+        "end": 0.639,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.639,
+        "end": 0.68,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "approaches",
+        "start": 0.68,
+        "end": 1.279,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.279,
+        "end": 1.36,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 1.36,
+        "end": 1.459,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.459,
+        "end": 1.539,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "portal,",
+        "start": 1.539,
+        "end": 1.959,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.959,
+        "end": 2.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 2.799,
+        "end": 2.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.859,
+        "end": 2.919,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "holy",
+        "start": 2.919,
+        "end": 3.199,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.199,
+        "end": 3.339,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "sound",
+        "start": 3.339,
+        "end": 3.679,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.679,
+        "end": 3.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "grows",
+        "start": 3.799,
+        "end": 4.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.079,
+        "end": 4.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "stronger,",
+        "start": 4.159,
+        "end": 4.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.799,
+        "end": 5.599,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "shaking",
+        "start": 5.599,
+        "end": 5.98,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.98,
+        "end": 6.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him",
+        "start": 6.059,
+        "end": 6.239,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.239,
+        "end": 6.259,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 6.259,
+        "end": 6.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.359,
+        "end": 6.399,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 6.399,
+        "end": 6.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.519,
+        "end": 6.619,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "core.\n",
+        "start": 6.619,
+        "end": 7.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.079,
+        "end": 7.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "Light",
+        "start": 7.799,
+        "end": 8.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.079,
+        "end": 8.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "begins",
+        "start": 8.139,
+        "end": 8.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.559,
+        "end": 8.639,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 8.639,
+        "end": 8.76,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.76,
+        "end": 8.819,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "pulsate,",
+        "start": 8.819,
+        "end": 9.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.559,
+        "end": 10.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "inviting",
+        "start": 10.139,
+        "end": 10.639,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.639,
+        "end": 10.699,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him",
+        "start": 10.699,
+        "end": 10.88,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.88,
+        "end": 10.96,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "closer.",
+        "start": 10.96,
+        "end": 11.579,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "8": {
+    "text": "A strong wind begins to blow, playful and expectant. Now standing before the portal, he raises a hand.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "A",
+        "start": 0.299,
+        "end": 0.439,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.439,
+        "end": 0.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "strong",
+        "start": 0.5,
+        "end": 0.959,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.959,
+        "end": 1.079,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "wind",
+        "start": 1.079,
+        "end": 1.319,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.319,
+        "end": 1.419,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "begins",
+        "start": 1.419,
+        "end": 1.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.859,
+        "end": 1.899,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 1.899,
+        "end": 1.959,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.959,
+        "end": 2.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "blow,",
+        "start": 2.059,
+        "end": 2.44,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.44,
+        "end": 3.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "playful",
+        "start": 3.099,
+        "end": 3.74,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.74,
+        "end": 3.859,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 3.859,
+        "end": 3.98,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.98,
+        "end": 4.119,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "expectant.",
+        "start": 4.119,
+        "end": 5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5,
+        "end": 5.9,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "Now",
+        "start": 5.9,
+        "end": 6.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.179,
+        "end": 6.339,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "standing",
+        "start": 6.339,
+        "end": 6.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.839,
+        "end": 6.939,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "before",
+        "start": 6.94,
+        "end": 7.339,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.339,
+        "end": 7.419,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 7.419,
+        "end": 7.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.539,
+        "end": 7.619,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "portal,",
+        "start": 7.619,
+        "end": 8.099,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.099,
+        "end": 8.739,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "he",
+        "start": 8.739,
+        "end": 8.88,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.88,
+        "end": 8.96,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "raises",
+        "start": 8.96,
+        "end": 9.38,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.38,
+        "end": 9.439,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 9.439,
+        "end": 9.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.519,
+        "end": 9.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "hand...",
+        "start": 9.579,
+        "end": 10,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "9": {
+    "text": "Hesitantly his hand draws forward",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "Hesitantly,",
+        "start": 0.179,
+        "end": 1,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1,
+        "end": 1.62,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "his",
+        "start": 1.62,
+        "end": 1.819,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.819,
+        "end": 1.839,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "hand",
+        "start": 1.839,
+        "end": 2.18,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.18,
+        "end": 2.22,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "draws",
+        "start": 2.22,
+        "end": 2.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.539,
+        "end": 2.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "forward.",
+        "start": 2.659,
+        "end": 3.399,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "10": {
+    "text": "Taking a deep breath, he steps in.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "Taking",
+        "start": 0.14,
+        "end": 0.5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.5,
+        "end": 0.56,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 0.56,
+        "end": 0.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.779,
+        "end": 0.839,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "deep",
+        "start": 0.839,
+        "end": 1.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.059,
+        "end": 1.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "breath,",
+        "start": 1.199,
+        "end": 1.639,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.639,
+        "end": 2.439,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "he",
+        "start": 2.44,
+        "end": 2.619,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.619,
+        "end": 2.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "steps",
+        "start": 2.659,
+        "end": 3.019,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.019,
+        "end": 3.079,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "in.",
+        "start": 3.079,
+        "end": 3.379,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "11": {
+    "text": "The saint loses consciousness for a brief moment. His mind struggles to process what is happening. He awakens in an exalted room lit by a warm light.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "The",
+        "start": 0.159,
+        "end": 0.319,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.319,
+        "end": 0.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 0.379,
+        "end": 0.62,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.699,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "loses",
+        "start": 0.699,
+        "end": 1.039,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.039,
+        "end": 1.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "consciousness",
+        "start": 1.139,
+        "end": 1.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.799,
+        "end": 1.939,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "for",
+        "start": 1.939,
+        "end": 2.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.079,
+        "end": 2.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 2.139,
+        "end": 2.159,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.159,
+        "end": 2.279,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "brief",
+        "start": 2.279,
+        "end": 2.579,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.579,
+        "end": 2.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "moment.",
+        "start": 2.679,
+        "end": 3.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.179,
+        "end": 4.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "His",
+        "start": 4.159,
+        "end": 4.299,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.299,
+        "end": 4.419,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "mind",
+        "start": 4.42,
+        "end": 4.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.699,
+        "end": 4.879,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "struggles",
+        "start": 4.88,
+        "end": 5.44,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.44,
+        "end": 5.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 5.5,
+        "end": 5.659,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.659,
+        "end": 5.719,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "process",
+        "start": 5.719,
+        "end": 6.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.359,
+        "end": 6.459,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "what",
+        "start": 6.46,
+        "end": 6.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.559,
+        "end": 6.599,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "is",
+        "start": 6.599,
+        "end": 6.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.699,
+        "end": 6.819,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "happening.\n",
+        "start": 6.819,
+        "end": 7.279,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.279,
+        "end": 8.039,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "He",
+        "start": 8.039,
+        "end": 8.099,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.099,
+        "end": 8.219,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "awakens",
+        "start": 8.22,
+        "end": 8.899,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.899,
+        "end": 8.96,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "in",
+        "start": 8.96,
+        "end": 9.139,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.139,
+        "end": 9.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "an",
+        "start": 9.199,
+        "end": 9.3,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.3,
+        "end": 9.42,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "exalted",
+        "start": 9.42,
+        "end": 9.979,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.979,
+        "end": 10.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "room",
+        "start": 10.099,
+        "end": 10.4,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.4,
+        "end": 10.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "lit",
+        "start": 10.579,
+        "end": 10.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.779,
+        "end": 10.84,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "by",
+        "start": 10.84,
+        "end": 10.98,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.98,
+        "end": 11.019,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 11.019,
+        "end": 11.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.059,
+        "end": 11.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "warm",
+        "start": 11.199,
+        "end": 11.539,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.539,
+        "end": 11.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "light.",
+        "start": 11.659,
+        "end": 12.079,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "12": {
+    "text": "In front of him, a large pedestal pulsates with light",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "In",
+        "start": 0.159,
+        "end": 0.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.359,
+        "end": 0.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "front",
+        "start": 0.379,
+        "end": 0.579,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.579,
+        "end": 0.599,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 0.599,
+        "end": 0.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.699,
+        "end": 0.74,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him,",
+        "start": 0.74,
+        "end": 0.959,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.959,
+        "end": 1.459,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 1.459,
+        "end": 1.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.559,
+        "end": 1.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "large",
+        "start": 1.579,
+        "end": 1.939,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.939,
+        "end": 2.039,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "pedestal",
+        "start": 2.039,
+        "end": 2.659,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.659,
+        "end": 2.719,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "pulsates",
+        "start": 2.72,
+        "end": 3.399,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.399,
+        "end": 3.419,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "with",
+        "start": 3.419,
+        "end": 3.599,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.599,
+        "end": 3.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "light.",
+        "start": 3.679,
+        "end": 4.36,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "13": {
+    "text": "Three Santioni Spirits bottles glint on the table, vibrating with a tantalizing shimmer. The saint pauses. Somehow, they're calling to him, inviting him to indulge.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "Three",
+        "start": 0.219,
+        "end": 0.62,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.62,
+        "end": 0.779,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "Santioni",
+        "start": 0.779,
+        "end": 1.379,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.379,
+        "end": 1.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "Spirits",
+        "start": 1.5,
+        "end": 1.939,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.939,
+        "end": 2.019,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "bottles",
+        "start": 2.019,
+        "end": 2.419,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.419,
+        "end": 2.519,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "glint",
+        "start": 2.519,
+        "end": 2.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.839,
+        "end": 2.879,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "on",
+        "start": 2.879,
+        "end": 2.959,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.959,
+        "end": 2.979,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 2.98,
+        "end": 3.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.119,
+        "end": 3.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "table,",
+        "start": 3.159,
+        "end": 3.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.559,
+        "end": 4.48,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "vibrating",
+        "start": 4.48,
+        "end": 5.099,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.099,
+        "end": 5.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "with",
+        "start": 5.159,
+        "end": 5.279,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.279,
+        "end": 5.319,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 5.319,
+        "end": 5.42,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.42,
+        "end": 5.48,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "tantalizing",
+        "start": 5.48,
+        "end": 6.299,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.299,
+        "end": 6.459,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "shimmer.",
+        "start": 6.46,
+        "end": 6.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.859,
+        "end": 7.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "The",
+        "start": 7.799,
+        "end": 7.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.839,
+        "end": 7.919,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 7.919,
+        "end": 8.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.179,
+        "end": 8.239,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "pauses.",
+        "start": 8.239,
+        "end": 8.82,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.82,
+        "end": 9.42,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "Somehow...",
+        "start": 9.42,
+        "end": 9.84,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.84,
+        "end": 10.46,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "they're",
+        "start": 10.46,
+        "end": 10.599,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.599,
+        "end": 10.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "calling",
+        "start": 10.659,
+        "end": 11,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11,
+        "end": 11.019,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 11.019,
+        "end": 11.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.119,
+        "end": 11.179,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him,",
+        "start": 11.179,
+        "end": 11.38,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.38,
+        "end": 12.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "inviting",
+        "start": 12.099,
+        "end": 12.619,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.619,
+        "end": 12.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him",
+        "start": 12.659,
+        "end": 12.86,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.86,
+        "end": 12.88,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 12.88,
+        "end": 13,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 13,
+        "end": 13.039,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "indulge.",
+        "start": 13.039,
+        "end": 13.92,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "14": {
+    "text": "The saint drinks, and in an instant, a beam of light engulfs him, swirling with mint, chocolate, and cream, an ethereal trail that lifts him beyond the senses.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "The",
+        "start": 0.299,
+        "end": 0.439,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.439,
+        "end": 0.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 0.5,
+        "end": 0.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.839,
+        "end": 0.879,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "drinks,",
+        "start": 0.879,
+        "end": 1.459,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.459,
+        "end": 1.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 1.799,
+        "end": 2,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2,
+        "end": 2.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "in",
+        "start": 2.059,
+        "end": 2.159,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.159,
+        "end": 2.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "an",
+        "start": 2.2,
+        "end": 2.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.359,
+        "end": 2.439,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "instant,",
+        "start": 2.44,
+        "end": 3,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3,
+        "end": 3.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 3.679,
+        "end": 3.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.799,
+        "end": 3.859,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "beam",
+        "start": 3.859,
+        "end": 4.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.059,
+        "end": 4.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 4.099,
+        "end": 4.219,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.219,
+        "end": 4.299,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "light",
+        "start": 4.299,
+        "end": 4.5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.5,
+        "end": 4.539,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "engulfs",
+        "start": 4.539,
+        "end": 5.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.119,
+        "end": 5.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him,",
+        "start": 5.139,
+        "end": 5.38,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.38,
+        "end": 6.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "swirling",
+        "start": 6.099,
+        "end": 6.619,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.619,
+        "end": 6.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "with",
+        "start": 6.659,
+        "end": 6.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.799,
+        "end": 6.919,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "mint,",
+        "start": 6.92,
+        "end": 7.279,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.279,
+        "end": 7.779,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "chocolate,",
+        "start": 7.779,
+        "end": 8.22,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.22,
+        "end": 8.639,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 8.639,
+        "end": 8.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.859,
+        "end": 8.96,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "cream,",
+        "start": 8.96,
+        "end": 9.42,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.42,
+        "end": 10.26,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "an",
+        "start": 10.26,
+        "end": 10.319,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.319,
+        "end": 10.38,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "ethereal",
+        "start": 10.38,
+        "end": 11.079,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.079,
+        "end": 11.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "trail",
+        "start": 11.159,
+        "end": 11.619,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.619,
+        "end": 11.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "that",
+        "start": 11.679,
+        "end": 11.86,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.86,
+        "end": 11.88,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "lifts",
+        "start": 11.88,
+        "end": 12.099,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.099,
+        "end": 12.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him",
+        "start": 12.159,
+        "end": 12.32,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.32,
+        "end": 12.34,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "beyond",
+        "start": 12.34,
+        "end": 12.699,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.699,
+        "end": 12.719,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 12.719,
+        "end": 12.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.859,
+        "end": 12.92,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "senses.",
+        "start": 12.92,
+        "end": 13.639,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "15": {
+    "text": "The saint gently floats back to the floor, one foot after the other. His robe now saturated with the color of the mysterious liquid",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "The",
+        "start": 0.219,
+        "end": 0.34,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.34,
+        "end": 0.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 0.379,
+        "end": 0.719,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.719,
+        "end": 0.759,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "gently",
+        "start": 0.759,
+        "end": 1.12,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.12,
+        "end": 1.259,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "floats",
+        "start": 1.259,
+        "end": 1.559,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.559,
+        "end": 1.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "back",
+        "start": 1.679,
+        "end": 1.939,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.939,
+        "end": 1.959,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 1.959,
+        "end": 2.039,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.039,
+        "end": 2.079,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 2.079,
+        "end": 2.139,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.139,
+        "end": 2.259,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "floor,",
+        "start": 2.259,
+        "end": 2.659,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.659,
+        "end": 3.339,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "one",
+        "start": 3.339,
+        "end": 3.46,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.46,
+        "end": 3.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "foot",
+        "start": 3.579,
+        "end": 3.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.839,
+        "end": 3.899,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "after",
+        "start": 3.899,
+        "end": 4.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.179,
+        "end": 4.219,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 4.219,
+        "end": 4.279,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.279,
+        "end": 4.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "other.",
+        "start": 4.38,
+        "end": 4.659,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.659,
+        "end": 5.579,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "His",
+        "start": 5.579,
+        "end": 5.739,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.739,
+        "end": 5.859,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "robe",
+        "start": 5.859,
+        "end": 6.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.179,
+        "end": 6.619,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "now",
+        "start": 6.619,
+        "end": 6.739,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.739,
+        "end": 6.899,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saturated",
+        "start": 6.899,
+        "end": 7.5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.5,
+        "end": 7.559,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "with",
+        "start": 7.559,
+        "end": 7.659,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.659,
+        "end": 7.699,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 7.699,
+        "end": 7.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.799,
+        "end": 7.879,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "color",
+        "start": 7.879,
+        "end": 8.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.179,
+        "end": 8.239,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 8.239,
+        "end": 8.34,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.34,
+        "end": 8.38,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 8.38,
+        "end": 8.439,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.439,
+        "end": 8.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "mysterious",
+        "start": 8.5,
+        "end": 9.179,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.179,
+        "end": 9.279,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "liquid",
+        "start": 9.279,
+        "end": 9.96,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "16": {
+    "text": "The sudden roar of shattering stone fills the air. The columns and roof begin to break apart and lift away, revealing a deep red sky.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "The",
+        "start": 0.079,
+        "end": 0.239,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.239,
+        "end": 0.299,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "sudden",
+        "start": 0.299,
+        "end": 0.56,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.56,
+        "end": 0.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "roar",
+        "start": 0.659,
+        "end": 0.979,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.979,
+        "end": 1.079,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 1.079,
+        "end": 1.199,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.199,
+        "end": 1.319,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "shattering",
+        "start": 1.319,
+        "end": 1.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.799,
+        "end": 1.939,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "stone",
+        "start": 1.939,
+        "end": 2.339,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.339,
+        "end": 2.44,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "fills",
+        "start": 2.44,
+        "end": 2.7,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.7,
+        "end": 2.759,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 2.759,
+        "end": 2.859,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.859,
+        "end": 2.959,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "air.",
+        "start": 2.96,
+        "end": 3.259,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.259,
+        "end": 4.119,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "The",
+        "start": 4.119,
+        "end": 4.239,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.239,
+        "end": 4.299,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "columns",
+        "start": 4.299,
+        "end": 4.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.779,
+        "end": 4.819,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 4.819,
+        "end": 4.92,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.92,
+        "end": 5.019,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "roof",
+        "start": 5.019,
+        "end": 5.319,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.319,
+        "end": 5.379,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "begin",
+        "start": 5.38,
+        "end": 5.639,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.639,
+        "end": 5.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "to",
+        "start": 5.679,
+        "end": 5.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.779,
+        "end": 5.839,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "break",
+        "start": 5.839,
+        "end": 6.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.059,
+        "end": 6.219,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "apart",
+        "start": 6.219,
+        "end": 6.619,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.619,
+        "end": 6.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 6.659,
+        "end": 6.779,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.779,
+        "end": 6.859,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "lift",
+        "start": 6.859,
+        "end": 7.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.059,
+        "end": 7.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "away,",
+        "start": 7.199,
+        "end": 7.599,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.599,
+        "end": 8.279,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "revealing",
+        "start": 8.279,
+        "end": 8.899,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.899,
+        "end": 8.979,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 8.979,
+        "end": 9.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.059,
+        "end": 9.219,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "deep",
+        "start": 9.22,
+        "end": 9.5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.5,
+        "end": 9.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "red",
+        "start": 9.659,
+        "end": 9.92,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.92,
+        "end": 10.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "sky.",
+        "start": 10.059,
+        "end": 10.659,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  },
+  "orange": {
+      "text": "The saint drinks, and in an instant, a beam of light engulfs him, swirling with orange, chocolate, and cream, an ethereal trail that lifts him beyond the senses.",
+      "language_code": "eng",
+      "language_probability": 1,
+      "words": [
+        {
+          "text": "The",
+          "start": 0.299,
+          "end": 0.439,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 0.439,
+          "end": 0.5,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "saint",
+          "start": 0.5,
+          "end": 0.839,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 0.839,
+          "end": 0.879,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "drinks,",
+          "start": 0.879,
+          "end": 1.74,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 1.74,
+          "end": 1.799,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "and",
+          "start": 1.799,
+          "end": 2,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 2,
+          "end": 2.059,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "in",
+          "start": 2.059,
+          "end": 2.159,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 2.159,
+          "end": 2.199,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "an",
+          "start": 2.2,
+          "end": 2.359,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 2.359,
+          "end": 2.439,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "instant,",
+          "start": 2.44,
+          "end": 3,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 3,
+          "end": 3.679,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "a",
+          "start": 3.679,
+          "end": 3.799,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 3.799,
+          "end": 3.859,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "beam",
+          "start": 3.859,
+          "end": 4.059,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 4.059,
+          "end": 4.099,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "of",
+          "start": 4.099,
+          "end": 4.219,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 4.219,
+          "end": 4.299,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "light",
+          "start": 4.299,
+          "end": 4.5,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 4.5,
+          "end": 4.539,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "engulfs",
+          "start": 4.539,
+          "end": 5.119,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 5.119,
+          "end": 5.139,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "him,",
+          "start": 5.139,
+          "end": 5.38,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 5.38,
+          "end": 6.099,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "swirling",
+          "start": 6.099,
+          "end": 6.619,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 6.619,
+          "end": 6.639,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "with",
+          "start": 6.639,
+          "end": 6.879,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 6.879,
+          "end": 7.079,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "orange,",
+          "start": 7.079,
+          "end": 7.559,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 7.559,
+          "end": 8.319,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "chocolate,",
+          "start": 8.319,
+          "end": 9.119,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 9.119,
+          "end": 9.179,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "and",
+          "start": 9.179,
+          "end": 9.42,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 9.42,
+          "end": 9.5,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "cream,",
+          "start": 9.5,
+          "end": 9.96,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 9.96,
+          "end": 10.8,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "an",
+          "start": 10.8,
+          "end": 10.859,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 10.859,
+          "end": 10.92,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "ethereal",
+          "start": 10.92,
+          "end": 11.619,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 11.619,
+          "end": 11.699,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "trail",
+          "start": 11.699,
+          "end": 12.159,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 12.159,
+          "end": 12.219,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "that",
+          "start": 12.219,
+          "end": 12.4,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 12.4,
+          "end": 12.42,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "lifts",
+          "start": 12.42,
+          "end": 12.639,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 12.639,
+          "end": 12.699,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "him",
+          "start": 12.699,
+          "end": 12.86,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 12.86,
+          "end": 12.88,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "beyond",
+          "start": 12.88,
+          "end": 13.239,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 13.239,
+          "end": 13.259,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "the",
+          "start": 13.259,
+          "end": 13.399,
+          "type": "word",
+          "speaker_id": null
+        },
+        {
+          "text": " ",
+          "start": 13.399,
+          "end": 13.46,
+          "type": "spacing",
+          "speaker_id": null
+        },
+        {
+          "text": "senses.",
+          "start": 13.46,
+          "end": 14.179,
+          "type": "word",
+          "speaker_id": null
+        }
+      ]
+  },
+  "marshmallow": {
+    "text": "The saint drinks, and in an instant, a beam of light engulfs him, swirling with marshmallow, coffee, and cream, an ethereal trail that lifts him beyond the senses.",
+    "language_code": "eng",
+    "language_probability": 1,
+    "words": [
+      {
+        "text": "The",
+        "start": 0.299,
+        "end": 0.439,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.439,
+        "end": 0.5,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "saint",
+        "start": 0.5,
+        "end": 0.839,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 0.839,
+        "end": 0.879,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "drinks,",
+        "start": 0.879,
+        "end": 1.74,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 1.74,
+        "end": 1.799,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 1.799,
+        "end": 2,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2,
+        "end": 2.059,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "in",
+        "start": 2.059,
+        "end": 2.159,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.159,
+        "end": 2.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "an",
+        "start": 2.2,
+        "end": 2.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 2.359,
+        "end": 2.439,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "instant,",
+        "start": 2.44,
+        "end": 3,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3,
+        "end": 3.679,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "a",
+        "start": 3.679,
+        "end": 3.799,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 3.799,
+        "end": 3.859,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "beam",
+        "start": 3.859,
+        "end": 4.059,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.059,
+        "end": 4.099,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "of",
+        "start": 4.099,
+        "end": 4.219,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.219,
+        "end": 4.299,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "light",
+        "start": 4.299,
+        "end": 4.5,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 4.5,
+        "end": 4.539,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "engulfs",
+        "start": 4.539,
+        "end": 5.119,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.119,
+        "end": 5.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him,",
+        "start": 5.139,
+        "end": 5.38,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 5.38,
+        "end": 5.999,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "swirling",
+        "start": 6,
+        "end": 6.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.519,
+        "end": 6.539,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "with",
+        "start": 6.539,
+        "end": 6.719,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 6.719,
+        "end": 6.779,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "marshmallow,",
+        "start": 6.779,
+        "end": 7.519,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 7.519,
+        "end": 8.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "coffee,",
+        "start": 8.139,
+        "end": 8.679,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 8.679,
+        "end": 9.139,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "and",
+        "start": 9.139,
+        "end": 9.34,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.34,
+        "end": 9.46,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "cream,",
+        "start": 9.46,
+        "end": 9.92,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 9.92,
+        "end": 10.76,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "an",
+        "start": 10.76,
+        "end": 10.819,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 10.819,
+        "end": 10.859,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "ethereal",
+        "start": 10.859,
+        "end": 11.6,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 11.6,
+        "end": 11.659,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "trail",
+        "start": 11.659,
+        "end": 12.099,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.099,
+        "end": 12.159,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "that",
+        "start": 12.159,
+        "end": 12.34,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.34,
+        "end": 12.359,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "lifts",
+        "start": 12.359,
+        "end": 12.6,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.6,
+        "end": 12.639,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "him",
+        "start": 12.639,
+        "end": 12.819,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 12.819,
+        "end": 12.839,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "beyond",
+        "start": 12.84,
+        "end": 13.18,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 13.18,
+        "end": 13.199,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "the",
+        "start": 13.199,
+        "end": 13.359,
+        "type": "word",
+        "speaker_id": null
+      },
+      {
+        "text": " ",
+        "start": 13.359,
+        "end": 13.42,
+        "type": "spacing",
+        "speaker_id": null
+      },
+      {
+        "text": "senses.",
+        "start": 13.42,
+        "end": 14.119,
+        "type": "word",
+        "speaker_id": null
+      }
+    ]
+  }
+}

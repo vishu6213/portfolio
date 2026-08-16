@@ -1097,23 +1097,23 @@ const DoorSection = ({
                             <group position={[0, 0, 0.01]}>
                                 <Text
                                     font="/fonts/CabinSketch-Bold.ttf"
-                                    fontSize={0.25}
+                                    fontSize={0.16}
                                     color="#111111"
                                     anchorX="center"
                                     anchorY="bottom"
                                     position={[0, -0.02, 0]}
                                 >
-                                    THE
+                                    NOOTTURNO
                                 </Text>
                                 <Text
                                     font="/fonts/CabinSketch-Bold.ttf"
-                                    fontSize={0.25}
+                                    fontSize={0.15}
                                     color="#111111"
                                     anchorX="center"
                                     anchorY="top"
                                     position={[0, +0.03, 0]}
                                 >
-                                    STUDIO
+                                    EXPERIENCE
                                 </Text>
                             </group>
                         )}
