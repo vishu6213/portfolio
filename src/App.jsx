@@ -115,13 +115,19 @@ function ResponsiveCamera() {
 
 const StudioIframe = ({ isVisible }) => {
   const [render, setRender] = useState(isVisible);
+  const iframeRef = React.useRef(null);
 
   useEffect(() => {
     if (isVisible) setRender(true);
   }, [isVisible]);
 
   const handleAnimationEnd = () => {
-    if (!isVisible) setRender(false);
+    if (!isVisible) {
+      if (iframeRef.current) {
+        iframeRef.current.src = "about:blank";
+      }
+      setTimeout(() => setRender(false), 50);
+    }
   };
 
   if (!render) return null;
@@ -141,6 +147,7 @@ const StudioIframe = ({ isVisible }) => {
         `}
       </style>
       <iframe
+        ref={iframeRef}
         src="/nootturno-experience/index.html"
         title="Studio Experience"
         style={{

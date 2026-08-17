@@ -2132,21 +2132,6 @@
             Please enable javascript</p>
     </noscript>
     <style>
-        /* Hide AgeGate visually so it doesn't flash before auto-click */
-        .AgeGate {
-            opacity: 0 !important;
-            pointer-events: none !important;
-            z-index: -1 !important;
-        }
-
-        /* Hide the sections that come after TasteUI */
-        .CollectionUI,
-        .ProductsUI,
-        .RetailUI,
-        .FooterUI {
-            display: none !important;
-        }
-
         /* Hide the original logos on Loader */
         .LoaderView .logo,
         .LoaderView .lottie-container {
@@ -2165,19 +2150,16 @@
                 }
             }, 500);
 
-            // 4. Auto-Play Audio
-            // Automatically unmute the music when the website loads!
-            let audioClicked = false;
-            const audioInterval = setInterval(() => {
-                const audioBtn = document.querySelector('[class*="AudioToggle"]');
-                if (audioBtn && !audioClicked) {
-                    // Check if it's currently muted by looking for the "muted" lines or specific SVG state
-                    // The site defaults to muted on refresh, so a single click will unmute it.
-                    audioBtn.click();
-                    audioClicked = true;
-                    clearInterval(audioInterval);
-                }
-            }, 500);
+            // 4. Auto-Play Audio (DISABLED FOR MOBILE)
+            // let audioClicked = false;
+            // const audioInterval = setInterval(() => {
+            //     const audioBtn = document.querySelector('[class*="AudioToggle"]');
+            //     if (audioBtn && !audioClicked) {
+            //         audioBtn.click();
+            //         audioClicked = true;
+            //         clearInterval(audioInterval);
+            //     }
+            // }, 500);
 
             const checkAgeGate = setInterval(() => {
                 const yesBtn = document.querySelector('.AgeGate .actions .action');
