@@ -148,7 +148,7 @@ const StudioIframe = ({ isVisible }) => {
           top: 0,
           left: 0,
           width: '100%',
-          height: '100%',
+          height: '100dvh',
           zIndex: 99,
           border: 'none',
           backgroundColor: '#000',
@@ -240,7 +240,7 @@ function AppContent() {
           onComplete={() => setIsLoaded(true)}
         />
       </div>
-      <RotatePhonePrompt />
+      {currentRoom !== 'studio' && <RotatePhonePrompt />}
     </>
   );
 }
