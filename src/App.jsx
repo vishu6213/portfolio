@@ -1,4 +1,4 @@
-import { useState, Suspense, useEffect, useCallback, lazy } from 'react';
+import { useState, Suspense, useEffect, useCallback, lazy, useRef } from 'react';
 import { Canvas, useThree, useLoader } from '@react-three/fiber';
 import { Preload, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
@@ -115,7 +115,7 @@ function ResponsiveCamera() {
 
 const StudioIframe = ({ isVisible }) => {
   const [render, setRender] = useState(isVisible);
-  const iframeRef = React.useRef(null);
+  const iframeRef = useRef(null);
 
   useEffect(() => {
     if (isVisible) setRender(true);
