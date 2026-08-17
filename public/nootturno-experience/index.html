@@ -2182,7 +2182,16 @@
             const checkAgeGate = setInterval(() => {
                 const yesBtn = document.querySelector('.AgeGate .actions .action');
                 if (yesBtn) {
+                    // Dispatch multiple event types to ensure mobile frameworks register it
+                    yesBtn.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, cancelable: true }));
+                    yesBtn.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, cancelable: true }));
+                    yesBtn.dispatchEvent(new TouchEvent('touchstart', { bubbles: true, cancelable: true }));
+                    yesBtn.dispatchEvent(new TouchEvent('touchend', { bubbles: true, cancelable: true }));
                     yesBtn.click();
+                    
+                    const ageGateEl = document.querySelector('.AgeGate');
+                    if (ageGateEl) ageGateEl.style.display = 'none';
+
                     const storyEl = document.querySelector('.Story');
                     if (storyEl && !storyEl.hasAttribute('inert')) {
                         clearInterval(checkAgeGate);
