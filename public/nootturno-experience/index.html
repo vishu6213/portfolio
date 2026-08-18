@@ -1953,7 +1953,7 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            display: none !important;
+            display: none;
             position: fixed
         }
 
@@ -1963,7 +1963,7 @@
         }
 
         .RotatePrompt[data-show=true] {
-            display: none !important;
+            display: flex
         }
 
         .SplitTextPlayground {
@@ -2132,7 +2132,7 @@
             Please enable javascript</p>
     </noscript>
     <style>
-        /* Hide the original logos on Loader */
+        /* Hide the original logos on Loader so custom branding shows */
         .LoaderView .logo,
         .LoaderView .lottie-container {
             display: none !important;
@@ -2140,17 +2140,6 @@
     </style>
     <script>
         (function () {
-            // 4. Auto-Play Audio (DISABLED FOR MOBILE)
-            // let audioClicked = false;
-            // const audioInterval = setInterval(() => {
-            //     const audioBtn = document.querySelector('[class*="AudioToggle"]');
-            //     if (audioBtn && !audioClicked) {
-            //         audioBtn.click();
-            //         audioClicked = true;
-            //         clearInterval(audioInterval);
-            //     }
-            // }, 500);
-
             let timeout;
             const observer = new MutationObserver(() => {
                 // 1. Loader View Logo (Absolute Center)
@@ -2159,8 +2148,6 @@
                     const vishuImg = document.createElement('img');
                     vishuImg.className = 'vishu-loader-logo';
                     vishuImg.src = 'assets/images/vishu_logo_center.png';
-                    // We use filter: contrast(4) grayscale(1) to crush the dark grey background to pure black,
-                    // which makes mix-blend-mode: screen work perfectly without visible borders.
                     vishuImg.style.cssText = 'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 280px; max-width: 80vw; height: auto; object-fit: contain; mix-blend-mode: screen; filter: contrast(4) grayscale(1); z-index: 10; pointer-events: none;';
                     loaderView.appendChild(vishuImg);
                 }
@@ -2199,6 +2186,15 @@
             observer.observe(document.body, { childList: true, subtree: true, attributes: true });
         })();
     </script>
+    <style>
+        .ProductsUI, .RetailUI, .CollectionUI, .FooterUI {
+            display: none !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            pointer-events: none !important;
+            overflow: hidden !important;
+        }
+    </style>
 </body>
 
 </html>
