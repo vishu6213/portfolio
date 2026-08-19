@@ -84,6 +84,8 @@ const SegmentDoors = ({
     // Actually, distinct logic: open when close, close when far.
     // The previous logic was: if (dist < open) open; if (dist > close) close.
 
+    const hasRedirectedRef = useRef(false);
+
     useFrame(() => {
         if (!leftDoorRef.current || !rightDoorRef.current) return;
 
@@ -117,6 +119,40 @@ const SegmentDoors = ({
             // Open Doors
             gsap.to(leftDoorRef.current.rotation, { y: -Math.PI * 0.55, duration: 0.9, ease: 'power2.out', delay: 0.1 });
             gsap.to(rightDoorRef.current.rotation, { y: Math.PI * 0.55, duration: 0.9, ease: 'power2.out', delay: 0.1 });
+        }
+
+        // Redirect logic when passing through the door
+        if (distanceZ < 2.0 && distanceX < 1.5 && isOpenRef.current && !hasRedirectedRef.current) {
+            hasRedirectedRef.current = true;
+
+            // Create a smooth white fade transition
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100vw';
+            overlay.style.height = '100vh';
+            overlay.style.backgroundColor = 'white';
+            overlay.style.opacity = '0';
+            overlay.style.zIndex = '99999';
+            overlay.style.transition = 'opacity 1.5s ease-in-out';
+            overlay.style.pointerEvents = 'none';
+            document.body.appendChild(overlay);
+
+            // Trigger fade
+            requestAnimationFrame(() => {
+                overlay.style.opacity = '1';
+            });
+
+            // Redirect after fade completes
+            setTimeout(() => {
+                try {
+                    sessionStorage.removeItem('zero:resume');
+                    sessionStorage.removeItem('zero_resume');
+                    localStorage.removeItem('zero:resume');
+                } catch (e) {}
+                window.location.href = '/zero/workspace/material/why.zero.university/index.html';
+            }, 1500);
         }
 
         // Close if user moves away in Z, OR if they move away in X (like flying sideways into a room)

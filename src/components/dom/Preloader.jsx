@@ -113,7 +113,25 @@ const statusStyle = {
 };
 
 const Preloader = ({ onComplete, ready }) => {
-  const [isDone, setIsDone] = useState(false);
+  const isSkipRequested = typeof window !== 'undefined' && (
+    window.location.search.includes('skipLoader') ||
+    sessionStorage.getItem('skipPreloader') === 'true'
+  );
+  const [isDone, setIsDone] = useState(isSkipRequested);
+
+  useEffect(() => {
+    if (isSkipRequested) {
+      try {
+        sessionStorage.removeItem('skipPreloader');
+        if (window.history && window.history.replaceState) {
+          const url = new URL(window.location.href);
+          url.searchParams.delete('skipLoader');
+          window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
+        }
+      } catch (e) { }
+      onComplete?.();
+    }
+  }, [isSkipRequested, onComplete]);
 
   // Custom throttled progress state to prevent React 'Maximum update depth exceeded'
   const [realProgress, setRealProgress] = useState(0);
@@ -142,11 +160,11 @@ const Preloader = ({ onComplete, ready }) => {
       cancelAnimationFrame(t);
       setRealProgress(100);
       setActive(false);
-      
+
       const loadEnd = performance.now();
       const loadDuration = ((loadEnd - loadStartTime.current) / 1000).toFixed(2);
       // console.info(`📦 Assets Loaded: ${loadDuration}s`);
-      
+
       origOnLoad?.();
     };
 
@@ -238,13 +256,13 @@ const Preloader = ({ onComplete, ready }) => {
     }
 
     setTargetProgress(prev => Math.max(prev, newTarget));
-    
+
     // Safety Fallback: if assets are loaded but scene is not ready, force 100% after 2.5s
     const fallbackTimer = setTimeout(() => {
-        if (!active && !ready) {
-            console.warn('Preloader: Forcing 100% due to ready signal timeout');
-            setTargetProgress(100);
-        }
+      if (!active && !ready) {
+        console.warn('Preloader: Forcing 100% due to ready signal timeout');
+        setTargetProgress(100);
+      }
     }, 2500);
     return () => clearTimeout(fallbackTimer);
   }, [realProgress, active, ready]);
@@ -334,11 +352,11 @@ const Preloader = ({ onComplete, ready }) => {
         startExit();
       } else {
         const forceExitTimer = setTimeout(() => {
-            if (!exitStarted.current) {
-                console.warn('Preloader: Forcing exit sequence');
-                exitStarted.current = true;
-                startExit();
-            }
+          if (!exitStarted.current) {
+            console.warn('Preloader: Forcing exit sequence');
+            exitStarted.current = true;
+            startExit();
+          }
         }, 1500);
         return () => clearTimeout(forceExitTimer);
       }
@@ -378,7 +396,7 @@ const Preloader = ({ onComplete, ready }) => {
 
   return (
     <div className="preloader" ref={containerRef} style={{ display: 'flex', flexDirection: 'column', height: '100vh', width: '100vw', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fdf8e2', position: 'fixed', top: 0, left: 0, zIndex: 9999 }}>
-      
+
       {/* Centered Loading Animation */}
       <LoadingBreadcrumb text="Cooking" />
 

@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import Preloader from './components/dom/Preloader';
 import PaperTransition from './components/dom/PaperTransition';
 import { AudioProvider, useAudio } from './context/AudioManager';
-import { initAudio } from './utils/audioManager';
+import { initAudio, switchSectionAudio, unlockAudio } from './utils/audioManager';
 import { PerformanceProvider, usePerformance } from './context/PerformanceContext';
 import { SceneProvider, useScene } from './context/SceneContext';
 import NavigationUI from './components/ui/NavigationUI';
@@ -40,12 +40,11 @@ const preloadBrowserImage = (path) => {
 };
 
 const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent || '');
-const isWeakCPU = typeof navigator.hardwareConcurrency !== 'undefined' && navigator.hardwareConcurrency <= 4;
-const isLowRAM = typeof navigator.deviceMemory !== 'undefined' && navigator.deviceMemory <= 4;
-const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 450;
+const isWeakCPU = typeof navigator !== 'undefined' && navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+const isLowRAM = typeof navigator !== 'undefined' && navigator.deviceMemory && navigator.deviceMemory <= 4;
+const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 768;
 const isLowEnd = isMobileDevice || isWeakCPU || isLowRAM || isSmallScreen;
-
-const supportsHover = typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
+const supportsHover = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: hover)').matches;
 
 // Trigger Three.js preloads at module level (as standard for Drei)
 if (isLowEnd) {
@@ -63,20 +62,33 @@ if (isLowEnd) {
   filteredLoader.forEach(path => useLoader.preload(TextureLoader, path));
 }
 
-// Helper component to handle global audio enable on interaction
+// Helper component to handle section-based audio and global unlock
 const GlobalAudioEnabler = () => {
   const { enableAudio } = useAudio();
+  const { currentRoom } = useScene();
+
   useEffect(() => {
-    const handleInteraction = () => enableAudio();
-    window.addEventListener('click', handleInteraction, { once: true });
-    window.addEventListener('touchstart', handleInteraction, { once: true });
-    window.addEventListener('keydown', handleInteraction, { once: true });
+    const handleInteraction = () => {
+      enableAudio();
+      unlockAudio();
+    };
+    window.addEventListener('click', handleInteraction);
+    window.addEventListener('touchstart', handleInteraction);
+    window.addEventListener('pointerdown', handleInteraction);
+    window.addEventListener('keydown', handleInteraction);
     return () => {
       window.removeEventListener('click', handleInteraction);
       window.removeEventListener('touchstart', handleInteraction);
+      window.removeEventListener('pointerdown', handleInteraction);
       window.removeEventListener('keydown', handleInteraction);
     };
   }, [enableAudio]);
+
+  // Switch ambient audio / music whenever the user enters a different section or returns to the corridor
+  useEffect(() => {
+    switchSectionAudio(currentRoom);
+  }, [currentRoom]);
+
   return null;
 };
 
@@ -169,10 +181,14 @@ const StudioIframe = ({ isVisible }) => {
 };
 
 function AppContent() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const isSkipRequested = typeof window !== 'undefined' && (
+    window.location.search.includes('skipLoader') ||
+    sessionStorage.getItem('skipPreloader') === 'true'
+  );
+  const [isLoaded, setIsLoaded] = useState(isSkipRequested);
   const [sceneReady, setSceneReady] = useState(false);
   const { settings, downgradeTier, tier } = usePerformance();
-  const { currentRoom } = useScene();
+  const { currentRoom, exitRequested } = useScene();
 
   useEffect(() => {
     initAudio();
@@ -191,7 +207,7 @@ function AppContent() {
       <DocumentMetaBridge />
       <GlobalAudioEnabler />
       <div className="app">
-        <StudioIframe isVisible={currentRoom === 'studio'} />
+        <StudioIframe isVisible={currentRoom === 'studio' && !exitRequested} />
         {currentRoom === 'gallery' && <GalleryVideoBackground />}
         <div className="canvas-wrapper">
           <Canvas

@@ -260,17 +260,25 @@ const useInfiniteCamera = ({
         const scrollObserver = Observer.create({
             target: window,
             type: "wheel,touch,pointer",
+            preventDefault: false,
             onWheel: (e) => {
                 handleWheel(e.event);
             },
             onPress: (e) => {
                 if (e.event.touches && e.event.touches.length > 0) {
                     handleTouchStart(e.event);
+                } else if (e.y !== undefined) {
+                    touchStart.current.x = e.x || 0;
+                    touchStart.current.y = e.y || 0;
                 }
             },
             onDrag: (e) => {
                 if (e.event.touches && e.event.touches.length > 0) {
                     handleTouchMove(e.event);
+                } else if (e.deltaY !== undefined && scrollEnabledRef.current) {
+                    const deltaY = e.deltaY * scrollSpeed * 2.0;
+                    targetZ.current += deltaY;
+                    unlockAchievement('corridor_explore');
                 }
             }
         });

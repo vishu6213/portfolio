@@ -706,21 +706,25 @@
 // === RESPONSIVE ===
 @media (max-width: 768px) {
     .nav-btn {
-        width: 45px;
+        width: 46px;
         height: 50px;
+        touch-action: manipulation;
     }
 
     .back-btn {
-        left: 16px;
+        left: max(16px, env(safe-area-inset-left));
+        top: max(0px, env(safe-area-inset-top));
     }
 
     .nav-controls {
-        right: 16px;
+        right: max(16px, env(safe-area-inset-right));
+        top: max(0px, env(safe-area-inset-top));
         gap: 8px;
     }
 
     .audio-panel {
-        right: 16px;
+        right: max(16px, env(safe-area-inset-right));
+        top: max(60px, calc(env(safe-area-inset-top) + 55px));
     }
 
     .map-panel {
@@ -732,28 +736,41 @@
         }
 
         .close-btn {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
+            touch-action: manipulation;
         }
     }
 
     .entrance-hint {
         gap: 8px;
-        bottom: 24px;
-        padding: 12px 20px;
-        font-size: 13px;
+        bottom: max(20px, env(safe-area-inset-bottom));
+        padding: 10px 18px;
+        font-size: 12px;
+        max-width: 90vw;
     }
 
     .corridor-hint {
         gap: 8px;
-        bottom: 24px;
-        padding: 12px 20px;
-        font-size: 13px;
+        bottom: max(20px, env(safe-area-inset-bottom));
+        padding: 10px 18px;
+        font-size: 12px;
+        max-width: 90vw;
     }
 }
 
 @media (max-width: 480px) {
+    .nav-btn {
+        width: 44px;
+        height: 48px;
+    }
+
+    .nav-controls {
+        gap: 6px;
+    }
+
     .map-panel {
         width: 100%;
+        max-height: 92dvh;
     }
 }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 210" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="cardDummy" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#efeae6"/>
+      <stop offset="1" stop-color="#d8d1ca"/>
+    </linearGradient>
+  </defs>
+  <rect width="384" height="210" fill="url(#cardDummy)"/>
+  <circle cx="192" cy="112" r="30" fill="#1f1d1e" opacity="0.12"/>
+  <path d="M184 98 L184 126 L208 112 Z" fill="#1f1d1e" opacity="0.5"/>
+</svg>

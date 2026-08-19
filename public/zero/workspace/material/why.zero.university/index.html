@@ -1,0 +1,256 @@
+<!-- Published: 2026-08-10 04:04:41 UTC | 2026-08-10 09:34:41 IST (commit bdac4e2) -->
+<!doctype html>
+<html lang="en">
+  <head><script>try{sessionStorage.removeItem("zero:resume");sessionStorage.removeItem("zero_resume");localStorage.removeItem("zero:resume");}catch(e){}</script>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    
+    <title>Zero — Human Infrastructure to Get Hired</title>
+    <meta
+      name="description"
+      content="Zero is building human infrastructure for the AI era. Learn, build, and get hired through immersive, AI-native experiences designed by reverse-engineering real jobs."
+    />
+    <link rel="canonical" href="index.html" />
+    <meta name="theme-color" content="#000000" />
+
+    
+    <meta name="color-scheme" content="light only" />
+    <meta name="supported-color-schemes" content="light" />
+    <meta name="darkreader-lock" />
+
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://why.zero.university/" />
+    <meta
+      property="og:title"
+      content="Zero — Human Infrastructure to Get Hired"
+    />
+    <meta
+      property="og:description"
+      content="Zero is building human infrastructure for the AI era. Learn, build, and get hired through immersive, AI-native experiences designed by reverse-engineering real jobs."
+    />
+    <meta
+      property="og:image"
+      content="https://why.zero.university/assets/brand/og_image.jpg"
+    />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Zero — Human Infrastructure to Get Hired"
+    />
+    <meta
+      name="twitter:description"
+      content="Zero is building human infrastructure for the AI era. Learn, build, and get hired through immersive, AI-native experiences designed by reverse-engineering real jobs."
+    />
+    <meta
+      name="twitter:image"
+      content="https://why.zero.university/assets/brand/og_image.jpg"
+    />
+
+    
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets/brand/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-N4VGV4H4EN"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-N4VGV4H4EN');
+    </script>
+
+    
+    <link rel="dns-prefetch" href="https://www.gstatic.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Google+Sans+Code:wght@400;700&family=Google+Sans+Flex:wght@500&family=Inter:wght@400;500;600&family=Newsreader:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow: hidden;
+        background-color: rgb(30, 0, 0); /* base — never a white pre-paint */
+      }
+      /* Background gradient on a dedicated fixed div BEHIND the canvas (z 0 <
+         canvas z 1). It mirrors the procedural loaderGradient (see main.js
+         loaderGradient stops / center / radii) and shows through the
+         transparent canvas during the loader (renderer clearAlpha=0). Once the
+         WebGL bgPass renders its matching gradient, the opaque canvas covers
+         this div — seamless.
+
+         Why a fixed div and not the body background: position:fixed inset:0 is
+         sized to the viewport from the very first layout, independent of
+         document flow, so the gradient paints on the first frame. Painting it
+         on <body> let the solid background-color flash through while the body
+         box was momentarily unsized. Radii in vw/vh size the ellipse to the
+         viewport; no background-attachment:fixed. */
+      #bg-gradient {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-color: rgb(20, 0, 0);
+        background-image: radial-gradient(
+          ellipse 126.7vw 143.4vh at 50% 130%,
+          rgb(180, 0, 0) 15.855%,
+          rgb(150, 0, 0) 26.169%,
+          rgb(120, 0, 0) 36.483%,
+          rgb(90, 0, 0) 46.797%,
+          rgb(65, 0, 0) 57.111%,
+          rgb(40, 0, 0) 78.555%,
+          rgb(20, 0, 0) 100%
+        );
+      }
+      /* Dummy pre-canvas placeholder: a "99" in the bottom-left that paints
+         on the very first layout and shows through the transparent canvas
+         alongside #bg-gradient while WebGL boots. Same z-index 0 as the
+         gradient but later in DOM order, so it paints above it; the opaque
+         canvas (z 1) covers it once the first frame renders. Purely
+         decorative — no behavior, no pointer events.
+
+         Styled to mirror the real loader counter (LoaderTextOverlay.js):
+         700 'Supply Sans' (same stack, monospace fallback pre-font-load),
+         white, left-aligned at the same reference ratios — desktop font
+         180/1080 of viewport height with a 40/1920 left margin, phone
+         (<768px) 110/1080 with an 80/1920 margin, baseline ~40/1080 up
+         from the bottom. */
+      /* svh (small-viewport) units, NOT vh: the canvas counter sizes itself
+         from window.innerHeight, which on phones equals the SMALL viewport
+         while the URL bar is visible — i.e. exactly at page load, when this
+         placeholder shows. Plain vh measures the LARGE (bar-retracted)
+         viewport there, so the DOM 99 rendered bigger/lower than the canvas
+         99 drawn over it — the mismatched fringes read as the number being
+         "cut" at the top and bottom. Desktop viewports are static, where
+         svh === vh, so nothing changes there. */
+      #pre-canvas-99 {
+        position: fixed;
+        left: 2.0833vw; /* 40 / 1920 */
+        bottom: 3.7037vh; /* 40 / 1080 (fallback) */
+        bottom: 3.7037svh;
+        z-index: 0;
+        pointer-events: none;
+        user-select: none;
+        font:
+          700 16.667vh/1 'Supply Sans',
+          monospace; /* 180 / 1080 (fallback) */
+        font-size: 16.667svh;
+        color: #ffffff;
+      }
+      @media (max-width: 767px) {
+        #pre-canvas-99 {
+          left: 4.1667vw; /* 80 / 1920 */
+          font-size: 10.185vh; /* 110 / 1080 (fallback) */
+          font-size: 10.185svh;
+        }
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: transparent;
+      }
+      #webgl {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: auto;
+        touch-action: none;
+      }
+      #ui-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .eg-track {
+        display: none !important;
+      }
+    </style>
+    <script type="module" crossorigin src="assets/main-B9-HtP-f.js?v=1787157397186"></script>
+    <link rel="stylesheet" crossorigin href="assets/main-yeWZtezw.css">
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        var err = document.createElement('div');
+        err.style.position = 'fixed';
+        err.style.zIndex = '999999';
+        err.style.background = 'red';
+        err.style.color = 'white';
+        err.style.padding = '10px';
+        err.style.top = '0';
+        err.style.left = '0';
+        err.innerHTML = 'Error: ' + msg + '<br>Line: ' + line + '<br>' + (error && error.stack ? error.stack : '');
+        document.body.appendChild(err);
+      };
+      window.addEventListener('unhandledrejection', function(e) {
+        var err = document.createElement('div');
+        err.style.position = 'fixed';
+        err.style.zIndex = '999999';
+        err.style.background = 'red';
+        err.style.color = 'white';
+        err.style.padding = '10px';
+        err.style.top = '50px';
+        err.style.left = '0';
+        err.innerHTML = 'Promise Rejection: ' + (e.reason && e.reason.message ? e.reason.message : e.reason) + '<br>' + (e.reason && e.reason.stack ? e.reason.stack : '');
+        document.body.appendChild(err);
+      });
+      const originalConsoleError = console.error;
+      console.error = function() {
+        var err = document.createElement('div');
+        err.style.position = 'fixed';
+        err.style.zIndex = '999999';
+        err.style.background = 'orange';
+        err.style.color = 'black';
+        err.style.padding = '10px';
+        err.style.top = '100px';
+        err.style.left = '0';
+        err.innerHTML = 'Console Error: ' + Array.from(arguments).join(' ');
+        document.body.appendChild(err);
+        originalConsoleError.apply(console, arguments);
+      };
+    </script>
+  </head>
+  
+  <body class="webgl-loader-overlay">
+    <div id="bg-gradient" aria-hidden="true"></div>
+    <div id="pre-canvas-99" aria-hidden="true">99</div>
+    <canvas
+      id="webgl"
+      role="img"
+      aria-label="ZERO interactive 3D experience"
+    ></canvas>
+    <div id="ui-container" role="region" aria-label="Interface controls"></div>
+  </body>
+</html>

@@ -548,19 +548,6 @@ const StudioRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
 
     return (
         <group ref={groupRef} position={[0, -1.2, 0]}>
-            {!isWarmup && (
-                <PositionalAudio
-                    ref={audioRef}
-                    url="/sounds/szummonitorow.mp3"
-                    distanceModel="exponential"
-                    refDistance={AUDIO_SETTINGS.distance}
-                    rolloffFactor={AUDIO_SETTINGS.rolloff}
-                    loop
-                    autoplay
-                    volume={effectiveVolume}
-                />
-            )}
-
             {/* THE INFINITE TOWER */}
             <group
                 ref={towerRef}
