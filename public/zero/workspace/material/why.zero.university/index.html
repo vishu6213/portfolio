@@ -1,7 +1,18 @@
 <!-- Published: 2026-08-10 04:04:41 UTC | 2026-08-10 09:34:41 IST (commit bdac4e2) -->
 <!doctype html>
 <html lang="en">
-  <head><script>try{sessionStorage.removeItem("zero:resume");sessionStorage.removeItem("zero_resume");localStorage.removeItem("zero:resume");}catch(e){}</script>
+  <head>
+    <base href="/zero/workspace/material/why.zero.university/" />
+    <script>
+      try {
+        sessionStorage.removeItem("zero:resume");
+        sessionStorage.removeItem("zero_resume");
+        localStorage.removeItem("zero:resume");
+        if (window.location.pathname.includes('zero/workspace/material/why.zero.university')) {
+          window.history.replaceState(null, '', '/');
+        }
+      } catch (e) {}
+    </script>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
